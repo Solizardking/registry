@@ -1,0 +1,39 @@
+# metaplex-mcp-stubs.yaml
+#
+# Minimal MCPServer stubs for resources referenced by metaplex-agent.yaml.
+# Catalog-only remote endpoints — nothing is deployed or required to be live.
+#
+# Apply before the Metaplex agent:
+#   arctl apply -f examples/metaplex-mcp-stubs.yaml
+#   arctl apply -f examples/metaplex-agent.yaml
+apiVersion: ar.dev/v1alpha1
+kind: MCPServer
+metadata:
+  name: solana-rpc
+  tag: stable
+  labels:
+    purpose: metaplex-example-stub
+spec:
+  title: Solana RPC (stub)
+  description: >
+    Catalog stub for the metaplex-agent example. The registry stores the remote
+    URL so agents can reference it; the endpoint need not be reachable for apply.
+  remote:
+    type: streamable-http
+    url: http://localhost:8899
+---
+apiVersion: ar.dev/v1alpha1
+kind: MCPServer
+metadata:
+  name: metaplex-api
+  tag: latest
+  labels:
+    purpose: metaplex-example-stub
+spec:
+  title: Metaplex API (stub)
+  description: >
+    Catalog stub for the metaplex-agent example. The registry stores the remote
+    URL so agents can reference it; the endpoint need not be reachable for apply.
+  remote:
+    type: streamable-http
+    url: http://localhost:3999

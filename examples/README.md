@@ -18,6 +18,13 @@ arctl apply -f examples/agent.yaml
 
 # Agent + MCP + skill + prompt in one multi-doc file
 arctl apply -f examples/full-stack.yaml
+
+# Metaplex agent (stubs satisfy MCP refs; catalog-only, no live endpoints required)
+arctl apply -f examples/metaplex-mcp-stubs.yaml
+arctl apply -f examples/metaplex-agent.yaml
+
+# Clawd Perps multi-doc (catalog-only; perps HTTP server need not be up)
+arctl apply -f examples/clawd-perps-agent.yaml
 ```
 
 ## Catalog
@@ -30,6 +37,7 @@ arctl apply -f examples/full-stack.yaml
 | [`skill.yaml`](./skill.yaml) | Skill | Git-backed skill package |
 | [`prompt.yaml`](./prompt.yaml) | Prompt | Inline system prompt |
 | [`full-stack.yaml`](./full-stack.yaml) | MCPServer + Skill + Prompt + Agent | Dependencies first, then agent |
+| [`metaplex-mcp-stubs.yaml`](./metaplex-mcp-stubs.yaml) | MCPServer | Catalog stubs for metaplex agent MCP refs |
 | [`metaplex-agent.yaml`](./metaplex-agent.yaml) | Agent | Metaplex on-chain identity fields |
 | [`clawd-perps-agent.yaml`](./clawd-perps-agent.yaml) | Skill + MCPServer + Agent | Multi-doc Clawd Perps stack |
 | [`clawd-perps-mcp/mcp.yaml`](./clawd-perps-mcp/mcp.yaml) | MCPServer | Remote perps MCP (localhost:8080) |

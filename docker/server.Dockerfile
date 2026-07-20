@@ -89,9 +89,13 @@ RUN set -eux; \
     docker compose version
 
 COPY --from=builder /app/bin/arctl-server /app/bin/arctl-server
+# Fly injects DATABASE_URL via postgres attach; map to AGENT_REGISTRY_DATABASE_URL.
+COPY docker/fly-entrypoint.sh /app/bin/fly-entrypoint.sh
+RUN chmod +x /app/bin/fly-entrypoint.sh
 
 LABEL org.opencontainers.image.source=https://github.com/agentregistry-dev/agentregistry
 LABEL org.opencontainers.image.description="Agent Registry Server"
 LABEL org.opencontainers.image.authors="Agent Registry Creators 🤖"
 
+ENTRYPOINT ["/app/bin/fly-entrypoint.sh"]
 CMD ["/app/bin/arctl-server"]
