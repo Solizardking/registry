@@ -1,0 +1,937 @@
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-pointpillars
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train pointpillars
+  description: "PointPillars for 3D object detection from LiDAR point clouds. Encodes point clouds into a pseudo-image via a pillar-based representation, then applies 2D detection — used in autonomous driving and robotics. Use when training, evaluating, exporting, pruning, retraining, or running inference for a TAO PointPillars model. Trigger phrases include \"train PointPillars\", \"LiDAR 3D detection\", \"point-cloud object detection\", \"pillar-based 3D detector\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-pointpillars
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-pose-classification
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train pose classification
+  description: "Pose classification using ST-GCN (Spatial Temporal Graph Convolutional Network). Classifies skeleton sequences into action categories from pose-keypoint data. Use when training, evaluating, exporting, or running inference for a TAO pose-classification model. Trigger phrases include \"train pose classification\", \"skeleton action recognition\", \"ST-GCN\", \"keypoint sequence classifier\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-pose-classification
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-reid
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train reid
+  description: "Person re-identification (ReID). Learns discriminative embeddings to match the same person across different camera views, based on metric learning. Use when training, evaluating, exporting, or running inference for a TAO person re-identification model. Trigger phrases include \"train ReID\", \"person re-identification\", \"cross-camera person matching\", \"ReID embeddings\", \"person re-id\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-reid
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-rtdetr
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train rtdetr
+  description: "RT-DETR (Real-Time DEtection TRansformer) for 2D object detection. Designed for real-time inference with competitive accuracy and supports distillation and quantization for deployment optimization. Use when training, evaluating, distilling, quantizing, exporting, or running inference for a TAO RT-DETR model. Trigger phrases include \"train RT-DETR\", \"real-time DETR\", \"low-latency object detection\", \"RT-DETR distillation / quantization\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-rtdetr
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-segformer
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train segformer
+  description: "SegFormer for semantic segmentation. Lightweight transformer-based architecture with hierarchical feature extraction, efficient for real-time segmentation tasks. Use when training, evaluating, exporting, quantizing, or running inference for a TAO SegFormer model. Trigger phrases include \"train SegFormer\", \"semantic segmentation\", \"lightweight transformer segmenter\", \"real-time semantic segmentation\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-segformer
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-single-step
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train single step
+  description: "Standard single-step train/eval/export workflow for any TAO model. Use when training a TAO model on a dataset without iterative data augmentation, AutoML, or DEFT loops. Trigger phrases include \"single train run\", \"train then evaluate then export\", \"plain TAO training\", \"normal training\", \"no AutoML\", \"skip the loop\". Routes through the per-model SKILL.md for action specifics and through `tao-launch-workflow` for platform/credentials/dataset intake."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-single-step
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-sparse4d
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train sparse4d
+  description: "Sparse4D for multi-camera temporal 3D object detection and tracking. Uses sparse queries with deformable attention across camera views and time for end-to-end 3D perception, with an instance bank for temporal tracking. Use when training, evaluating, exporting, quantizing, or running inference for a TAO Sparse4D model. Trigger phrases include \"train Sparse4D\", \"multi-camera 3D detection\", \"temporal 3D tracker\", \"sparse query 3D perception\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-sparse4d
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-visual-changenet
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train visual changenet
+  description: "Visual ChangeNet for binary image classification and segmentation in AOI defect detection. Use when training, evaluating, exporting, or running inference for PCB defect detection or visual inspection, comparing image pairs for PASS/NO_PASS classification, or producing change-segmentation masks. Trigger phrases include \"train Visual ChangeNet\", \"ChangeNet classify\", \"ChangeNet segment\", \"AOI defect detection\", \"PCB inspection model\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-visual-changenet
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-validate-dataset-format
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao validate dataset format
+  description: "Run `tao-daft validate` to check NVIDIA TAO DAFT datasets for structure, schema, and cross-reference errors. Do not use for non-DAFT formats. Use when the user asks to validate a DAFT dataset, check DAFT schema, validate a TAO dataset format, or run `tao-daft validate`."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-validate-dataset-format
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tilegym-adding-cutile-kernel
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tilegym adding cutile kernel
+  description: Add a new cuTile GPU kernel operator to TileGym. Covers dispatch registration in ops.py, cuTile backend implementation, __init__.py exports, test creation, and benchmark in tests/benchmark. Use when adding, creating, or implementing a new cuTile operator/kernel in TileGym, or when asking how to register a new cuTile op.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tilegym-adding-cutile-kernel
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tilegym-converting-cutile-to-julia
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tilegym converting cutile to julia
+  description: "Converts cuTile Python GPU kernels (@ct.kernel) to cuTile.jl Julia equivalents. Handles kernel syntax translation, 0-indexed to 1-indexed conversion, broadcasting differences, memory layout (row-major to column-major), type system mapping, and launch API differences. Use when converting, porting, or translating cuTile Python kernels to Julia cuTile.jl, or debugging/optimizing existing Julia cuTile translations."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tilegym-converting-cutile-to-julia
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tilegym-converting-cutile-to-triton
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tilegym converting cutile to triton
+  description: "Converts cuTile GPU kernels (@ct.kernel) to Triton (@triton.jit). Handles standard in-repo conversion, debugging (cudaErrorIllegalAddress, shape mismatch, numerical mismatch), and mapping cuTile idioms (ct.load/ct.store, ct.Constant, ct.launch) to Triton equivalents. Covers dual-kernel layout flags (e.g. transpose=True/False + autotune grid via META) per translations/advanced-patterns.md. Use when converting, porting, or translating cuTile kernels to Triton, or debugging existing Triton translations."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tilegym-converting-cutile-to-triton
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tilegym-cutile-autotuning
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tilegym cutile autotuning
+  description: "Use when adding, modifying, optimizing, or debugging CuTile autotuning code. Trigger signals: `exhaustive_search` / `replace_hints` / `hints_fn` / `cuda.tile.tune` in code, `autotune` in filenames, or correctness/performance issues in autotuned CuTile kernels. Covers: tune-once/cache/launch pattern, per-architecture configs (sm80–sm120), parameter space design (tile sizes, occupancy, num_ctas), and 7 common pitfalls with solutions."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tilegym-cutile-autotuning
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tilegym-cutile-python
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tilegym cutile python
+  description: "Expert cuTile programming assistant. Write high-performance GPU kernels using cuTile's tile-based programming model with proper validation and optimization. Supports deep agent orchestration for complex multi-kernel tasks."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tilegym-cutile-python
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tilegym-improve-cutile-kernel-perf
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tilegym improve cutile kernel perf
+  description: "Iteratively optimize cuTile kernel performance through systematic profiling, bottleneck analysis, IR comparison, and targeted tuning. Covers tile sizes, occupancy, autotune configs, TMA, latency hints, persistent scheduling, num_ctas, flush_to_zero, and IR-level debugging. Use when asked to \"optimize cutile kernel\", \"improve kernel perf\", \"tune cutile performance\", \"make kernel faster\", or iteratively benchmark and refine a cuTile GPU kernel in the TileGym project."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tilegym-improve-cutile-kernel-perf
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tilegym-monkey-patch-kernels-to-transformers
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tilegym monkey patch kernels to transformers
+  description: "Integrate TileGym kernels into Hugging Face `transformers` models by replacing the library's submodule(s) and certain class(es)' implementations, and patching certain class(es)' init/forward/load weight methods prior to instantiating models. Used when the user requires integrating TileGym kernels into `transformers` models."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tilegym-monkey-patch-kernels-to-transformers
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-vss-ask-video
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: vss ask video
+  description: "Use this skill to ask the VSS agent's video_understanding tool a fresh visual question about a recorded clip. Not for prior tool output, search hits, or metadata-answerable questions."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/vss-ask-video
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-vss-deploy-dense-captioning
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: vss deploy dense captioning
+  description: Use this skill when deploying standalone RT-VLM dense captioning or calling its REST API (uploads, captions, streams, chat-completions, Kafka). Not for VSS profile deploy or video-search ingestion.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/vss-deploy-dense-captioning
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-vss-deploy-detection-tracking-2d
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: vss deploy detection tracking 2d
+  description: "Use this skill when the user wants to deploy, run, debug, tear down, or call the REST API of the RTVI-CV 2D detection / tracking microservice. Trigger when the user says things like 'deploy rtvi-cv', 'start warehouse 2d', 'add a stream', 'check rtvi-cv health', or 'stop the perception container'. Not for VLM, embedding, or analytics — use the matching vss-* skill."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/vss-deploy-detection-tracking-2d
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-vss-deploy-detection-tracking-3d
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: vss deploy detection tracking 3d
+  description: "Deploy and operate the RTVI-CV-3D microservice as MV3DT (`MODE=mv3dt`): per-camera DeepStream perception plus BEV Fusion over calibrated cameras. Supports the bundled sample dataset, custom video files, and RTSP streams, and chains to `vss-generate-video-calibration` when calibration is missing. Use `vss-deploy-profile` for the full warehouse blueprint and `vss-deploy-detection-tracking-2d` for single-camera 2D detection."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/vss-deploy-detection-tracking-3d
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-vss-deploy-profile
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: vss deploy profile
+  description: "Use to select, configure, deploy, verify, debug, or tear down a VSS profile (base, search, lvs, warehouse, edge). Not for standalone microservices — use the vss-deploy-* skill."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/vss-deploy-profile
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-vss-deploy-video-embedding
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: vss deploy video embedding
+  description: "Use this skill when deploying, operating, or integrating the VSS 3.2 GA RT-Embed Video Embedding microservice. Covers Docker Compose bring-up, GPU and storage prerequisites, the `/v1` REST API (file uploads, text and video embeddings, live RTSP streams, health and metrics), Redis/Kafka/OTel integration, common failure modes, and teardown."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/vss-deploy-video-embedding
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-vss-generate-video-calibration
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: vss generate video calibration
+  description: Use to run AutoMagicCalib on local MP4s, RTSP, or the bundled sample dataset, and to deploy vss-auto-calibration when needed. Do not use for non-AMC calibration or runtime analytics.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/vss-generate-video-calibration
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-vss-generate-video-report
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: vss generate video report
+  description: "Use this skill when producing a VSS analysis report — Mode A per-clip VLM, Mode B incident-range via video-analytics. Not for standalone video summarization, real-time alerts or ad-hoc Q&A."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/vss-generate-video-report
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-vss-manage-alerts
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: vss manage alerts
+  description: Use for VSS alert workflows — real-time monitoring, Alert-Bridge subscriptions, Slack notifications, incident queries, camera onboarding. Not for non-alert analytics.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/vss-manage-alerts
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-vss-manage-video-io-storage
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: vss manage video io storage
+  description: Use to call the VIOS REST API (sensor list, timelines, clip extraction, snapshots, add/delete sensors and streams). Not for VLM inference or search.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/vss-manage-video-io-storage
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-vss-query-analytics
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: vss query analytics
+  description: Use this skill when reading video-analytics metrics, incidents, alerts, and sensor data via the VA-MCP server (port 9901). Not for live VLM or incident-range narrative reports.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/vss-query-analytics
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-vss-search-archive
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: vss search archive
+  description: "Use this skill to run top-level VSS fusion search on archived video, or to ingest video files / RTSP streams for search. Do NOT use for ad-hoc visual Q&A (use vss-ask-video), live captioning (use vss-deploy-dense-captioning), or video summarization and reports (use vss-summarize-video)."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/vss-search-archive
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-vss-setup-behavior-analytics
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: vss setup behavior analytics
+  description: Use to deploy the vss-behavior-analytics service standalone (entrypoint, config-source, optional calibration). Not for the full warehouse deploy.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/vss-setup-behavior-analytics
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-vss-setup-video-analytics-api
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: vss setup video analytics api
+  description: Use to deploy the vss-video-analytics-api REST service standalone (config-source, data-log bind, Elasticsearch, optional Kafka). Not for full warehouse deploy.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/vss-setup-video-analytics-api
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-vss-summarize-video
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: vss summarize video
+  description: Use to summarize a recorded video via the LVS summarization microservice (HITL-gated) with a VLM fallback. Not for report generation or live RTSP captioning.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/vss-summarize-video
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: agent-browser
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: local-web-services
+    kind: skill
+spec:
+  title: agent browser
+  description: "Use the host-side `agent-browser` CLI for local browser smoke tests, screenshots, snapshots, and simple UI validation against forwarded localhost URLs."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/agent-browser
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: anthropic-skills-webapp-testing
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: local-web-services
+    kind: skill
+    namespace: anthropic-skills
+spec:
+  title: webapp testing
+  description: Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/anthropic-skills/webapp-testing
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: food-order
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: local-web-services
+    kind: skill
+spec:
+  title: food order
+  description: "Reorder Foodora orders + track ETA/status with ordercli. Never confirm without explicit user approval. Triggers: order food, reorder, track ETA."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/food-order
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: goplaces
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: local-web-services
+    kind: skill
+spec:
+  title: goplaces
+  description: Query Google Places API (New) via the goplaces CLI for text search, place details, resolve, and reviews. Use for human-friendly place lookup or JSON output for scripts.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/goplaces
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: local-places
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: local-web-services
+    kind: skill
+spec:
+  title: local places
+  description: Search for places (restaurants, cafes, etc.) via Google Places API proxy on localhost.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/local-places
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: ops-and-setup-create-readonly-db-role
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: local-web-services
+    kind: skill
+    namespace: ops-and-setup
+spec:
+  title: create readonly db role
+  description: "Provision a hardened SELECT-only Postgres role so AI agents can safely read a production database. Works on Supabase and any Postgres. Use when the user wants agents to query prod data, says \"read-only role\", \"safe prod DB access for agents\", or is tired of running SQL by hand for agents. Differentiator: this skill CREATES the role and wiring; day-to-day querying belongs in a project-local skill."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/ops-and-setup/create-readonly-db-role
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: ordercli
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: local-web-services
+    kind: skill
+spec:
+  title: ordercli
+  description: Foodora-only CLI for checking past orders and active order status (Deliveroo WIP).
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/ordercli
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: research-and-web-online-shopping
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: local-web-services
+    kind: skill
+    namespace: research-and-web
+spec:
+  title: online shopping
+  description: "Research any online purchase with DeepAPI — fair-price checks, best deals, where to buy, shop trust. Load whenever the user is shopping or buying anything online: mentions buying a product, comparing prices, \"is this a good price\", \"where can I get X\", or attaches a product photo or listing screenshot. Research only — never places orders."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/research-and-web/online-shopping
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: weather
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: local-web-services
+    kind: skill
+spec:
+  title: weather
+  description: Get current weather and forecasts (no API key required).
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/weather
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: anthropic-skills-canvas-design
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: media-devices
+    kind: skill
+    namespace: anthropic-skills
+spec:
+  title: canvas design
+  description: "Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/anthropic-skills/canvas-design
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: anthropic-skills-docx
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: media-devices
+    kind: skill
+    namespace: anthropic-skills
+spec:
+  title: docx
+  description: "Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files). Triggers include: any mention of 'Word doc', 'word document', '.docx', or requests to produce professional documents with formatting like tables of contents, headings, page numbers, or letterheads. Also use when extracting or reorganizing content from .docx files, inserting or replacing images in documents, performing find-and-replace in Word files, working with tracked changes or comments, or converting content into a polished Word document. If the user asks for a 'report', 'memo', 'letter', 'template', or similar deliverable as a Word or .docx file, use this skill. Do NOT use for PDFs, spreadsheets, Google Docs, or general coding tasks unrelated to document generation."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/anthropic-skills/docx
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: anthropic-skills-pdf
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: media-devices
+    kind: skill
+    namespace: anthropic-skills
+spec:
+  title: pdf
+  description: Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, splitting PDFs apart, rotating pages, adding watermarks, creating new PDFs, filling PDF forms, encrypting/decrypting PDFs, extracting images, and OCR on scanned PDFs to make them searchable. If the user mentions a .pdf file or asks to produce one, use this skill.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/anthropic-skills/pdf
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: anthropic-skills-slack-gif-creator
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: media-devices
+    kind: skill
+    namespace: anthropic-skills
+spec:
+  title: slack gif creator
+  description: "Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like \"make me a GIF of X doing Y for Slack.\""
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/anthropic-skills/slack-gif-creator
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: blucli
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: media-devices
+    kind: skill
+spec:
+  title: blucli
+  description: BluOS CLI (blu) for discovery, playback, grouping, and volume.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/blucli
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: camsnap
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: media-devices
+    kind: skill
+spec:
+  title: camsnap
+  description: Capture frames or clips from RTSP/ONVIF cameras.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/camsnap
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: canvas
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: media-devices
+    kind: skill
+spec:
+  title: canvas
+  description: Display HTML content on connected Clawdbot nodes across Mac, iOS, and Android canvas views. Use for presenting generated HTML, dashboards, games, visualizations, and interactive demos through the Clawdbot canvas host and node bridge.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/canvas
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: gifgrep
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: media-devices
+    kind: skill
+spec:
+  title: gifgrep
+  description: Search GIF providers with CLI/TUI, download results, and extract stills/sheets.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/gifgrep
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nano-banana-pro
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: media-devices
+    kind: skill
+spec:
+  title: nano banana pro
+  description: Generate or edit images via Gemini 3 Pro Image (Nano Banana Pro).
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nano-banana-pro
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nano-pdf
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: media-devices
+    kind: skill
+spec:
+  title: nano pdf
+  description: Edit PDFs with natural-language instructions using the nano-pdf CLI.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nano-pdf

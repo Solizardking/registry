@@ -1,0 +1,921 @@
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-lot-size-calculator
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: vulcan lot size calculator
+  description: Convert desired token/notional amounts to Phoenix base lots. Use whenever a Vulcan command requires size/base lots.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/vulcan-lot-size-calculator
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-margin-operations
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: vulcan margin operations
+  description: Vulcan/Phoenix collateral, deposits, withdrawals, transfers, isolated margin, leverage tiers, and margin health.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/vulcan-margin-operations
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-market-intel
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: vulcan market intel
+  description: Phoenix market data, tickers, orderbooks, candles, funding, spreads, liquidity, and pre-trade market context.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/vulcan-market-intel
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-onboarding
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: vulcan onboarding
+  description: First-run Vulcan setup for paper trading, wallet, registration, collateral, MCP skills, and live readiness.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/vulcan-onboarding
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-portfolio-intel
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: vulcan portfolio intel
+  description: "Phoenix portfolio snapshots: margin, positions, resting orders, funding exposure, PnL, and account reporting."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/vulcan-portfolio-intel
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-position-management
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: vulcan position management
+  description: List, show, close, reduce Phoenix positions and attach/cancel TP/SL.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/vulcan-position-management
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-quickstart
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: vulcan quickstart
+  description: Five-minute Vulcan quickstart for install, health check, first market read, and first paper trade.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/vulcan-quickstart
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-risk-management
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: vulcan risk management
+  description: "Risk checks for Phoenix perps: margin health, leverage tiers, liquidation distance, notional caps, exposure, stops, and strategy guardrails."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/vulcan-risk-management
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-skills-index
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: vulcan skills index
+  description: Index for the bundled Vulcan skill pack exposed through solana-clawd. Use to discover the correct focused Vulcan skill.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/vulcan-skills-index
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-ta-strategy
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: vulcan ta strategy
+  description: Technical-analysis-driven Phoenix strategy runner using declarative rules and Vulcan strategy ledgers.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/vulcan-ta-strategy
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-technical-analysis
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: vulcan technical analysis
+  description: "Technical indicators and trigger evaluation for Phoenix markets: RSI, MACD, BBands, ATR, ADX, VWAP, Stoch, SMA, EMA."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/vulcan-technical-analysis
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-tpsl-management
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: vulcan tpsl management
+  description: Take-profit and stop-loss setup, cancellation, laddered exits, position-side rules, and verification for Vulcan/Phoenix.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/vulcan-tpsl-management
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-trade-execution
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: vulcan trade execution
+  description: "Safe Phoenix order execution via Vulcan: pre-trade checks, market/limit orders, paper/dry-run/live gates, and post-trade verification."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/vulcan-trade-execution
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-twap-execution
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: vulcan twap execution
+  description: "TWAP strategy execution on Phoenix perps using Vulcan's first-class runner, tick logs, ledgers, status/monitor/finalize controls."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/vulcan-twap-execution
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: zk
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: zk
+  description: For custom ZK Solana programs and privacy-preserving applications to prevent double spending. Guide to integrate rent-free nullifier PDAs for double-spend prevention.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/zk
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: zkrouter
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: zkrouter
+  description: "Self-hosted OpenAI-compatible LLM router — smart tier-based routing, ZK-stamped routing decisions, mode overrides, free OpenRouter at install via the Birth bot. Save 60-80% on inference costs by routing to the cheapest capable model across 12+ OpenRouter models."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/zkrouter
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: agent-desktop
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: agent desktop
+  description: "Use the built-in `Computer` sub-agent with `agent-desktop` for macOS desktop automation. Apply when a task needs application launching, accessibility snapshots, stable element refs, window focusing, semantic clicks/typing, or visual confirmation outside the browser sandbox."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/agent-desktop
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: agent-orchestration-agent-self-scheduling
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: agent-orchestration
+spec:
+  title: agent self scheduling
+  description: "Make an AI agent run on a schedule, loop, or interval — cron, heartbeats, recurring autonomous checks. Use for \"run every N minutes\", \"schedule a task\", \"run on a loop\", \"heartbeat\". Covers external clocks (Claude Code, Codex, Pi) vs Hermes' built-in scheduler."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/agent-orchestration/agent-self-scheduling
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: agent-orchestration-codex-subagent
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: agent-orchestration
+spec:
+  title: codex subagent
+  description: Launch OpenAI Codex CLI as a subagent (ChatGPT subscription auth, no API key). Use when delegating a self-contained coding task to Codex from another agent — parallel implementation work, a second opinion, or an independent verification pass.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/agent-orchestration/codex-subagent
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: agent-orchestration-fable-safe-prompt
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: agent-orchestration
+spec:
+  title: fable safe prompt
+  description: "Rewrite a user's prompt to reduce the chance it trips Claude Fable 5's server-side safety classifiers (cyber/bio guardrails that force-route to Opus 4.8 or return stop_reason \"refusal\"). Use when the user hands you a prompt that touches cybersecurity, auth, exploits, malware, pentesting, or other dual-use topics and asks to make it \"Fable-safe\", \"guardrail-safe\", \"won't get flagged/refused/downgraded\", or to rewrite it so Fable 5 won't block it."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/agent-orchestration/fable-safe-prompt
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: agent-orchestration-goal-loop
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: agent-orchestration
+spec:
+  title: goal loop
+  description: "Explain and write effective instructions for the `/goal` feature — the persistent self-checking agent loop (plan → act → test → review → iterate), available in agents like Codex, Claude Code, and Hermes Agent. Use when the user mentions `/goal`, \"goal loop\", \"Ralph loop\", wants to kick off a long-running autonomous agent run, asks how to write a goal prompt, or wants a one-paragraph goal instruction drafted."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/agent-orchestration/goal-loop
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: agent-orchestration-run-deep-swe
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: agent-orchestration
+spec:
+  title: run deep swe
+  description: "Score any AI model on the DeepSWE coding-agent benchmark via the OpenRouter API. Use when the user wants an independent, reproducible coding-agent eval — \"run DeepSWE\", \"benchmark this model on DeepSWE\", \"score model X on the coding benchmark\", \"test a model via OpenRouter on DeepSWE\", or to verify vendor-reported coding scores. Covers setup, the OpenRouter wiring for mini-swe-agent, single-task / subset / full 113-task runs, and leaderboard submission."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/agent-orchestration/run-deep-swe
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: agents-sdk
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: agents sdk
+  description: Build AI agents on Cloudflare Workers using the Agents SDK. Load when creating stateful agents, durable workflows, real-time WebSocket apps, scheduled tasks, MCP servers, chat applications, voice agents, or browser automation. Covers Agent class, state management, callable RPC, Workflows, durable execution, queues, retries, observability, and React hooks. Biases towards retrieval from Cloudflare docs over pre-trained knowledge.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/agents-sdk
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: anthropic-skills-algorithmic-art
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: anthropic-skills
+spec:
+  title: algorithmic art
+  description: "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/anthropic-skills/algorithmic-art
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: anthropic-skills-internal-comms
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: anthropic-skills
+spec:
+  title: internal comms
+  description: A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/anthropic-skills/internal-comms
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: anthropic-skills-mcp-builder
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: anthropic-skills
+spec:
+  title: mcp builder
+  description: Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/anthropic-skills/mcp-builder
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: anthropic-skills-skill-creator
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: anthropic-skills
+spec:
+  title: anthropic-skill-creator
+  description: "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/anthropic-skills/skill-creator
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: anthropic-skills-web-artifacts-builder
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: anthropic-skills
+spec:
+  title: web artifacts builder
+  description: Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/anthropic-skills/web-artifacts-builder
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: anthropic-skills-xlsx
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: anthropic-skills
+spec:
+  title: xlsx
+  description: "Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit, or fix an existing .xlsx, .xlsm, .csv, or .tsv file (e.g., adding columns, computing formulas, formatting, charting, cleaning messy data); create a new spreadsheet from scratch or from other data sources; or convert between tabular file formats. Trigger especially when the user references a spreadsheet file by name or path — even casually (like \"the xlsx in my downloads\") — and wants something done to it or produced from it. Also trigger for cleaning or restructuring messy tabular data files (malformed rows, misplaced headers, junk data) into proper spreadsheets. The deliverable must be a spreadsheet file. Do NOT trigger when the primary deliverable is a Word document, HTML report, standalone Python script, database pipeline, or Google Sheets API integration, even if tabular data is involved."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/anthropic-skills/xlsx
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: clawdhub
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: clawdhub
+  description: Use the ClawdHub CLI to search, install, update, and publish agent skills from clawdhub.com. Use when you need to fetch new skills on the fly, sync installed skills to latest or a specific version, or publish new/updated skill folders with the npm-installed clawdhub CLI.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/clawdhub
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: cloudflare
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: cloudflare
+  description: Comprehensive Cloudflare platform skill covering Workers, Pages, storage (KV, D1, R2), AI (Workers AI, Vectorize, Agents SDK), feature flags (Flagship), networking (Tunnel, Spectrum), security (WAF, DDoS), and infrastructure-as-code (Terraform, Pulumi). Use for any Cloudflare development task. Biases towards retrieval from Cloudflare docs over pre-trained knowledge.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/cloudflare
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: create-agent-tui
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: create agent tui
+  description: "Scaffolds a complete agent TUI in TypeScript using @openrouter/agent — like create-react-app for terminal agents. Generates a customizable terminal interface with three input styles, four tool display modes, ASCII banners, streaming output, session persistence, and configurable tools. Use when building an agent, creating a TUI, scaffolding an agent project, or building a coding assistant."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/create-agent-tui
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: deprecated-design-an-interface
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: deprecated
+spec:
+  title: design an interface
+  description: "Generate multiple radically different interface designs for a module using parallel sub-agents. Use when user wants to design an API, explore interface options, compare module shapes, or mentions \"design it twice\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/deprecated/design-an-interface
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: deprecated-qa
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: deprecated
+spec:
+  title: qa
+  description: "Interactive QA session where user reports bugs or issues conversationally, and the agent files GitHub issues. Explores the codebase in the background for context and domain language. Use when user wants to report bugs, do QA, file issues conversationally, or mentions \"QA session\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/deprecated/qa
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: deprecated-request-refactor-plan
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: deprecated
+spec:
+  title: request refactor plan
+  description: Create a detailed refactor plan with tiny commits via user interview, then file it as a GitHub issue. Use when user wants to plan a refactor, create a refactoring RFC, or break a refactor into safe incremental steps.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/deprecated/request-refactor-plan
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: durable-objects
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: durable objects
+  description: Create and review Cloudflare Durable Objects. Use when building stateful coordination (chat rooms, multiplayer games, booking systems), implementing RPC methods, SQLite storage, alarms, WebSockets, or reviewing DO code for best practices. Covers Workers integration, wrangler config, and testing with Vitest. Biases towards retrieval from Cloudflare docs over pre-trained knowledge.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/durable-objects
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: emil-design-eng
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: emil design eng
+  description: "This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisions, and the invisible details that make software feel great."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/emil-design-eng
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: engineering-ask-matt
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: engineering
+spec:
+  title: ask matt
+  description: Ask which skill or flow fits your situation. A router over the skills in this repo.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/engineering/ask-matt
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: engineering-code-review
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: engineering
+spec:
+  title: code review
+  description: "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes — Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/PRD asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to \"review since X\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/engineering/code-review
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: engineering-codebase-design
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: engineering
+spec:
+  title: codebase design
+  description: "Shared vocabulary for designing deep modules. Use when the user wants to design or improve a module's interface, find deepening opportunities, decide where a seam goes, make code more testable or AI-navigable, or when another skill needs the deep-module vocabulary."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/engineering/codebase-design
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: engineering-domain-modeling
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: engineering
+spec:
+  title: domain modeling
+  description: "Build and sharpen a project's domain model. Use when the user wants to pin down domain terminology or a ubiquitous language, record an architectural decision, or when another skill needs to maintain the domain model."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/engineering/domain-modeling
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: engineering-research
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: engineering
+spec:
+  title: research
+  description: Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated to a background agent.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/engineering/research
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: engineering-triage
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: engineering
+spec:
+  title: triage
+  description: Move issues and external PRs through a state machine of triage roles — categorise, verify, grill if needed, and write agent-ready briefs.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/engineering/triage
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: engineering-wayfinder
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: engineering
+spec:
+  title: wayfinder
+  description: Plan a huge chunk of work — more than one agent session can hold — as a shared map of investigation tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/engineering/wayfinder
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: find-skills
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: find skills
+  description: "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/find-skills
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: forge
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: agent-skill-creator
+  description: Create cross-platform agent skills from workflow descriptions. Activates when users ask to create an agent, automate a repetitive workflow, create a custom skill, or need advanced agent creation. Triggers on phrases like create agent for, automate workflow, create skill for, every day I have to, daily I need to, turn process into agent, need to automate, create a cross-platform skill, validate this skill, export this skill, migrate this skill. Supports single skills, multi-agent suites, transcript processing, template-based creation, interactive configuration, cross-platform export, and spec validation.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/forge
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: github
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: github
+  description: "Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/github
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: google-agent-registry
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: google agent registry
+  description: "Maintain and register Cheshire Google Agent Registry artifacts under registry/google (A2A agent card, MCP tools list, MCP interface, server card, zero-service OpenAPI) and deploy Apigee reverse proxies on project x402-477302. Use for gcloud agent-registry, 10 KB size limits, tool-name parity with server/mcp/tools.ts, Apigee test-env, or validate:google-registry / register:google-agent."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/google-agent-registry
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: improve-animations
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: improve animations
+  description: "Survey a codebase's animation and motion code as a senior motion advisor, then produce a prioritized audit and self-contained implementation plans for other agents (or cheaper models) to execute. Read-only on source code — it plans improvements, it does not apply them. Use when the user asks to \"improve the animations\", \"audit the motion\", \"make this app feel better\", or wants a roadmap of animation fixes rather than a review of a single diff."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/improve-animations
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: in-progress-claude-handoff
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: in-progress
+spec:
+  title: claude handoff
+  description: Hand the current conversation off to a fresh background agent that picks up the work immediately.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/in-progress/claude-handoff

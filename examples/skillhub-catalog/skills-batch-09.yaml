@@ -1,0 +1,949 @@
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-rag-eval
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: rag eval
+  description: "Filesystem RAG benchmarks: corpus/, train.json, evaluate_rag.py (RAGAS quality). Not for prod monitoring, latency/throughput benchmarking (use rag-perf), or evals outside this repo layout."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/rag-eval
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-rag-perf
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: rag perf
+  description: "Performance benchmarking for a deployed NVIDIA RAG Blueprint server: profiling pass + aiperf load test driven by a single YAML config. Not for accuracy / RAGAS scoring (use rag-eval) or for deploying / repairing services (use rag-blueprint)."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/rag-perf
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-skill-card-generator
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: skill card generator
+  description: Use only to generate or update a governance skill card for a specified existing agent skill directory. Do not use for explaining, listing, comparing, or discussing skill capabilities.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/skill-card-generator
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-analyze-changenet-rca
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao analyze changenet rca
+  description: "Performs deep Root Cause Analysis (RCA) on NVIDIA TAO Visual ChangeNet classification experiments with image-evidence-driven investigation. Use when analyzing ChangeNet model failures, investigating poor recall / FAR / PASS-NO_PASS metrics, auditing visual inspection pipeline quality, or running an RCA report for an AOI defect-detection model. Trigger phrases include \"RCA on my ChangeNet model\", \"why is my AOI model failing\", \"audit ChangeNet predictions\", \"investigate FAR regressions\", \"root cause analysis on visual-changenet\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-analyze-changenet-rca
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-analyze-gaps-visual-changenet
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao analyze gaps visual changenet
+  description: "Performs gap analysis on NVIDIA TAO VCN Classify (Visual Component Net) experiments by invoking the data-services container (`tao_toolkit.data_services` from `versions.yaml`) directly via `docker run … gap_analysis vcn_aoi …` — picks the optimal decision threshold, ranks per-sample weakness, and emits a top-K weakest parquet expanded per-lighting for downstream augmentation. Use when analyzing VCN classification failures, picking SDA augmentation targets, or auditing PASS/NO_PASS boundary cases."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-analyze-gaps-visual-changenet
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-analyze-gaps-vlm-bcq
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao analyze gaps vlm bcq
+  description: "Extract false-positive and false-negative gaps from VLM binary-classification-question (BCQ, yes/no) predictions. Use when the user asks to \"analyze VLM BCQ gaps\", \"extract VLM false positives and false negatives\", or identify failure cases from a predictions JSON for DEFT root-cause analysis on a binary-classification VLM workflow."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-analyze-gaps-vlm-bcq
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-convert-dataset-format
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao convert dataset format
+  description: "Run `tao-daft convert` to convert NVIDIA TAO DAFT datasets between supported formats. Do not use for non-DAFT data. Use when the user asks to convert a DAFT dataset, change DAFT format, change a TAO dataset format, or run `tao-daft convert`."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-convert-dataset-format
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-finetune-clip
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao finetune clip
+  description: CLIP vision-language model for image-text retrieval, zero-shot classification, embedding extraction, ONNX export, and TensorRT deployment. Use when fine-tuning or training CLIP, running zero-shot classification, computing image embeddings, or deploying CLIP to ONNX/TensorRT.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-finetune-clip
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-finetune-cosmos-embed
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao finetune cosmos embed
+  description: "Cosmos-Embed1 video-text embedding for text-to-video retrieval, video-to-video search, semantic deduplication, and fine-tuning. Use when the user asks to \"fine-tune Cosmos-Embed1\", \"run cosmos-embed inference\", \"export Cosmos-Embed1\", \"embed videos\", or \"search videos with text\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-finetune-cosmos-embed
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-finetune-cosmos-reason
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao finetune cosmos reason
+  description: "Cosmos3-Nano video QA supervised fine-tuning with FSDP parallelism. Use when training or evaluating video question-answering models, fine-tuning Cosmos3-Nano or compatible Cosmos Reason models with SFT/LoRA, or working with Cosmos-RL. Trigger phrases include \"fine-tune Cosmos\", \"Cosmos3 Nano Reasoner\", \"Cosmos-RL SFT\", \"video QA fine-tune\", \"Cosmos3-Nano training\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-finetune-cosmos-reason
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-finetune-huggingface-model
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao finetune huggingface model
+  description: "Fine-tune any HuggingFace CV / VLM / LLM model on local NVIDIA GPUs inside an NGC PyTorch container. Use when the user wants to fine-tune a HuggingFace model (full or LoRA), train a vision / VLM / LLM model end-to-end, generate a reproducible HF training pipeline, smoke-test a HuggingFace model locally before scale-up, push a fine-tuned model to the HF Hub with a model card, or emit a self-contained rerun skill for an existing HuggingFace finetune. Supports image classification, object detection, semantic / instance / panoptic segmentation, depth estimation, image-text-to-text VLM (SFT / LoRA), and LLM SFT / DPO / GRPO. Six-step workflow: inspect and qualify, hardware and NGC image, research, generate and smoke, train + eval + infer, push and emit rerun skill."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-finetune-huggingface-model
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-generate-image-grounding
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao generate image grounding
+  description: "\"Two-step image grounding pipeline: extracts referring expressions from (image, caption) pairs and grounds them to pixel-space bounding boxes via a VLM. Use when the user wants to ground captions to bboxes, generate phrase-grounded annotations, auto-label images for grounding, or run the image_grounding pipeline. Triggers include 'image grounding', 'phrase grounding', 'ground captions', 'auto-label image grounding', 'image_grounding'.\""
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-generate-image-grounding
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-generate-referring-expressions
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao generate referring expressions
+  description: "\"Four-step image referring-expression pipeline: turns images plus KITTI bounding-box labels into region descriptions, scene captions, grounded referring expressions, and (optionally) verified expressions via VLM distillation. Use when the user wants to generate referring-expression annotations from images with KITTI labels, build region descriptions, produce grouped grounding phrases tied to bboxes, run a double-check verification pass on grounding expressions, auto-label traffic / scene images for referring datasets, or run the image_referring_expression pipeline. Triggers include 'referring expression', 'region description', 'KITTI labels', 'spatial relationship annotation', 'auto-label image referring expression', 'image_referring_expression'.\""
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-generate-referring-expressions
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-generate-video-reasoning-annotations
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao generate video reasoning annotations
+  description: "Multi-step video annotation pipeline that turns raw videos into Chain-of-Thought training data — multi-level captions, structured descriptions, and QA pairs (MCQ, binary, open-ended) with reasoning traces, via VLM/LLM distillation. Use when the user wants to \"create video training data\", \"generate video QA datasets\", \"build CoT reasoning traces from videos\", \"auto-label videos\", or run the video_reasoning_annotation pipeline. Triggers include \"video annotation\", \"video CoT\", \"video QA\", \"chain-of-thought\", \"video captioning pipeline\", \"video distillation\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-generate-video-reasoning-annotations
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-launch-workflow
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao launch workflow
+  description: Shared launch intake for any TAO workflow or action. Use when the user wants to run TAO AutoML, train, evaluate, infer, export, generate TensorRT engines, or launch DEFT/workflow jobs on an execution platform.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-launch-workflow
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-list-capabilities
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao list capabilities
+  description: "Answer what the TAO Skill Bank plugin can do by generating the response from packaged application, data, model, AutoML, and platform manifests. Use when the user asks \"what can TAO Skill Bank do\", \"list TAO models\", \"which TAO workflows are available\", or \"what supports AutoML\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-list-capabilities
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-mine-aoi-images
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao mine aoi images
+  description: "Runs the DEFT embed-then-mine workflow for VCN AOI iterations — embeds the gap-analysis target parquet, embeds a source pool, and mines nearest-neighbour source images for downstream augmentation. Use as the immediate next step after `tao-route-visual-changenet-samples` when expanding a real-image augmentation queue from the mining subset."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-mine-aoi-images
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-port-huggingface-model
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao port huggingface model
+  description: "Integrate a HuggingFace Computer Vision model into the NVIDIA TAO Toolkit ecosystem (tao-core config, tao-pytorch trainer, tao-deploy TensorRT pipeline). Use when the user asks to \"integrate a HuggingFace model into TAO\", \"add an HF model to TAO Toolkit\", \"wire a HuggingFace ViT/DETR/ SegFormer into tao-pytorch\", \"build a TAO trainer + deploy pipeline for an HF CV model\", or pastes a HuggingFace model URL/ID and wants it turned into a TAO model. Covers the full 7-phase loop: prerequisites check, HuggingFace inspection and validation, codebase exploration, tao-core configuration and native trainer implementation, ONNX export plus TensorRT deploy integration, packaging and L0 testing, container-based end-to-end validation, and (conditional) accuracy/latency tuning. Supports classification, object detection, semantic / instance / panoptic segmentation, zero-shot detection, and depth estimation."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-port-huggingface-model
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-route-visual-changenet-samples
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao route visual changenet samples
+  description: "Routes the weakest VCN samples (output of `tao-analyze-gaps-visual-changenet`) into per-augmentation-module subsets based on each module's label eligibility. Use when the user asks to \"route VCN gap samples\", \"split AOI gaps for k-NN mining and AnomalyGen\", or prepare the immediate next step after DEFT gap analysis in a VCN AOI SDA iteration."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-route-visual-changenet-samples
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-run-automl
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao run automl
+  description: Run AutoML / hyperparameter optimization (HPO) for NVIDIA TAO networks using AutoMLRunner. Handles algorithm selection (bayesian, hyperband, asha, bohb, llm, hybrid, autoresearch), WandB experiment tracking, job execution on any TAO SDK platform, result interpretation, and per-rec custom evaluation hooks. Use when the user mentions TAO AutoML, hyperparameter optimization, HPO, automl, automl_settings, AutoMLRunner, tao_automl, bayesian search, hyperband, ASHA, LLM-guided search, autoresearch, or wants to tune training hyperparameters for any TAO network. Platform-agnostic — runs on any SDK (Brev, SLURM, Kubernetes, Docker).
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-run-automl
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-run-automl-deft-pipeline
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao run automl deft pipeline
+  description: "Run the canonical NVIDIA AOI three-phase training pipeline — Phase 1 AutoML baseline (HPO), Phase 2 DEFT loop (RCA → SDG → mining → plain-train retrain), Phase 3 AutoML refinement on the DEFT-augmented dataset. Use when the user asks to \"run the AOI workflow\", \"fine-tune my PCB AOI model end-to-end\", \"improve my AOI ChangeNet model\", or \"AOI workflow with AutoML\" request — route here instead of tao-run-deft-aoi directly unless the user explicitly asks for the DEFT loop ONLY (e.g. \"run JUST the DEFT loop\", \"skip AutoML, only DEFT\"). Also handles the same three-phase pattern for non-AOI DEFT applications — AutoML baseline then DEFT loop warm-started from AutoML's winning HPs then post-DEFT AutoML refinement on the iteration-augmented dataset. Trigger phrases include \"run the AOI workflow\", \"AOI end-to-end\", \"AutoML + DEFT\", \"AutoML then DEFT\", \"tune hyperparameters then DEFT\", \"DEFT with AutoML at both ends\", \"warm-start DEFT\", \"improve my AOI model\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-run-automl-deft-pipeline
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-run-deft-aoi
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao run deft aoi
+  description: "Run the full DEFT AOI improvement loop for NVIDIA TAO VisualChangeNet / ChangeNet PCB inspection models: baseline evaluate, RCA, Cosmos AnomalyGen / AMP synthetic defects, k-NN mining, retraining, and deployment gating until FAR / recall KPI targets are met. Use for prompts like \"run the DEFT loop\", \"fine-tune until FAR below 0.1% at recall=100%\", or \"improve my AOI ChangeNet model with RCA and synthetic defects\"; do not use for standalone TAO training, one-off inference, generic anomaly generation, or RCA-only analysis."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-run-deft-aoi
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-run-inference-service
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao run inference service
+  description: "Start, query, and stop a network-specific TAO inference microservice ({network_arch}-inference-microservice) by delegating container execution to the appropriate platform skill. Handles container image resolution, job-payload JSON construction, and the service registry. Use when the user wants to run inference on a TAO model checkpoint using a microservice container, deploy a TAO inference endpoint, or stop a running inference container."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-run-inference-service
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-run-on-brev
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao run on brev
+  description: "Brev managed GPU instances with Docker support. Use when running TAO training, evaluation, or inference on Brev GPU instances, managing Brev deployments, or dispatching TAO jobs through the Brev CLI. Trigger phrases include \"run on Brev\", \"Brev GPU instance\", \"submit job to Brev\", \"Brev CLI deployment\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-run-on-brev
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-run-on-kubernetes
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao run on kubernetes
+  description: Kubernetes execution platform — submits TAO container jobs as single-pod k8s Jobs with NVIDIA GPU scheduling. Use when running on EKS / GKE / AKS / on-prem clusters with the NVIDIA GPU Operator installed, or when integrating TAO into an existing k8s-native ML platform.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-run-on-kubernetes
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-run-on-local-docker
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao run on local docker
+  description: "Local or remote Docker execution for TAO SDK job containers using a Docker daemon with NVIDIA GPU runtime. Use when running TAO jobs on the current machine, a directly attached Docker host, or a remote GPU box exposed through DOCKER_HOST. Trigger phrases include \"run locally\", \"local Docker\", \"remote Docker\", \"use my GPU\", \"run on my machine\", \"host Docker daemon\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-run-on-local-docker
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-run-on-slurm
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao run on slurm
+  description: "Remote SLURM GPU cluster execution over SSH with sbatch/srun, Pyxis/Enroot containers, and Lustre-backed results. Use when running TAO training/eval/inference jobs on an on-prem or DGX SLURM cluster. Trigger phrases include \"run on SLURM\", \"submit sbatch\", \"DGX SLURM cluster\", \"Pyxis/Enroot container\", \"Lustre dataset\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-run-on-slurm
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-run-platform
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao run platform
+  description: "TAO Execution SDK for submitting and monitoring GPU training jobs on supported platforms (Brev, SLURM, local Docker, Kubernetes). Use when the user wants to run TAO jobs through the SDK, get job tracking, S3 I/O wrapping, multi-node distributed training, or platform-specific features that docker-run can't provide. Trigger phrases include \"use the TAO SDK\", \"call tao_sdk\", \"AutoMLRunner\", \"ActionWorkflow\", \"Job handles\", \"S3 I/O wrapping\", \"TAO platform run\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-run-platform
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-setup-nvidia-gpu-host
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao setup nvidia gpu host
+  description: "Host setup for TAO GPU backends. Checks and, after user approval, installs NVIDIA driver branch 580, CUDA Toolkit 13.0, and NVIDIA Container Toolkit 1.19.0 for Docker/local-Docker and Kubernetes GPU worker hosts. The `--check-only` path works on any Linux distribution; `--install` automates debian-family (Ubuntu/Debian/Pop!_OS/Mint/Zorin/Raspbian), rhel-family (Fedora/RHEL/Rocky/AlmaLinux), and suse-family (openSUSE/SLES) hosts, and prints actionable manual-install steps for everything else. Use when the user asks to \"set up an NVIDIA GPU host\", \"check TAO Docker GPU runtime\", or prepare a Kubernetes GPU worker for TAO."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-setup-nvidia-gpu-host
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-action-recognition
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train action recognition
+  description: "Action recognition from video sequences. Supports RGB, optical flow, and joint (multi-stream) input types for classifying temporal actions in video clips. Use when training, evaluating, exporting, or running inference on a TAO action-recognition model. Trigger phrases include \"train action recognition\", \"video action classification\", \"RGB + optical flow action model\", \"TAO ActionRecognition\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-action-recognition
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-bevfusion
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train bevfusion
+  description: "BEVFusion for multi-sensor 3D object detection. Fuses LiDAR point clouds and camera images in bird's-eye-view (BEV) space, used in autonomous driving for robust 3D perception. Use when training, evaluating, or running inference for a TAO BEVFusion model. Trigger phrases include \"train BEVFusion\", \"LiDAR + camera fusion\", \"BEV 3D detection\", \"multi-sensor 3D perception\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-bevfusion
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-centerpose
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train centerpose
+  description: "CenterPose for keypoint / pose estimation. Detects object centers and regresses keypoint locations for 6-DoF object pose estimation. Use when training, evaluating, exporting, or running inference for a TAO CenterPose model. Trigger phrases include \"train CenterPose\", \"6-DoF object pose\", \"keypoint estimation\", \"object pose regression\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-centerpose
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-deformable-detr
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train deformable detr
+  description: "Deformable DETR for 2D object detection. Uses deformable attention for efficient multi-scale feature processing, lighter than DINO with competitive accuracy. Use when training, evaluating, exporting, quantizing, or running inference for a TAO Deformable-DETR model. Trigger phrases include \"train deformable-detr\", \"Deformable DETR object detection\", \"lightweight DETR detector\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-deformable-detr
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-depth-anything-v2
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train depth anything v2
+  description: "Monocular depth estimation using Metric Depth Anything v2 or Relative Depth Anything architectures. Predicts per-pixel depth from single RGB images. Use when training, evaluating, exporting, or running inference for a TAO monocular depth model. Trigger phrases include \"train monocular depth\", \"DepthAnything v2\", \"metric depth from single image\", \"monocular depth estimation\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-depth-anything-v2
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-dino
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train dino
+  description: "DINO (DETR with Improved DeNoising Anchor Boxes) for 2D object detection. Transformer-based detector with denoising training, multi-scale features, and optional distillation support. Use when training, evaluating, exporting, distilling, quantizing, or running inference for a TAO DINO detector. Trigger phrases include \"train DINO\", \"DETR object detection\", \"TAO 2D detection\", \"DINO with distillation\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-dino
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-fast-foundation-stereo
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train fast foundation stereo
+  description: "Real-time stereo depth estimation using FastFoundationStereo (FFS), the distilled bp2 commercial variant of FoundationStereo. Predicts disparity maps from stereo image pairs with ~10× lower latency than full FoundationStereo. Use when training, evaluating, exporting, or running inference for a TAO FastFoundationStereo (FFS) model. Trigger phrases include \"train fast stereo\", \"real-time stereo disparity\", \"FastFoundationStereo\", \"distilled stereo depth\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-fast-foundation-stereo
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-foundation-stereo
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train foundation stereo
+  description: "Stereo depth estimation using FoundationStereo. Predicts disparity maps from stereo image pairs for 3D reconstruction. Use when training, evaluating, exporting, or running inference for a TAO FoundationStereo model. Trigger phrases include \"train stereo depth\", \"FoundationStereo\", \"stereo disparity estimation\", \"3D reconstruction from stereo\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-foundation-stereo
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-grounding-dino
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train grounding dino
+  description: "Grounding DINO for open-set object detection. Combines DINO-style detection with a BERT text encoder for language-guided detection — detects objects described by text prompts without a fixed class vocabulary. Use when training, evaluating, exporting, quantizing, or running inference for a TAO Grounding DINO model. Trigger phrases include \"train Grounding DINO\", \"open-vocabulary detection\", \"text-prompted detector\", \"language-guided object detection\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-grounding-dino
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-image-classification
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train image classification
+  description: "PyTorch-based TAO image classification. Supports a wide range of backbones (FAN, EfficientNet, ResNet, etc.) with distillation and quantization for deployment. Use when training, evaluating, distilling, quantizing, exporting, or running inference for a TAO image-classification (PyT) model. Trigger phrases include \"train image classifier\", \"TAO classification\", \"ResNet/EfficientNet/FAN backbone classifier\", \"classification-pyt\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-image-classification
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-mask-auto-encoder
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train mask auto encoder
+  description: "Masked Auto-Encoder (MAE) for self-supervised pretraining and fine-tuning. Masks random patches and reconstructs them to learn visual representations; supports pretrain and finetune stages. Use when training, evaluating, exporting, or running inference for a TAO MAE backbone. Trigger phrases include \"pretrain MAE\", \"self-supervised vision pretraining\", \"Masked Autoencoder\", \"Mask Auto-Encoder\", \"MAE fine-tune\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-mask-auto-encoder
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-mask-auto-label
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train mask auto label
+  description: "MAL (Mask Auto-Label) for weakly-supervised segmentation. Produces segmentation masks from minimal annotations (point or box annotations) using a ViT-MAE backbone. Use when training, evaluating, or running inference for a TAO MAL model. Trigger phrases include \"train MAL\", \"Mask Auto-Label\", \"weakly-supervised segmentation\", \"box-prompted segmentation\", \"minimal-annotation mask prediction\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-mask-auto-label
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-mask-grounding-dino
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train mask grounding dino
+  description: "Mask Grounding DINO for grounded instance segmentation. Extends Grounding DINO with a mask-prediction head for open-set segmentation guided by text prompts. Use when training, evaluating, exporting, quantizing, or running inference for a TAO Mask-Grounding-DINO model. Trigger phrases include \"train Mask Grounding DINO\", \"open-vocabulary segmentation\", \"text-prompted instance segmentation\", \"grounded mask DETR\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-mask-grounding-dino
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-mask2former
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train mask2former
+  description: "Mask2Former for universal image segmentation (panoptic, instance, and semantic). Transformer-based with masked attention for high-quality segmentation results. Use when training, evaluating, exporting, quantizing, or running inference for a TAO Mask2Former model. Trigger phrases include \"train Mask2Former\", \"universal segmentation\", \"panoptic / instance / semantic segmentation\", \"masked-attention transformer segmenter\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-mask2former
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-metric-learning-recognition
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train metric learning recognition
+  description: "Metric-learning recognition (ml-recog) for fine-grained visual recognition. Learns embeddings for retrieval-based matching (e.g., retail product recognition) using triplet / contrastive losses. Use when training, evaluating, exporting, or running inference for a TAO metric-learning recognition model. Trigger phrases include \"train metric learning\", \"ml-recog\", \"retrieval embeddings\", \"triplet loss recognition\", \"fine-grained matching\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-metric-learning-recognition
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-nvdinov2
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train nvdinov2
+  description: "NVDINOv2 for self-supervised visual representation learning. Trains vision transformers via self-distillation (teacher-student) without labels and produces general-purpose visual features. Use when training, exporting, or running inference for a TAO NVDINOv2 backbone. Trigger phrases include \"train NVDINOv2\", \"self-supervised ViT pretraining\", \"DINOv2 backbone\", \"visual representation learning\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-nvdinov2
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-nvpanoptix3d
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train nvpanoptix3d
+  description: "NVPanoptix3D for panoptic 3D scene reconstruction from posed RGB images. Produces 3D panoptic segmentation (semantic, instance, and panoptic masks) with occupancy completion. Built on a VGGT backbone with a Mask2Former-style head and 3D frustum reconstruction. Use when training, evaluating, exporting, or running inference for a TAO NVPanoptix3D model. Trigger phrases include \"train NVPanoptix3D\", \"panoptic 3D reconstruction\", \"3D scene segmentation\", \"occupancy completion\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-nvpanoptix3d
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-ocdnet
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train ocdnet
+  description: "OCDNet for scene text detection. Detects arbitrary-oriented text regions in natural images using a differentiable binarization approach. Use when training, evaluating, exporting, pruning, quantizing, retraining, or running inference for a TAO OCDNet model. Trigger phrases include \"train OCDNet\", \"scene text detection\", \"arbitrary-oriented text boxes\", \"differentiable binarization detector\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-ocdnet
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-ocrnet
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train ocrnet
+  description: "OCRNet for scene text recognition. Recognizes text content from cropped text-region images and supports CTC and attention-based decoders. Use when training, evaluating, exporting, pruning, quantizing, retraining, or running inference for a TAO OCRNet model. Trigger phrases include \"train OCRNet\", \"scene text recognition\", \"OCR cropped text\", \"CTC / attention text decoder\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-ocrnet
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-oneformer
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train oneformer
+  description: "OneFormer for universal image segmentation. Unifies panoptic, instance, and semantic segmentation with a single architecture using task-conditioned queries. Use when training, evaluating, exporting, quantizing, or running inference for a TAO OneFormer model. Trigger phrases include \"train OneFormer\", \"universal segmentation\", \"task-conditioned segmentation\", \"panoptic / instance / semantic in one model\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-oneformer
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-tao-train-optical-inspection
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: tao train optical inspection
+  description: "Optical Inspection for defect detection using Siamese networks. Compares image pairs to detect manufacturing defects, anomalies, or quality issues. Use when training, evaluating, exporting, or running inference for a TAO Optical Inspection model on AOI / quality-control data. Trigger phrases include \"train optical inspection\", \"AOI defect detection\", \"Siamese defect classifier\", \"PCB / manufacturing inspection\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/tao-train-optical-inspection

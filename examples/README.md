@@ -55,6 +55,20 @@ python3 scripts/import-robinhood-agents.py \
 
 Batches: [`robinhood-agents-catalog/`](./robinhood-agents-catalog/).
 
+## SkillHub catalog (full 584)
+
+Import the full [SkillHub](https://github.com/Solizardking/skillhub-main) hub:
+
+```bash
+git clone --depth 1 https://github.com/Solizardking/skillhub-main.git /tmp/skillhub-main
+python3 scripts/import-skillhub.py \
+  --source /tmp/skillhub-main \
+  --repo-url https://github.com/Solizardking/skillhub-main \
+  --apply --registry-url https://cheshire-agentregistry.fly.dev
+```
+
+Batches: [`skillhub-catalog/`](./skillhub-catalog/) · tag `skillhub` · site https://skills.x402.wtf
+
 ## Skills catalog
 
 Import Cheshire Terminal `SKILL.md` packages as registry Skill resources:

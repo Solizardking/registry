@@ -1,0 +1,949 @@
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-holoscan-install-wheel
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: holoscan install wheel
+  description: Install Holoscan SDK Python wheel via pip into a venv. Use for Python installs; not for native C++/apt or Conda installs.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/holoscan-install-wheel
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-holoscan-setup
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: holoscan setup
+  description: "Guides Holoscan SDK installation: inspects the host, assesses platform compatibility, recommends an install method, and delegates to the matching install skill."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/holoscan-setup
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-hsb-app
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: hsb app
+  description: "Discover and run Holoscan Sensor Bridge example applications on a connected devkit. Filters available apps by the user's platform, HSB software version, board type, and sensors. Supports timed execution, failure analysis, code-edit suggestions, and iterative re-runs."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/hsb-app
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-hsb-flash
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: hsb flash
+  description: "Flash the FPGA on an HSB board connected to an NVIDIA devkit. Supports HSB Lattice boards (FPGA versions 2407, 2412, 2507, 2510) and Leopard Imaging VB1940 \"all-in-one\" cameras (FPGA versions 2507, 2510). Uses release-specific YAML manifests and board-type-specific program commands. Lattice and VB1940 commands must never be mixed."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/hsb-flash
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-hsb-setup
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: hsb setup
+  description: Clone the latest NVIDIA Holoscan Sensor Bridge repo, ask which supported devkit is being used, configure the host per platform, build the correct demo container, run it, and verify HSB connectivity by pinging 192.168.0.2. Use for Holoscan Sensor Bridge setup, build, container launch, and first-connectivity bring-up.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/hsb-setup
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-hsb-test
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: hsb test
+  description: "Execute QA test plans on Holoscan Sensor Bridge hardware. Reads a user-provided test document, filters tests by the user's setup, determines which tests can run automatically, executes them with pass/fail evaluation, and produces a structured test results report."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/hsb-test
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-build-source
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson build source
+  description: "Use when you need to rebuild the BSP overlay — DT, OOT modules, or kernel — from changes under bsp_sources/. Triggers: build bsp, rebuild dtb, rebuild kernel."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-build-source
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-customize-camera
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson customize camera
+  description: Enable MIPI/GMSL camera sensors on a Jetson Thor or Orin custom carrier by rendering a kernel-DT overlay from the in-tree sensor DTSI. Do NOT use for UPHY lane allocation or ODMDATA edits.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-customize-camera
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-customize-clocks
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson customize clocks
+  description: Use to lock/cap Jetson CPU/GPU/EMC clocks, toggle EMC/CPU DVFS, or change cpufreq governors by editing BPMP DTB and nvpower.sh pre-flash. Do NOT use for live tuning or nvpmodel edits.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-customize-clocks
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-customize-fan
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson customize fan
+  description: "Use when you need to add, remove, edit, list, or change the boot default of an nvfancontrol fan profile on a Jetson/Tegra (Orin, Thor) target. Triggers: edit fan profile, tune fan curve."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-customize-fan
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-customize-mgbe
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson customize mgbe
+  description: Enable Jetson Thor 25G/10G/1G MGBE QSFP via kernel-DT overlay. Do NOT use for UPHY lane allocation or ODMDATA edits.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-customize-mgbe
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-customize-nvpmodel
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson customize nvpmodel
+  description: "Use when you need to add, remove, edit, list, or change the boot default of an nvpmodel power mode on a Jetson/Tegra (Orin, Thor) target. Triggers: edit power mode, tune frequency caps."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-customize-nvpmodel
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-customize-pcie
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson customize pcie
+  description: Per-controller PCIe enable / disable / lanes / link-speed for a Jetson Thor or Orin custom carrier via ODMDATA + kernel-DT overlay. Do NOT use for UPHY lane allocation or endpoint-mode bring-up.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-customize-pcie
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-customize-pinmux
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson customize pinmux
+  description: Per-pin SFIO / direction / initial-state configurator for a Jetson Orin or Thor custom carrier from the pinmux XLSM. Do NOT use for kernel-DT overlay or ODMDATA edits.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-customize-pinmux
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-customize-uphy
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson customize uphy
+  description: Configure Jetson UPHY lane allocation (uphy0/uphy1-config) on Orin/Thor custom carriers. Do NOT use for pinmux or PCIe-only edits.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-customize-uphy
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-customize-usb
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson customize usb
+  description: Enable/disable Jetson USB2/USB3 SS ports via kernel-DT overlay. Do NOT use for UPHY lane allocation or ODMDATA edits.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-customize-usb
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-derive-carrier
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson derive carrier
+  description: Bootstrap a custom carrier board by forking carrier files and scaffolding a DT overlay from the reference devkit. Use after jetson-init-source; not for module-level or kernel-DTB changes.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-derive-carrier
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-diagnostic
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson diagnostic
+  description: Read-only Jetson health snapshot for identity, memory, GPU, thermal, power, storage, services, and top processes.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-diagnostic
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-download-bsp
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson download bsp
+  description: Download NVIDIA Jetson Linux BSP artifacts (BSP tarball, sample rootfs, public_sources, x-tools, guides) for the active target. Use for Auto Setup; not for extraction or profile edits.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-download-bsp
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-flash-image
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson flash image
+  description: Use to flash a promoted BSP image to a Jetson DUT in RCM mode via flash.sh or l4t_initrd_flash.sh. Do NOT use for BSP customization, image promotion, or carrier derivation.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-flash-image
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-generate-kb
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson generate kb
+  description: Build a per-target knowledge-base markdown next to the active profile by walking the BSP root and source tree. Use after init-image / init-source; not for editing profile fields.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-generate-kb
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-headless-mode
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson headless mode
+  description: Plan and apply safe Jetson headless-mode changes to reclaim GUI and daemon memory.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-headless-mode
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-inference-mem-tune
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson inference mem tune
+  description: Pick the serving stack and per-runtime memory flags (vLLM, SGLang, llama.cpp, TensorRT Edge-LLM) for an LLM/VLM workload on any NVIDIA Jetson.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-inference-mem-tune
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-init-image
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson init image
+  description: Extract Jetson Linux + sample-rootfs tarballs and run apply_binaries.sh for the active target, then record bsp_image in the profile. Use after jetson-init-target; not for source-tree setup.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-init-image
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-init-source
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson init source
+  description: "Set up the BSP source workspace: Linux_for_Tegra overlay tracker, bsp_sources, Crosstool-NG toolchain. Use after jetson-init-image; not for fetching inputs."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-init-source
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-init-target
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson init target
+  description: Author a new Jetson target-platform profile (reference_devkit + optional custom_carrier) and update the active pointer. Use to create a target; not for switching existing profiles.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-init-target
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-link-docs
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson link docs
+  description: Bind pre-downloaded Jetson reference docs (developer guide, design guide, pinmux, schematics) into the active profile documents block. Use after staging docs on disk; not for downloading.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-link-docs
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-llm-benchmark
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson llm benchmark
+  description: Benchmark Jetson LLM/VLM serving performance across vLLM, llama.cpp, and Ollama with structured JSON output.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-llm-benchmark
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-llm-serve
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson llm serve
+  description: Stand up vLLM or SGLang serving on Jetson, using upstream vLLM on Thor and Orin JetPack 7.2+, and NVIDIA-AI-IOT vLLM on older Orin.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-llm-serve
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-memory-audit
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson memory audit
+  description: Measure Jetson DRAM/NvMap usage and verify before/after memory reclamation with live audit data.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-memory-audit
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-optimize-memory
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson optimize memory
+  description: Reclaim DRAM by disabling unused subsystems across MB1 BCT, MB2 BCT, kernel reserved-memory, and SWIOTLB. Use for headless or no-camera Jetson deployments; not for CPU/GPU frequency tuning.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-optimize-memory
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-package
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson package
+  description: Pick Jetson-compatible containers, vLLM runtime images, and Jetson AI Lab PyPI indexes; maps Orin SM 8.7 vs Thor SM 11.0 and JetPack-specific package choices.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-package
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-print-bsp-info
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson print bsp info
+  description: Use when you need to print Jetson BSP info (L4T version, board configs, rootfs state) from a Linux_for_Tegra root on the host PC. This is an example skill.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-print-bsp-info
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-print-device-info
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson print device info
+  description: Use when you need to print Jetson device info (module model, L4T version, kernel, OS version, current power mode) from a running Jetson target. This is an example skill.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-print-device-info
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-promote-image
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson promote image
+  description: "Use to promote overlay files and built artifacts into the staged BSP image. Do NOT use to flash or build. Triggers: promote bsp image."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-promote-image
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-quick-start
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson quick start
+  description: Entry skill for Jetson / IGX BSP customization. Asks one core click-to-select setup questionnaire and passes prefilled answers to downstream setup skills.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-quick-start
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-set-target
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson set target
+  description: Switch the active Jetson target-platform pointer to an existing profile YAML. Use before customize/build/flash to change target; not for authoring profiles — use jetson-init-target instead.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-set-target
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-speculative-decoding
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson speculative decoding
+  description: Add EAGLE-3 or draft-model speculative decoding to a Jetson vLLM server when TPOT is the bottleneck.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-speculative-decoding
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-jetson-validate-image
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: jetson validate image
+  description: "Use after jetson-flash-image to run static BSP checks, on-target smoke/regression tests on a flashed DUT, or both. Not for build or flash steps. Triggers: validate bsp, on-target validation."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/jetson-validate-image
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-launch-nemo-rl
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: launch nemo rl
+  description: Playbook for launching, monitoring, stopping, and debugging NeMo-RL recipes on a Kubernetes cluster via the nrl-k8s CLI. Covers ephemeral vs long-lived RayCluster modes, iterating on runs, and debugging hung or failed training jobs.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/launch-nemo-rl
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-mcore-create-issue
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: mcore create issue
+  description: Investigate a failing GitHub Actions run or job and create a GitHub issue for the failure.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/mcore-create-issue
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-mcore-linting-and-formatting
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: mcore linting and formatting
+  description: Linting and formatting for Megatron-LM. Covers running autoformat.sh, tools (ruff, black, isort, pylint, mypy), and code style rules.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/mcore-linting-and-formatting
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-mcore-run-on-slurm
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: mcore run on slurm
+  description: How to launch distributed Megatron-LM training jobs on a SLURM cluster. Covers a minimal sbatch skeleton, environment-variable setup for torch.distributed.run, CUDA_DEVICE_MAX_CONNECTIONS rules across hardware and parallelism modes, container conventions, monitoring, and per-rank failure diagnosis.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/mcore-run-on-slurm
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-mcore-split-pr
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: mcore split pr
+  description: Split a PR into multiple PRs to reduce the number of required CODEOWNERS reviewer groups.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/mcore-split-pr
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-mcore-testing
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: mcore testing
+  description: Test system for Megatron-LM. Covers test layout, recipe YAML structure, adding and running unit and functional tests, golden values, marker filters, and CI parity.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/mcore-testing
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-automodel-distributed-training
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo automodel distributed training
+  description: Guide for selecting and configuring distributed training strategies in NeMo AutoModel, including FSDP2, Megatron FSDP, DDP, and parallelism settings.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-automodel-distributed-training
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-automodel-launcher-config
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo automodel launcher config
+  description: Configure NeMo AutoModel job launches for interactive runs, Slurm clusters, and SkyPilot cloud execution.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-automodel-launcher-config
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-automodel-model-onboarding
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo automodel model onboarding
+  description: Guide for onboarding new model architectures into NeMo AutoModel, including architecture discovery, implementation patterns, registration, and validation.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-automodel-model-onboarding
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-automodel-recipe-development
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo automodel recipe development
+  description: Create and modify NeMo AutoModel training and evaluation recipes, including YAML structure, builders, and execution flow.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-automodel-recipe-development
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-data-designer-plugin
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo data designer plugin
+  description: Use when the user wants to create a dataset, generate synthetic data, or build a data generation pipeline via the NeMo Data Designer plugin.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-data-designer-plugin

@@ -1,0 +1,931 @@
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: in-progress-wizard
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: in-progress
+spec:
+  title: wizard
+  description: Generate an interactive bash wizard that walks a human through a manual procedure — third-party setup, a one-off migration, an A→B state transition — opening URLs, capturing values, confirming each step, and writing .env files and GitHub Actions secrets.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/in-progress/wizard
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: index-bot
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: index bot
+  description: "This skill should be used when the user asks to \"create an index\", \"build a basket of top assets\", \"buy a weighted basket\", \"make a portfolio of assets\", \"equal-weight basket\", \"rebalance my portfolio\", \"track the top N tokens\", or wants an automated, weighted multi-asset basket that buys in one pass and rebalances on a cadence. Builds the basket spec, delegates each buy and rebalance swap to the swap-integration Trading API flow, and records target weights in state."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/index-bot
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: liquidity-planner
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: liquidity planner
+  description: "This skill should be used when the user asks to \"provide liquidity\", \"create LP position\", \"add liquidity to pool\", \"become a liquidity provider\", \"create v3 position\", \"create v4 position\", \"concentrated liquidity\", \"set price range\", or mentions providing liquidity, LP positions, or liquidity pools on Uniswap. Generates deep links to create positions in the Uniswap interface."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/liquidity-planner
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: lp-integration
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: lp integration
+  description: "Integrate Uniswap liquidity provisioning (LP) into applications via the LP REST API. Use when the user says \"LP API\", \"liquidity provisioning API\", \"provide liquidity programmatically\", \"create LP position via API\", \"add liquidity via API\", \"increase liquidity\", \"decrease liquidity\", \"remove liquidity\", \"claim LP fees\", \"collect LP fees\", \"manage LP positions in code\", or mentions building a backend, bot, or frontend that creates or manages Uniswap v2/v3/v4 liquidity positions through an API. Also use when debugging LP API calls (e.g. /lp/create, /lp/check_approval, /lp/increase, /lp/decrease, /lp/claim_fees), unexpected response fields, the approval or EIP-712 permit flow, or transaction-building errors for liquidity positions. For generating deep links to the Uniswap web app instead of calling the API, use the liquidity-planner skill; for using the Uniswap v4 SDK directly rather than the REST API, use the v4-sdk-integration skill."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/lp-integration
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: mcporter
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: mcporter
+  description: Use the mcporter CLI to list, configure, auth, and call MCP servers/tools directly (HTTP or stdio), including ad-hoc servers, config edits, and CLI/type generation.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/mcporter
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: misc-git-guardrails-claude-code
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: misc
+spec:
+  title: git guardrails claude code
+  description: Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, branch -D, etc.) before they execute. Use when user wants to prevent destructive git operations, add git safety hooks, or block git push/reset in Claude Code.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/misc/git-guardrails-claude-code
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: openclawd-clawd-code-skill-main
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: clawd-code-skill
+  description: "Control Clawd Code via MCP protocol. Trigger with \"plan\" to write a precise execution plan then feed it to Clawd Code. Also supports direct commands, persistent sessions, agent teams, and advanced tool control."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/openclawd-clawd-code-skill-main
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: openrouter-agent-migration
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: openrouter agent migration
+  description: "Migration guide from @openrouter/sdk to @openrouter/agent for callModel, tool(), stop conditions, and agent features. This skill should be used when code imports callModel, tool(), or stop conditions from @openrouter/sdk and needs to migrate to @openrouter/agent."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/openrouter-agent-migration
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: openrouter-typescript-sdk
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: openrouter typescript sdk
+  description: Complete reference for integrating with 300+ AI models through the OpenRouter TypeScript SDK and Agent packages using the callModel pattern
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/openrouter-typescript-sdk
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: ops-and-setup-cyber-audit
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: ops-and-setup
+spec:
+  title: cyber audit
+  description: "Read-only exposure audit of the user's Mac (and ~/Documents/code projects) for a CVE, breach, malicious package, or other security advisory, then write a structured report to ~/Documents/security-audits/. Use when the user shares a breach/CVE/malware/supply-chain advisory and asks if they're affected, says \"scan my system for X\", \"are we affected by Y\", \"check if I'm vulnerable to Z\", or requests any hack/breach/cyber/vulnerability audit on this Mac. Output matches the existing audit format in ~/Documents/security-audits/."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/ops-and-setup/cyber-audit
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: ops-and-setup-pi-custom-model
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: ops-and-setup
+spec:
+  title: pi custom model
+  description: "Register a custom or variant model (e.g. an OpenRouter \":nitro\" / \":floor\" / \":exacto\" slug) in the Pi Agent so it can be set as the global default. Use when Pi silently falls back to a different model (e.g. moonshotai/kimi-k2.6) after setting defaultModel, or when a model slug isn't in Pi's bundled list. Triggers on \"Pi reset my model\", \"Pi won't use this model\", \"add a model to Pi\", \"Pi default keeps reverting\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/ops-and-setup/pi-custom-model
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: oracle
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: oracle
+  description: Best practices for using the oracle CLI (prompt + file bundling, engines, sessions, and file attachment patterns).
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/oracle
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: productivity-handoff
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: productivity
+spec:
+  title: productivity-handoff
+  description: Compact the current conversation into a handoff document for another agent to pick up.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/productivity/handoff
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: productivity-writing-great-skills
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: productivity
+spec:
+  title: writing great skills
+  description: Reference for writing and editing skills well — the vocabulary and principles that make a skill predictable.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/productivity/writing-great-skills
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: research-and-web-deep-research
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: research-and-web
+spec:
+  title: deep research
+  description: "Run a deep, source-backed research query via DeepAPI (go to deepapi.co to get an API key) POST /v1/research/deep. Builds a rigorous one-paragraph research prompt (per research-prompt rules), fires it, and saves a cited markdown report. Use when the user asks for \"deep research\", \"deepapi research\", \"perplexity deep research\" (legacy trigger), or any deep source-backed research run. Differentiator vs the deepapi skill: this is the full research workflow (prompt + run + report file), not raw endpoint access."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/research-and-web/deep-research
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: research-and-web-pi-web-search
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: research-and-web
+spec:
+  title: pi web search
+  description: ONLY for Pi Agents — all other agents have their own web tools. How Pi accesses the web via the pi-web-access package — search, fetch URLs/PDFs/YouTube/GitHub. Use whenever a Pi task needs current info, docs, news, prices, or content from a specific URL.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/research-and-web/pi-web-search
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: review-animations
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: review animations
+  description: "Reviews animation and motion code against a high craft bar derived from Emil Kowalski's design engineering philosophy. Default to flagging; approval is earned."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/review-animations
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: sandbox-sdk
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: sandbox sdk
+  description: Build sandboxed applications for secure code execution. Load when building AI code execution, code interpreters, CI/CD systems, interactive dev environments, or executing untrusted code. Covers Sandbox SDK lifecycle, commands, files, code interpreter, and preview URLs. Biases towards retrieval from Cloudflare docs over pre-trained knowledge.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/sandbox-sdk
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: session-logs
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: session logs
+  description: Search and analyze your own session logs (older/parent conversations) using jq.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/session-logs
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: skill-authoring-distribute-skill-to-all-agents
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: skill-authoring
+spec:
+  title: distribute skill to all agents
+  description: "Distribute a skill across the 4 agent skill folders (Codex, Claude Code, Pi, Hermes) so all agents see it. Use when the user says \"distribute this skill\", \"sync skills across agents\", or after creating/updating a skill that should be global. Covers the symlink layout and the ~/.pi/agent/skills trap."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/skill-authoring/distribute-skill-to-all-agents
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: skill-authoring-effective-agent-skills
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: skill-authoring
+spec:
+  title: effective agent skills
+  description: "How to write effective agent skills — what to do, what not to do, anatomy, progressive disclosure, design patterns, anti-patterns, testing, security. Read this whenever a skill (Claude Skill, Agent Skill, SKILL.md) is being created, edited, reviewed, or debugged. Use when the user says \"create a skill\", \"new skill\", \"update this skill\", \"improve a skill\", \"why isn't my skill triggering\", or anything else involving authoring or editing SKILL.md files."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/skill-authoring/effective-agent-skills
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: skill-authoring-folder-specific-claude-and-agents-md
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: skill-authoring
+spec:
+  title: folder specific claude and agents md
+  description: Create a specialized CLAUDE.md (+ AGENTS.md symlink) inside a specific folder to give future agents folder-scoped context. Use when the user asks to create a CLAUDE.md for a folder, write folder instructions, or add agent context to a directory.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/skill-authoring/folder-specific-claude-and-agents-md
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: skill-authoring-push-skill-to-github
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: skill-authoring
+spec:
+  title: push skill to github
+  description: "Commit and push agent-skill changes to the user's private skills GitHub repo (rooted at ~/.agents). Use after creating or updating any skill, when the user says \"push the skill\", \"push skills to github\", \"save the skill to my repo\", or \"update the skills repo\". Handles staging, committing, pushing, and cleaning up the cmux pane used to do it."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/skill-authoring/push-skill-to-github
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: skill-creator
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: skill creator
+  description: Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/skill-creator
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: stripe
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: stripe
+  description: "Install and use the official Stripe Claude Code plugin (stripe@claude-plugins-official), connect Stripe MCP (mcp.stripe.com), and implement modern Stripe payments with Checkout Sessions, PaymentIntents, SetupIntents, and Billing — never legacy Charges. Use when building Stripe checkout, subscriptions, webhooks, Connect, restricted keys, test cards, or running /plugin install stripe@claude-plugins-official / /explain-error / /test-cards."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/stripe
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: thinking-and-docs-level-up
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: thinking-and-docs
+spec:
+  title: level up
+  description: "Gauge the user's technical + product knowledge through 7 adaptive questions, log verbatim answers with honest ratings, and grow a learning plan from the gaps found. Use when the user says \"level up\", \"level-up session\", \"quiz me\", \"gauge my knowledge\", or wants a new assessment round. Differentiator: this finds and maps gaps; the `teach` skill delivers lessons on them."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/thinking-and-docs/level-up
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: thinking-and-docs-prompt-me
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: thinking-and-docs
+spec:
+  title: prompt me
+  description: "Prompt the user with pointed questions to extract what is in his head about a project — remaining work, what is being avoided, what really matters, what does not. Use when the user says \"prompt me\", \"ask me questions\", or wants the agent to figure out priorities by questioning him."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/thinking-and-docs/prompt-me
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: thinking-and-docs-short
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+    namespace: thinking-and-docs
+spec:
+  title: short
+  description: "Manually-invoked skill that forces the agent to compress its current answer — strip filler, simplify wording, and cut length while keeping the substance. Use when the user says \"short\", \"shorter\", \"simpler\", \"too long\", \"tl;dr\", or wants a more concise version of the previous response."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/thinking-and-docs/short
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: tmux
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: tmux
+  description: Remote-control tmux sessions for interactive CLIs by sending keystrokes and scraping pane output.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/tmux
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: v4-hook-generator
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: v4 hook generator
+  description: Generate Uniswap v4 hook contracts via OpenZeppelin MCP. Use when building custom swap logic, async swaps, hook-owned liquidity, custom curves, dynamic fees, MEV protection, limit orders, or oracle hooks.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/v4-hook-generator
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: web-perf
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: web perf
+  description: Analyzes web performance using Chrome DevTools MCP. Measures Core Web Vitals (LCP, INP, CLS) and supplementary metrics (FCP, TBT, Speed Index), identifies render-blocking resources, network dependency chains, layout shifts, caching issues, and accessibility gaps. Use when asked to audit, profile, debug, or optimize page load performance, Lighthouse scores, or site speed. Biases towards retrieval from current documentation over pre-trained knowledge.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/web-perf
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: workers-best-practices
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: workers best practices
+  description: Reviews and authors Cloudflare Workers code against production best practices. Load when writing new Workers, reviewing Worker code, configuring wrangler.jsonc, or checking for common Workers anti-patterns (streaming, floating promises, global state, secrets, bindings, observability). Biases towards retrieval from Cloudflare docs over pre-trained knowledge.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/workers-best-practices
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: wrangler
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: dev-tools-agents
+    kind: skill
+spec:
+  title: wrangler
+  description: Cloudflare Workers CLI for deploying, developing, and managing Workers, KV, R2, D1, Vectorize, Hyperdrive, Workers AI, Containers, Queues, Workflows, Pipelines, and Secrets Store. Load before running wrangler commands to ensure correct syntax and best practices. Biases towards retrieval from Cloudflare docs over pre-trained knowledge.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/wrangler
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: google-ads-data-manager-api-data-manager-api-audience-ingestion
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: google-ads
+    kind: skill
+    namespace: google
+spec:
+  title: data manager api audience ingestion
+  description: "Guides developers through uploading audience members to Google products using the Data Manager API /v1/audienceMembers/ingest endpoint and its associated client libraries. Use this skill when the user wants to upload audience members for Customer Match, mobile device ID audiences, or any other audience use case supported by the Data Manager API. Don't use for uploading events or conversions (use the data-manager-api-event-ingestion skill)."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/google/ads/data-manager-api/data-manager-api-audience-ingestion
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: google-ads-data-manager-api-data-manager-api-event-ingestion
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: google-ads
+    kind: skill
+    namespace: google
+spec:
+  title: data manager api event ingestion
+  description: "Guides developers through implementing event and conversion ingestion to Google products using the Data Manager API /v1/events/ingest endpoint and its associated client libraries. Use this skill when the user wants to upload offline conversions, enhanced conversions for leads, click conversions, Google Analytics web or app events, or any other event ingestion use case supported by the Data Manager API. Don't use for uploading audience members (use the data-manager-api-audience-ingestion skill)."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/google/ads/data-manager-api/data-manager-api-event-ingestion
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: google-ads-data-manager-api-data-manager-api-setup
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: google-ads
+    kind: skill
+    namespace: google
+spec:
+  title: data manager api setup
+  description: "Guides developers through client library installation and authentication setup steps for the Data Manager API. Use this skill when a user is getting started with the Data Manager API and needs to setup their local environment, install the client library, or setup access to the API. Don't use for implementing audience or event ingestion logic (use the data-manager-api-audience-ingestion or data-manager-api-event-ingestion skills instead)."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/google/ads/data-manager-api/data-manager-api-setup
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: google-ads-google-ads-api-google-ads-api-mcp-setup
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: google-ads
+    kind: skill
+    namespace: google
+spec:
+  title: google ads api mcp setup
+  description: Guides developers through downloading, configuring, and installing the official open-source Google Ads MCP Server. Use this skill when a user wants to connect their AI assistant (such as Gemini, Claude Code, or Cursor) to their Google Ads account to query campaigns or retrieve reporting metrics using natural language.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/google/ads/google-ads-api/google-ads-api-mcp-setup
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: google-ads-google-ads-api-google-ads-api-quickstart
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: google-ads
+    kind: skill
+    namespace: google
+spec:
+  title: google ads api quickstart
+  description: "Guides developers through Google Ads API quickstart: credential setup, choosing from 6 client libraries/REST, configuring environments, and running a \"retrieve campaigns\" script. Troubleshoots common setup errors: USER_PERMISSION_DENIED, login_customer_id issues, and DEVELOPER_TOKEN_NOT_APPROVED."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/google/ads/google-ads-api/google-ads-api-quickstart
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: google-ads-google-mobile-ads-google-mobile-ads-android-migrate
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: google-ads
+    kind: skill
+    namespace: google
+spec:
+  title: google mobile ads android migrate to next gen
+  description: "Migrates Android applications from the old, legacy Google Mobile Ads (GMA) SDK (com.google.android.gms:play-services-ads) to the new GMA Next-Gen SDK (com.google.android.libraries.ads.mobile.sdk:ads-mobile-sdk). Provides comprehensive mapping tables for imports, classes, and method signatures to help determine migration steps. Use when migrating an existing Android codebase from the old, legacy GMA SDK to GMA Next-Gen SDK."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/google/ads/google-mobile-ads/google-mobile-ads-android-migrate-to-next-gen
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: google-ads-google-mobile-ads-google-mobile-ads-banner
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: google-ads
+    kind: skill
+    namespace: google
+spec:
+  title: google mobile ads banner
+  description: Provides instructions to implement, integrate, or configure Google Mobile Ads (GMA) banner ads in Android and iOS mobile applications. Use when the task involves setting up banner ads in a mobile application.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/google/ads/google-mobile-ads/google-mobile-ads-banner
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: google-ads-google-mobile-ads-google-mobile-ads-get-started
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: google-ads
+    kind: skill
+    namespace: google
+spec:
+  title: google mobile ads get started
+  description: Provides instructions for integrating the Google Mobile Ads (GMA) SDK. Use this skill when the user wants to get started with, install, integrate, set up, or configure the SDK for AdMob or Ad Manager, GMA Next-Gen SDK or mobile ads framework in an Android, iOS, or Unity application.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/google/ads/google-mobile-ads/google-mobile-ads-get-started
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: google-ads-google-mobile-ads-google-mobile-ads-interstitial
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: google-ads
+    kind: skill
+    namespace: google
+spec:
+  title: google mobile ads interstitial
+  description: "Provides instructions for implementing, integrating, or configuring Google Mobile Ads (GMA) SDK interstitial ads in Android and iOS mobile applications. Use this skill when the task involves setting up interstitial ads. Don't use for \"rewarded interstitial\" ads."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/google/ads/google-mobile-ads/google-mobile-ads-interstitial
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: google-ads-google-mobile-ads-google-mobile-ads-rewarded
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: google-ads
+    kind: skill
+    namespace: google
+spec:
+  title: google mobile ads rewarded
+  description: "Provides instructions for implementing, integrating, or configuring Google Mobile Ads (GMA) SDK rewarded ads in Android or iOS mobile applications. Use this skill when the task involves setting up rewarded ads. Don't use for \"rewarded interstitial\" ads."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/google/ads/google-mobile-ads/google-mobile-ads-rewarded
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: google-ads-interactive-media-ads-ima-sdk-basics
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: google-ads
+    kind: skill
+    namespace: google
+spec:
+  title: ima sdk basics
+  description: "Use this skill for Interactive Media Ads (IMA) SDK client-side ad insertion when you are requesting video ads client-side into websites, apps, TVs or other platforms with VAST or VMAP. Do not use for Dynamic Ad Insertion (DAI), SSAI, or SGAI (use the `ima-sdk-dai-basics` skill instead)."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/google/ads/interactive-media-ads/ima-sdk-basics
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: google-analytics-google-analytics-admin-api-basics
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: google-analytics
+    kind: skill
+    namespace: google
+spec:
+  title: google analytics admin api basics
+  description: Manages Google Analytics account and property settings, enables the Analytics Admin API via the Cloud CLI, lists accounts and properties, and manages data streams, custom dimensions, conversion events, and integrations. Use when you need to programmatically configure Google Analytics accounts, provision properties, manage data retention, configure Measurement Protocol secrets, or manage Firebase and Google Ads links.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/google/analytics/google-analytics-admin-api-basics
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: google-analytics-google-analytics-data-api-basics
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: google-analytics
+    kind: skill
+    namespace: google
+spec:
+  title: google analytics data api basics
+  description: Manages Google Analytics reporting data, enables the Analytics Data API via the Cloud CLI, and creates reports using the Google Analytics Data API (v1beta). Use when you need to interact with Google Analytics properties, run customized analytics reports, query metrics (like activeUsers, screenPageViews) and dimensions (like city, date), check metrics and dimensions compatibility, or verify API enablement.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/google/analytics/google-analytics-data-api-basics
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: google-cloud-agent-platform-alert-configuration
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: google-cloud
+    kind: skill
+    namespace: google
+spec:
+  title: agent platform alert configuration
+  description: "Configures best-practice alerting policies for Google Cloud Vertex AI / Agent Platform agents on Agent Runtime. Use when analyzing, writing, or deploying alerting policies to monitor agent latency, error rates, and quality metrics (response quality, tool use, hallucination). Also use when provisioning online monitors for quality evaluation, or analyzing live metrics traffic footprints. NOTE: This skill currently only works for the Agent Runtime. Don't use for configuring general GCP alert policies or non-agent GCP alerting policies."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/google/cloud/agent-platform-alert-configuration
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: google-cloud-agent-platform-deploy
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: google-cloud
+    kind: skill
+    namespace: google
+spec:
+  title: agent platform deploy
+  description: "Deploy open models or custom weights from Model Garden to Agent Platform endpoints, check deployment status, verify serving endpoints, or clean up resources by undeploying models and deleting endpoints. Use when asked to deploy models on Agent Platform, list available Model Garden models, check if a model is deployable, query deployment cost, troubleshoot deployment errors (like quota limits), or undeploy/clean up endpoints. Also use when copying and deploying a 1P Tuned Model. Don't use for public Vertex AI deployments (use the `vertex-deploy` skill) or for running model evaluations (use the `agent-platform-eval` skill)."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/google/cloud/agent-platform-deploy
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: google-cloud-agent-platform-endpoint-management
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: google-cloud
+    kind: skill
+    namespace: google
+spec:
+  title: agent platform endpoint management
+  description: "Manages Agent Platform serving endpoints. Use when you need to create, list, describe, update, or delete serving endpoints for model deployment on Agent Platform. Also use when troubleshooting endpoint permission, quota, or resource busy errors. Don't use for deploying models to endpoints or for running model evaluations."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/google/cloud/agent-platform-endpoint-management
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: google-cloud-agent-platform-eval-flywheel
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: google-cloud
+    kind: skill
+    namespace: google
+spec:
+  title: agent platform eval flywheel
+  description: Measures and improves the quality of AI models and agents on Google Cloud using the Eval Quality Flywheel methodology. Use when evaluating an agent or model, building an eval dataset, picking or writing evaluation metrics, analyzing failures, comparing results before and after a fix, or when guidance is needed on Agent Platform eval methodology — including dataset schema, LLM-as-judge scoring, and common failure causes. For fine-tuning, use agent-platform-tuning. For general production deployment, use agent-platform-deploy.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/google/cloud/agent-platform-eval-flywheel

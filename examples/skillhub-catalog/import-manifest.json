@@ -1,0 +1,32 @@
+{
+  "total": 584,
+  "tag": "skillhub",
+  "repo": "https://github.com/Solizardking/skillhub-main",
+  "batches": [
+    "skills-batch-01.yaml",
+    "skills-batch-02.yaml",
+    "skills-batch-03.yaml",
+    "skills-batch-04.yaml",
+    "skills-batch-05.yaml",
+    "skills-batch-06.yaml",
+    "skills-batch-07.yaml",
+    "skills-batch-08.yaml",
+    "skills-batch-09.yaml",
+    "skills-batch-10.yaml",
+    "skills-batch-11.yaml",
+    "skills-batch-12.yaml"
+  ],
+  "byCategory": {
+    "Solana / Blockchain": 116,
+    "Dev Tools / Agents": 67,
+    "Google / Ads": 11,
+    "Google / Analytics": 2,
+    "Google / Cloud": 56,
+    "NVIDIA / Accelerated Computing": 229,
+    "Local / Web Services": 9,
+    "Media / Devices": 24,
+    "Productivity / Messaging": 23,
+    "Utilities": 47
+  },
+  "source": "catalog.json"
+}

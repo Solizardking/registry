@@ -1,0 +1,949 @@
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-evaluator-plugin
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo evaluator plugin
+  description: Use when working on the Evaluator plugin CLI, jobs, SDK-backed specs, metric types, or plugin-owned Evaluator skills.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-evaluator-plugin
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-mbridge-mlm-bridge-training
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo mbridge mlm bridge training
+  description: Run Megatron-LM (MLM) and Megatron Bridge training with mock or real data. Covers correlation testing, available recipes, and multi-GPU examples.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-mbridge-mlm-bridge-training
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-mbridge-multi-node-slurm
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo mbridge multi node slurm
+  description: Convert single-node scripts to multi-node Slurm sbatch jobs and debug common multi-node failures. Covers srun-native vs uv run torch.distributed approaches, container setup, NCCL timeouts, OOM sizing for MoE models, and interactive allocation.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-mbridge-multi-node-slurm
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-mbridge-perf-activation-recompute
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo mbridge perf activation recompute
+  description: Validate and use selective and full activation recompute in Megatron Bridge to reduce GPU memory usage at the cost of extra compute.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-mbridge-perf-activation-recompute
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-mbridge-perf-cpu-offloading
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo mbridge perf cpu offloading
+  description: Validate and use CPU offloading in Megatron Bridge, including layer-level activation offloading and fractional optimizer state offloading with HybridDeviceOptimizer.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-mbridge-perf-cpu-offloading
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-mbridge-perf-cuda-graphs
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo mbridge perf cuda graphs
+  description: Validate and use CUDA graph capture in Megatron Bridge, including local full-iteration graphs and Transformer Engine scoped graphs for attention, MLP, and MoE modules.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-mbridge-perf-cuda-graphs
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-mbridge-perf-expert-parallel-overlap
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo mbridge perf expert parallel overlap
+  description: Validate and use MoE expert-parallel communication overlap in Megatron-Bridge, including overlap_moe_expert_parallel_comm, delay_wgrad_compute, and flex dispatcher backends such as DeepEP and HybridEP.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-mbridge-perf-expert-parallel-overlap
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-mbridge-perf-hierarchical-context-parallel
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo mbridge perf hierarchical context parallel
+  description: Operational guide for enabling hierarchical context parallelism in Megatron-Bridge, including config knobs, code anchors, pitfalls, and verification.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-mbridge-perf-hierarchical-context-parallel
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-mbridge-perf-megatron-fsdp
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo mbridge perf megatron fsdp
+  description: Operational guide for enabling Megatron FSDP in Megatron-Bridge, including config knobs, code anchors, pitfalls, and verification.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-mbridge-perf-megatron-fsdp
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-mbridge-perf-memory-tuning
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo mbridge perf memory tuning
+  description: Techniques for reducing peak GPU memory in Megatron Bridge — expandable segments, PEFT + SP input re-gather, parallelism resizing, activation recompute, CPU offloading constraints, and common OOM fixes.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-mbridge-perf-memory-tuning
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-mbridge-perf-moe-comm-overlap
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo mbridge perf moe comm overlap
+  description: MoE expert-parallel communication overlap in Megatron Bridge. Covers dispatch/combine overlap, flex dispatcher backends, and expert wgrad scheduling.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-mbridge-perf-moe-comm-overlap
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-mbridge-perf-moe-dispatcher-selection
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo mbridge perf moe dispatcher selection
+  description: "Choose the right MoE token dispatcher (`alltoall`, DeepEP, or HybridEP) for the hardware, EP degree, and optimization stage. Summarizes patterns from DSV3, Qwen3, Qwen3-Next, and VLM bring-up work."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-mbridge-perf-moe-dispatcher-selection
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-mbridge-perf-moe-hardware-configs
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo mbridge perf moe hardware configs
+  description: Representative MoE training playbooks by hardware platform and model family. Summarizes rounded throughput bands, parallelism patterns, and common tuning stacks.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-mbridge-perf-moe-hardware-configs
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-mbridge-perf-moe-long-context
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo mbridge perf moe long context
+  description: Long-context MoE training guidance for Megatron Bridge. Covers CP sizing, selective recompute, dispatcher choices, and practical patterns from DSV3, Qwen3, and Qwen3-Next long-context experiments.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-mbridge-perf-moe-long-context
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-mbridge-perf-moe-optimization-workflow
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo mbridge perf moe optimization workflow
+  description: Systematic workflow for MoE training optimization in Megatron Bridge, based on the Megatron-Core MoE paper. Covers the Three Walls framework, parallel folding, recompute strategy, dispatcher choice, and CUDA-graph bring-up.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-mbridge-perf-moe-optimization-workflow
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-mbridge-perf-moe-vlm-training
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo mbridge perf moe vlm training
+  description: Practical guidance for training MoE VLMs in Megatron Bridge. Compares FSDP and 3D-parallel approaches, using rounded lessons from Qwen3-VL, Qwen3-Next, and other multimodal experiments.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-mbridge-perf-moe-vlm-training
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-mbridge-perf-parallelism-strategies
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo mbridge perf parallelism strategies
+  description: Operational guide for choosing and combining parallelism strategies in Megatron Bridge, including sizing rules, hardware topology mapping, and combined parallelism configuration.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-mbridge-perf-parallelism-strategies
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-mbridge-perf-sequence-packing
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo mbridge perf sequence packing
+  description: Validate and use packed sequences and long-context training in Megatron-Bridge, distinguishing offline packed SFT for LLMs from in-batch packing for VLMs, and applying the right CP constraints.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-mbridge-perf-sequence-packing
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-mbridge-perf-tp-dp-comm-overlap
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo mbridge perf tp dp comm overlap
+  description: Operational guide for enabling TP, DP, and PP communication overlap in Megatron-Bridge, including config knobs, code anchors, pitfalls, and verification.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-mbridge-perf-tp-dp-comm-overlap
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-mbridge-recipe-recommender
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo mbridge recipe recommender
+  description: "Recommend and customize Megatron Bridge recipes for a user's model, GPU count, and training goal. Indexes library recipes (pretrain/SFT/PEFT) and performance recipes."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-mbridge-recipe-recommender
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-mbridge-resiliency
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo mbridge resiliency
+  description: Resiliency features in Megatron Bridge including fault tolerance, straggler detection, in-process restart, preemption, and re-run state machine.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-mbridge-resiliency
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-retriever
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo retriever
+  description: "Use when the user wants to search, query, extract, transcribe, describe, quote, filter, or aggregate across documents — PDFs, scanned forms / images (`.jpg` `.png` `.tiff`), Office (`.docx` `.pptx`), text (`.html` `.txt`), audio (`.mp3` `.wav` `.m4a`), or video (`.mp4` `.mov`). Prefer this over native Read / Grep for multi-file or non-PDF corpora. Not for: editing files, web browsing, single-file plain-text lookups, fine-tuning."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-retriever
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-rl-auto-research
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo rl auto research
+  description: "Autonomous NeMo-RL research agent workflow for directed hypothesis testing and open-ended discovery. Guides agents through the full experiment lifecycle: understanding recipes and environments, wiring RL or NeMo-gym runs, launching reproducible baselines and iterations, analyzing results, preserving human oversight, and using git plus TSV logs as the research ledger. Do NOT use for: bug fixes, code review, documentation, refactoring, dependency updates, or single-file changes."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-rl-auto-research
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-rl-brev-etiquette
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo rl brev etiquette
+  description: "Brev instance operating guidance for NeMo-RL agents working in /home/ubuntu/RL with limited workspace disk, a larger /ephemeral volume, and optional /home/ubuntu/RL/.env secrets. Use when running nemo-rl-auto-research campaigns, experiments, training jobs, model or dataset downloads, shared cache-heavy commands, log-producing runs, checkpoint generation, W&B or Hugging Face authenticated workflows, or any workflow that may create large files on Brev."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-rl-brev-etiquette
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-rl-docs
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo rl docs
+  description: "Documentation conventions for NeMo-RL. Covers docs/index.md updates and docstring format. Do NOT use for: bug fixes, test fixes, dependency bumps, refactoring, CI/CD changes, performance tuning, or any task that does not involve writing or updating documentation."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-rl-docs
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemo-rl-session-memory
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemo rl session memory
+  description: "Manage durable working-session memory for coding agents. Use when a user asks to preserve or recover agent context across disconnects, VS Code restarts, long-running work, handoffs, or any session where important state should be written periodically under the repo's session directory. Do NOT use for: simple questions, short tasks, one-off commands, linting, or code review."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemo-rl-session-memory
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemoclaw-user-guide
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemoclaw user guide
+  description: "Guides human users' AI agents to the NemoClaw docs MCP server and canonical Fern documentation in Markdown form. Use when users ask how to install, configure, operate, troubleshoot, secure, or learn NemoClaw with an AI coding assistant. Trigger keywords - nemoclaw docs, use nemoclaw with ai agent, nemoclaw mcp docs, nemoclaw install help, nemoclaw quickstart, nemoclaw markdown docs, llms.txt, agent skills."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemoclaw-user-guide
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemotron-customize
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemotron customize
+  description: "Plan, configure, and chain repo-native Nemotron customization steps into single-step or multi-step pipelines: curation, translation, SFT/PEFT (AutoModel or Megatron-Bridge), pretraining/CPT, RL alignment (DPO/RLVR/GRPO/RLHF), BYOB/MCQ benchmarks, checkpoint conversion, ModelOpt optimization, env profiles, and evaluation of trained checkpoints or existing/hosted endpoints. Use when a request names a Nemotron step or workflow, or asks to clean, translate, train, fine-tune, align, convert, optimize, evaluate, or compose these into a pipeline. Do NOT use for frontend/dashboard/visualization work, generic ML advice, billing/access, or non-Nemotron coding tasks."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemotron-customize
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemotron-policy-generator
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemotron policy generator
+  description: Generates BYO custom safety policies for NVIDIA Nemotron content-safety guardrails — Nemotron-Content-Safety-Reasoning-4B (text) and multimodal Nemotron-3-Content-Safety. Produces a Markdown policy, JSON taxonomy, and drop-in inference prompts. Maps rough words or an existing policy to V2 categories, adding custom categories or topic-following rules.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemotron-policy-generator
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemotron-retrieval-recipes
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemotron retrieval recipes
+  description: "Use when planning, debugging, tuning, evaluating, exporting, or deploying public Nemotron `embed`/`rerank` retrieval recipes."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemotron-retrieval-recipes
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nemotron-speech
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nemotron speech
+  description: Routes NVIDIA Nemotron Speech (Riva) NIM tasks — deploys, runs, and tests ASR, TTS, and NMT NIMs on build.nvidia.com or self-hosted.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nemotron-speech
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nv-generate-ct-rflow
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nv generate ct rflow
+  description: Used for generating synthetic CT volumes and masks with NV-Generate-CTMR rflow-ct. Not for production training data without review.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nv-generate-ct-rflow
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nv-generate-mr
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nv generate mr
+  description: Used for generating synthetic body MRI volumes with NV-Generate-CTMR rflow-mr. Not for paired masks or production training data.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nv-generate-mr
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nv-generate-mr-brain
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nv generate mr brain
+  description: Used for generating synthetic brain MRI volumes with NV-Generate-CTMR rflow-mr-brain. Not for production training data.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nv-generate-mr-brain
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nv-generate-mr-brain-finetune
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nv generate mr brain finetune
+  description: Used for finetuning NV-Generate-CTMR MR-brain diffusion UNet from a NIfTI datalist. Not for clinical or production data approval.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nv-generate-mr-brain-finetune
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nv-generate-vae-finetune
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nv generate vae finetune
+  description: Used for finetuning the NV-Generate-CTMR MAISI VAE from CT/MRI NIfTI datalists. Not for clinical or production data approval.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nv-generate-vae-finetune
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nv-reason-cxr
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nv reason cxr
+  description: Used for command-shape or live NV-Reason-CXR chest X-ray reasoning smoke tests. Not for diagnosis or clinical reporting.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nv-reason-cxr
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nv-segment-ct
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nv segment ct
+  description: Used for running NV-Segment-CT VISTA3D on CT NIfTI volumes and recording label-map evidence.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nv-segment-ct
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nv-segment-ct-finetune
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nv segment ct finetune
+  description: Used for smoke or dataset finetuning of NV-Segment-CT VISTA3D on CT NIfTI labels. Not for clinical validation.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nv-segment-ct-finetune
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-nv-segment-ctmr
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: nv segment ctmr
+  description: Used for running NV-Segment-CTMR on CT or MRI NIfTI volumes and recording label-map evidence. Not for clinical interpretation.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/nv-segment-ctmr
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-omniverse-cad-to-simready
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: omniverse cad to simready
+  description: Coordinate the end-to-end CAD/source-asset to SimReady workflow. Use for broad requests such as CAD to SimReady, source asset to simulation-ready USD, or prop packaging that require conversion, material/physics assignment, SimReady conformance, validation, and optional package creation; deploy or verify Content Agents services first when property assignment is enabled; route single-stage work through nested references.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/omniverse-cad-to-simready
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-omniverse-realtime-viewer
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: omniverse realtime viewer
+  description: Use as the top-level router for Omniverse Realtime Viewer USD app requests and focused viewer reference documents.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/omniverse-realtime-viewer
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-omniverse-usd-performance-tuning
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: omniverse usd performance tuning
+  description: "Top-level workflow skill for USD performance diagnosis and optimization. Use for slow loading, high memory, low FPS, or 'optimize my scene' requests; delegates auth/runtime setup to Phase 0 owners."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/omniverse-usd-performance-tuning
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-physical-ai-defect-image-generation
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: physical ai defect image generation
+  description: Use when the user wants to orchestrate defect image generation with NVIDIA Cosmos AnomalyGen (Cosmos-Predict2-derived) on OSMO for PCBA, metal surface, and glass inspection. The Day 0 path handles cold-start with USD-to-ROI, image-edit augmentation, and AnomalyGen to create initial PCBA datasets. The Day 1 path performs inference and labeling on real images. This skill helps with first-time asset setup, creation of finetuning checkpoints, and configuring deployment.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/physical-ai-defect-image-generation
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-physical-ai-infrastructure-setup-and-resilient-scaling
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: physical ai infrastructure setup and resilient scaling
+  description: "Use when the user wants to set up, scale, validate, or harden NVIDIA physical AI infrastructure for synthetic data generation workflows across local MicroK8s or Azure AKS, including Kubernetes clusters, inference endpoint deployment, OSMO deployment, workload submission readiness, and infrastructure failure recovery. Trigger keywords: physical ai infrastructure, resilient scaling, SDG infrastructure, microk8s, azure aks, NVCF deployment, NIM Operator, OSMO deploy, workflow scaling. Don't trigger for: OSMO log summarization or workload-only operations unless infrastructure setup, scaling, validation, or recovery is requested."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/physical-ai-infrastructure-setup-and-resilient-scaling
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-physical-ai-neural-reconstruction
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: physical ai neural reconstruction
+  description: "Router for NVIDIA NuRec/NRE: USDZ rendering, NCore conversion, 3DGS, gRPC sensor sim, PhysicalAI HF datasets. Do NOT use for SimReady or infra setup."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/physical-ai-neural-reconstruction
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-physical-ai-people-attribute-search
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: physical ai people attribute search
+  description: "Use when running people attribute search (PAS) image augmentation and auto-labeling workflows on OSMO: flow selection, preflight, submit-time interpolation, monitoring, and output retrieval. Trigger keywords: people attribute search, PAS, person augmentation, attribute search, person re-identification, clothing augmentation, person crop augmentation."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/physical-ai-people-attribute-search
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-physical-ai-video-data-augmentation
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: physical ai video data augmentation
+  description: "Use when running video data augmentation and auto-labeling workflows on OSMO: flow selection, preflight, submit-time interpolation, monitoring, and output retrieval. Trigger keywords: video data augmentation, data enrichment, auto labeling, VDA demo, OSMO workflow, pseudo labeling."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/physical-ai-video-data-augmentation
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-physicsnemo-discover
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: physicsnemo discover
+  description: Official NVIDIA-authored guidance for navigating PhysicsNeMo — pick the model, datapipe, or example for a SciML/AI4Science task (surrogates, forecasting, downscaling, physics-informed, inverse, generative). Points at existing files via live repo search; never writes code. Do NOT use for installation or environment setup, training-loop or other code authoring/scaffolding, contributor/CI/packaging questions, repo-specific questions in physicsnemo-sym/-cfd/-curator, or general (non-physics) ML/PyTorch.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/physicsnemo-discover
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-rag-blueprint
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: rag blueprint
+  description: "NVIDIA RAG Blueprint — deploy, configure, troubleshoot, and manage. Handles any RAG action: deploy, install, start, enable, disable, toggle, change, configure, troubleshoot, debug, fix, shutdown, stop, or tear down any RAG feature or service (Agentic RAG, VLM, guardrails, query rewriting, models, search, ingestion, observability, summarization, reasoning, and more)."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/rag-blueprint

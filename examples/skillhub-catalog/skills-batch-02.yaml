@@ -1,0 +1,900 @@
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pay-with-any-token
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: pay with any token
+  description: "Pay HTTP 402 payment challenges using tokens via the Tempo CLI and Uniswap Trading API. Use when the user encounters a 402 Payment Required response, needs to fulfill a machine payment, mentions \"MPP\", \"Tempo payment\", \"pay for API access\", \"HTTP 402\", \"x402\", \"machine payment protocol\", \"pay-with-any-token\", \"use tempo\", \"tempo request\", or \"tempo wallet\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/pay-with-any-token
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pay-with-app
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: pay with app
+  description: "Pay HTTP 402 payment challenges issued by OKX's Agent Payments Protocol (APP) on X Layer using tokens from any chain via the Uniswap Trading API. Use this skill whenever the user encounters a 402 challenge whose network resolves to X Layer (chain 196), mentions \"APP\", \"Agent Payments Protocol\", \"OKX agent payment\", \"OKX Onchain OS\", \"OKX agentic wallet\", \"x402 on X Layer\", \"USDT0\", \"x42\", \"Instant Payment\", \"Batch Payment\", \"pay for X Layer API\", or wants to pay an OKX-backed merchant. Even when the user does not explicitly say APP, prefer this skill for any 402 challenge whose network resolves to X Layer (chain 196). For 402 challenges on other chains (Ethereum, Base, Arbitrum, Tempo) use pay-with-any-token instead."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/pay-with-app
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: phantom-wallet-mcp
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: phantom wallet mcp
+  description: "Execute wallet operations through the Phantom MCP server. Use when the user wants to interact with their Phantom wallet directly — get addresses, transfer SOL or SPL tokens, buy/swap tokens, sign transactions, and sign messages across Solana, Ethereum, Bitcoin, and Sui. Requires the @phantom/mcp-server to be configured as an MCP server."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/phantom-wallet-mcp
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: posthog-cheshire
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: posthog cheshire
+  description: Instrument and operate PostHog analytics for Cheshire Terminal (US cloud project 473072). Use when wiring posthog-js / posthog-node, cookieless privacy opt-in, wallet identify on SIWS, session replay, product events (wallet_connected, pump/dbc launches, agents, staking), or verifying capture to us.i.posthog.com.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/posthog-cheshire
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-admin-ops
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: pump admin ops
+  description: Build and execute Pump.fun admin workflows for authority management, creator reassignment, IDL authority changes, cashback claims, Mayhem mode, and cross-program Pump/PumpAMM admin instructions. Use when operating Pump protocol authority or administrative tasks.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/pump-admin-ops
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-ai-agents
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: pump ai agents
+  description: Create and maintain AI-agent integration files for Pump.fun SDK work, including AGENTS/CLAUDE/COPILOT/GEMINI instructions, .well-known discovery, LLM context docs, skills registries, MCP prompts, and terminal rules. Use when wiring agents to Pump.fun development workflows.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/pump-ai-agents
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-bonding-curve
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: pump bonding curve
+  description: Implement Pump.fun bonding-curve math for token pricing, buy/sell quotes, fee-aware calculations, market cap, tiered fees, ceiling division, virtual versus real reserves, and migration edge cases. Use when reviewing or coding Pump.fun pricing logic.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/pump-bonding-curve
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-build-release
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: pump build release
+  description: Run and maintain Pump.fun SDK build, release, and publishing workflows across TypeScript, Rust, npm, Vercel, Makefile targets, linting, semantic release, and MCP server distribution. Use when preparing or debugging Pump.fun package releases.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/pump-build-release
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-claims-readonly
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: pump claims readonly
+  description: "Query Pump.fun claim state without sending transactions: unclaimed token incentives, creator vault balances, volume accumulators, distributable fees, current-day token previews, and Pump/PumpAMM aggregate views. Use for read-only claim and fee diagnostics."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/pump-claims-readonly
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-fee-sharing
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: pump fee sharing
+  description: Configure and distribute Pump.fun creator fees through the PumpFees program with BPS shareholder splits, admin management, validation, and Pump/PumpAMM fee consolidation for graduated tokens. Use when setting up or paying creator fee shares.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/pump-fee-sharing
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-fee-system
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: pump fee system
+  description: Implement and audit the Pump.fun fee system, including market-cap fee tiers, creator fee vaults across Pump and PumpAMM, basis-point arithmetic, ceiling division, fee simulation, and dust-safe calculations. Use for protocol fee logic and creator-fee accounting.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/pump-fee-system
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-mcp-server
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: pump mcp server
+  description: Build and operate a Pump.fun Model Context Protocol server for AI agents, covering stdio transport, wallet/session safety, quoting, transaction builders, fee management, analytics, AMM operations, and prompt/resource design. Use when exposing Pump.fun operations through MCP.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/pump-mcp-server
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-rust-vanity
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: pump rust vanity
+  description: Build production Rust vanity-address tooling for Pump.fun/Solana wallets with Rayon parallelism, solana-sdk key generation, Base58 prefix/suffix matching, secure file output, zeroization, and Criterion benchmarks. Use for high-throughput vanity generation.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/pump-rust-vanity
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-sdk-core
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: pump sdk core
+  description: "Build and extend the Pump.fun SDK core: offline TypeScript instruction builders, online RPC helpers, account decoders, PDAs, token creation, buy/sell, migration, fee collection, PumpAMM, PumpFees, and Mayhem support. Use for SDK API and implementation work."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/pump-sdk-core
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-security
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: pump security
+  description: "Apply Pump.fun SDK security practices across Rust, TypeScript, and Bash: key handling, memory zeroization, secure file I/O, input validation, privilege boundaries, dependency auditing, and wallet/tool hardening. Use for Pump.fun security reviews and fixes."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/pump-security
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-shell-scripts
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: pump shell scripts
+  description: Write and maintain secure Bash tooling for Pump.fun/Solana workflows, including vanity generation wrappers, keypair verification, batch jobs, dependency audits, test orchestration, file permissions, input validation, and cleanup traps.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/pump-shell-scripts
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-solana-architecture
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: pump solana architecture
+  description: Design Pump.fun Solana program architecture, PDAs, account layouts, global singletons, per-token state, per-user accumulators, Mayhem accounts, and cross-program coordination across Pump, PumpAMM, PumpFees, and Mayhem. Use for account-model or PDA work.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/pump-solana-architecture
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-solana-dev
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: pump solana dev
+  description: "Apply Solana development patterns used by Pump.fun: Anchor IDL interaction, SPL Token and Token-2022 handling, transaction instruction composition, RPC batching, account decoding, simulation, BN arithmetic, and cross-program coordination."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/pump-solana-dev
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-solana-wallet
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: pump solana wallet
+  description: Generate and validate secure Solana wallets for Pump.fun workflows using official Solana libraries, Ed25519 keypairs, offline operation, memory zeroization, secure file permissions, and Rust/TypeScript/Bash implementations.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/pump-solana-wallet
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-testing
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: pump testing
+  description: Design and run Pump.fun SDK test infrastructure across Rust, TypeScript, Python, and Bash, including unit tests, integration tests, security tests, fuzzing, shell orchestration, Criterion benchmarks, coverage, and CI gates.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/pump-testing
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-token-incentives
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: pump token incentives
+  description: Implement and operate Pump.fun PUMP token incentive rewards with day-indexed epochs, pro-rata volume distribution, user/global accumulators, sync and claim flows, and Pump/PumpAMM cross-program aggregation.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/pump-token-incentives
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-token-lifecycle
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: pump token lifecycle
+  description: Manage the full Pump.fun token lifecycle from creation through bonding-curve trading, graduation detection, AMM migration, AMM trading, creator fee collection, and volume tracking with PumpSdk and OnlinePumpSdk.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/pump-token-lifecycle
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-ts-vanity
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: pump ts vanity
+  description: "Build educational TypeScript vanity-address tooling for Pump.fun/Solana wallets with @solana/web3.js, async generators, event-loop yielding, prefix/suffix matching, batch search, and best-effort memory zeroization."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/pump-ts-vanity
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pumpfun
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: pumpfun
+  description: Entry-point router for the local Pump.fun skill suite. Use when the user asks about launching Pump.fun tokens, bonding-curve or AMM trading, quotes, fees, claims, incentives, SDK work, agent/MCP integration, security, testing, or release workflows.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/pumpfun
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pumpfun-analytics
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: pumpfun analytics
+  description: Quick Pump.fun analytics shortcut for bonding curve state, graduation progress, price impact, token pricing, fee tiers, and buy/sell quote checks. Use for lightweight read-only token analysis.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/pumpfun-analytics
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pumpfun-fees
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: pumpfun fees
+  description: Quick Pump.fun fee shortcut for creator fee sharing setup, shareholder BPS splits, claim/distribution flows, fee-tier checks, token incentives, and automated fee monitoring.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/pumpfun-fees
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pumpfun-launcher
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: pumpfun launcher
+  description: Quick Pump.fun token-launch shortcut for creating tokens with the Pump SDK, optional initial buys, metadata upload flow, Mayhem mode, and launch safety checks.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/pumpfun-launcher
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pumpfun-trading
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: pumpfun trading
+  description: Quick Pump.fun trading shortcut for buy/sell flow selection, bonding curve versus AMM state checks, slippage handling, risk controls, and SDK trade instruction building.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/pumpfun-trading
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: rh-bonded-launch
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: rh bonded launch
+  description: "Launch a permissionless bonding-curve token on Robinhood Chain (4663) via the live BondingCurveLaunchpad, or guide a user/agent to do so on ClawdCode /launch or Cheshire /rh-launch. Use when the user says \"launch a token\", \"create token on Robinhood\", \"bonded launch\", \"createToken\", \"fair launch on RH\", \"pump style on robinhood\", \"open a curve\", or brings an agent to clawdcode.net to launch. Does NOT mint wCLAWD or bridge Solana $CLAWD — that is a separate bridge skill path."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/rh-bonded-launch
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: rh-launchpad-v3
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: rh launchpad v3
+  description: "Launch a permissionless bonding-curve token on Robinhood Chain (4663) via BondingCurveLaunchpadV3 — graduates into a Uniswap V3 pool (not V2). Use for bots, agents, Telegram, \"launch with V3 pool\", createToken on LaunchpadV3, curve-v3 rail, or ClawdCode /api/launchpad/v3. Distinct from legacy V2 BondingCurveLaunchpad and from NOXA Fun instant V3."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/rh-launchpad-v3
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: skillhub-onchain
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: skillhub onchain
+  description: "Publish agent skills on-chain via Skill Hub (skills.x402.wtf): upload SKILL.md, run the security scanner, pay a Solana fee, and anchor package hashes on Arweave and Solana. Use when shipping skills to the public catalog, reading the public submission ledger, or connecting Cheshire Terminal to the Skill Hub API."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/skillhub-onchain
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: solana-clawd
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: solana clawd
+  description: "One-shot setup and operation guide for the solana-clawd agentic engine. Use when: cloning the repo, setting up MCP tools, starting the Telegram bot, deploying to Fly.io/Netlify, hatching blockchain buddies, running OODA loops, configuring voice mode (ElevenLabs + Grok), minting Metaplex agents, managing the vault, running the worker swarm, or contributing to the project. Covers all 31 MCP tools, 18 buddy species, 9 spinners, 60+ Telegram commands, 95 skills, and the full repo structure."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/solana-clawd
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: solana-clawd-agentic-commerce
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: solana clawd agentic commerce
+  description: Build and operate Solana CLAWD agents that spend through Pay CLI, expose paid stores, mint Metaplex-readable identities, and launch Genesis agent tokens.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/solana-clawd-agentic-commerce
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: solana-clawd-agents
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: solana clawd agents
+  description: Use the imported Solana Clawd Agents hub catalog to browse, validate, build, deploy, mint, stake, and integrate production-ready Solana agent definitions, including x402 paid-agent APIs, MCP catalog endpoints, Cloudflare Worker API, Metaplex Core minting, and agent JSON schema workflows.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/solana-clawd-agents
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: solana-common-errors
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: solana common errors
+  description: "Diagnose and fix common Solana development errors — GLIBC mismatches, Anchor version conflicts, cargo build-sbf / platform-tools failures, LiteSVM issues, edition2024 crate pins, RPC airdrops, and Anchor 0.29→0.32 migrations. Use when builds fail, Anchor CLI won't install, or CI breaks on Debian/Ubuntu."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/solana-common-errors
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: solana-dev
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: solana dev
+  description: "Use when user asks to \"build a Solana dapp\", \"write an Anchor program\", \"create a token\", \"debug Solana errors\", \"set up wallet connection\", \"test my Solana program\", \"deploy to devnet\", or \"explain Solana concepts\" (rent, accounts, PDAs, CPIs, etc.). Also use for quick on-chain lookups via public RPC + curl — \"what's the balance of <wallet>\", \"look up transaction <sig>\", \"token balance for <account>\", \"check this address on mainnet/devnet\". End-to-end Solana development playbook covering wallet connection, Anchor/Pinocchio programs, Codama client generation, LiteSVM/Mollusk/Surfpool testing, security checklists, and JSON-RPC curl lookups against public clusters. Integrates with the Solana MCP server for live documentation search. Prefers framework-kit (@solana/client + @solana/react-hooks) for UI, wallet-standard-first connection (incl. ConnectorKit), @solana/kit for client/RPC code, and @solana/web3-compat for legacy boundaries."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/solana-dev
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: solana-dev-skill-main-skill
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+    namespace: solana-dev-skill-main
+spec:
+  title: solana-dev-framework-kit
+  description: "End-to-end Solana development playbook (Jan 2026). Prefer Solana Foundation framework-kit (@solana/client + @solana/react-hooks) for React/Next.js UI. Prefer @solana/kit for all new client/RPC/transaction code. When legacy dependencies require web3.js, isolate it behind @solana/web3-compat (or @solana/web3.js as a true legacy fallback). Covers wallet-standard-first connection (incl. ConnectorKit), Anchor/Pinocchio programs, Codama-based client generation, LiteSVM/Mollusk/Surfpool testing, and security checklists."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/solana-dev-skill-main/skill
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: solana-formal-verification
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: qedgen
+  description: "Formally verify programs by writing Lean 4 proofs. Trigger this skill whenever the user wants to formally verify code, generate Lean 4 proofs, prove properties about algorithms or smart contracts, verify invariants, convert program logic into formal specifications, or anything involving Lean 4 and formal verification. Also trigger when the user mentions \"qedgen\", \"lean proof\", \"formal proof\", \"verify my code\", \"prove correctness\", \"formal verification\", or wants mathematical guarantees about their implementation."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/solana-formal-verification
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: solana-ralphy-skill
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: solana ralphy skill
+  description: Autonomous AI coding loop for Solana development that combines Ralphy-style task execution with Solana program, token launch, dApp, testing, and multi-engine coding workflows. Use when running PRD-driven or parallel Solana implementation tasks.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/solana-ralphy-skill
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: solana-redpill-verifier
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: solana redpill verifier
+  description: "Solana RedPill TEE verifier development and operations for the `web/solana-redpill-verifier` stack. Use for Pinocchio SVM proof storage, TeeProofV2 PDA layout, StoreProofV2 transactions, RedPill/TDX and NVIDIA NRAS attestation anchoring, CLAWD TEE Gateway setup, OpenAI-compatible attested inference proxying, Solana Attestation Service Token-2022 credentials, TypeScript client integration, OP-TEE signer integration, deployment, and debugging proof anchoring on Solana."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/solana-redpill-verifier
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: solana-rent-free-dev
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: solana rent free dev
+  description: Skill for Solana development using compressed accounts from Light Protocol. Covers compressed token client development (TypeScript) and compressed PDA program development (Rust) across Anchor, native Rust, and Pinocchio. Use cases include token distribution, stablecoin payments, per-user and app state, nullifiers, and ZK applications.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/solana-rent-free-dev
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: sponge-wallet
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: sponge wallet
+  description: Crypto wallet, token swaps, cross-chain bridges, and access to paid external services (search, image gen, web scraping, AI, and more) via x402 payments.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/sponge-wallet
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: swap-planner
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: swap planner
+  description: "This skill should be used when the user asks to \"swap tokens\", \"trade ETH for USDC\", \"exchange tokens on Uniswap\", \"buy tokens\", \"sell tokens\", \"convert ETH to stablecoins\", \"find memecoins\", \"discover tokens\", \"research tokens\", \"tokens to buy\", \"find tokens to swap\", \"what should I buy\", or mentions swapping, trading, researching, discovering, buying, or exchanging tokens on any Uniswap-supported chain. Supports both known token swaps and token discovery workflows (discovery uses keyword search and web search — there is no live \"trending\" feed). Generates deep links to execute swaps in the Uniswap interface."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/swap-planner
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: swarm-orchestrator
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: swarm orchestrator
+  description: Orchestrate multi-bot trading swarms on Pump.fun with persona-driven agents
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/swarm-orchestrator
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: testing
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: testing
+  description: For testing with Light Protocol programs and clients on localnet, devnet, and mainnet validation.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/testing
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: viem-integration
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: viem integration
+  description: "Integrate EVM blockchains using viem. Use when user says \"read blockchain data\", \"send transaction\", \"interact with smart contract\", \"connect to Ethereum\", \"use viem\", \"use wagmi\", \"wallet integration\", \"viem setup\", or mentions blockchain/EVM development with TypeScript."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/viem-integration
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: vulcan
+  description: Entry-point skill for Phoenix perpetuals through Vulcan/Rise SDK inside solana-clawd. Use before answering or acting on Vulcan, Phoenix DEX, Solana perps, paper trading, live trading, margin, TP/SL, TWAP, grid, TA strategies, or perps agent setup.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/vulcan
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-error-recovery
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: vulcan error recovery
+  description: Error category routing and recovery for Vulcan/Phoenix perps. Use on failed CLI/MCP calls, tx failures, auth/config/API/network/rate-limit errors, and strategy recovery.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/vulcan-error-recovery
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-execution-modes
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: vulcan execution modes
+  description: "Canonical Vulcan execution mode taxonomy: Observe, Paper, Dry-Run, Confirm-Each, Auto-Execute. Use before launching strategies or live-capable perps flows."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/vulcan-execution-modes
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-grid-trading
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: solana-blockchain
+    kind: skill
+spec:
+  title: vulcan grid trading
+  description: Grid trading with layered limit orders on Phoenix perpetuals. Use for grid setup, monitoring, pausing/stopping, and live/paper grid strategy safety.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/vulcan-grid-trading

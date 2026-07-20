@@ -1,0 +1,638 @@
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: engineering-diagnosing-bugs
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+    namespace: engineering
+spec:
+  title: diagnosing bugs
+  description: "Diagnosis loop for hard bugs and performance regressions. Use when the user says \"diagnose\"/\"debug this\", or reports something broken/throwing/failing/slow."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/engineering/diagnosing-bugs
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: engineering-grill-with-docs
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+    namespace: engineering
+spec:
+  title: grill with docs
+  description: "A relentless interview to sharpen a plan or design, which also creates docs (ADR's and glossary) as we go."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/engineering/grill-with-docs
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: engineering-implement
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+    namespace: engineering
+spec:
+  title: implement
+  description: Implement a piece of work based on a spec or set of tickets.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/engineering/implement
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: engineering-improve-codebase-architecture
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+    namespace: engineering
+spec:
+  title: improve codebase architecture
+  description: Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/engineering/improve-codebase-architecture
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: engineering-prototype
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+    namespace: engineering
+spec:
+  title: prototype
+  description: Build a throwaway prototype to answer a design question. Use when the user wants to sanity-check whether a state model or logic feels right, or explore what a UI should look like.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/engineering/prototype
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: engineering-resolving-merge-conflicts
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+    namespace: engineering
+spec:
+  title: resolving merge conflicts
+  description: Use when you need to resolve an in-progress git merge/rebase conflict.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/engineering/resolving-merge-conflicts
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: engineering-setup-matt-pocock-skills
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+    namespace: engineering
+spec:
+  title: setup matt pocock skills
+  description: Configure this repo for the engineering skills — set up its issue tracker, triage label vocabulary, and domain doc layout. Run once before first use of the other engineering skills.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/engineering/setup-matt-pocock-skills
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: engineering-tdd
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+    namespace: engineering
+spec:
+  title: tdd
+  description: "Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions \"red-green-refactor\", or wants integration tests."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/engineering/tdd
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: engineering-to-spec
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+    namespace: engineering
+spec:
+  title: to spec
+  description: "Turn the current conversation into a spec and publish it to the project issue tracker — no interview, just synthesis of what you've already discussed."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/engineering/to-spec
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: engineering-to-tickets
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+    namespace: engineering
+spec:
+  title: to tickets
+  description: Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker — edges as text in one file per ticket locally, or native blocking links on a real tracker.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/engineering/to-tickets
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: gemini
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+spec:
+  title: gemini
+  description: "Gemini CLI for one-shot Q&A, summaries, and generation."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/gemini
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: in-progress-setup-ts-deep-modules
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+    namespace: in-progress
+spec:
+  title: setup ts deep modules
+  description: Wire dependency-cruiser into a TypeScript repo so each package is a deep module — implementation hidden in subfolders, reachable only through its entry-point files. User-invoked.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/in-progress/setup-ts-deep-modules
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: in-progress-writing-beats
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+    namespace: in-progress
+spec:
+  title: writing beats
+  description: Writing, exploit — assemble raw material into a journey of beats, grounding each term before a beat leans on it.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/in-progress/writing-beats
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: in-progress-writing-fragments
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+    namespace: in-progress
+spec:
+  title: writing fragments
+  description: Writing, explore — mine raw fragments, no structure yet.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/in-progress/writing-fragments
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: in-progress-writing-shape
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+    namespace: in-progress
+spec:
+  title: writing shape
+  description: Writing, exploit — shape raw material into an article, paragraph by paragraph.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/in-progress/writing-shape
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: misc-migrate-to-shoehorn
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+    namespace: misc
+spec:
+  title: migrate to shoehorn
+  description: "Migrate test files from `as` type assertions to @total-typescript/shoehorn. Use when user mentions shoehorn, wants to replace `as` in tests, or needs partial test data."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/misc/migrate-to-shoehorn
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: misc-scaffold-exercises
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+    namespace: misc
+spec:
+  title: scaffold exercises
+  description: Create exercise directory structures with sections, problems, solutions, and explainers that pass linting. Use when user wants to scaffold exercises, create exercise stubs, or set up a new course section.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/misc/scaffold-exercises
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: misc-setup-pre-commit
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+    namespace: misc
+spec:
+  title: setup pre commit
+  description: Set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and tests in the current repo. Use when user wants to add pre-commit hooks, set up Husky, configure lint-staged, or add commit-time formatting/typechecking/testing.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/misc/setup-pre-commit
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: openrouter-models
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+spec:
+  title: openrouter models
+  description: Query OpenRouter for available AI models, pricing, capabilities, throughput, and provider performance. Use when the user asks about available OpenRouter models, model pricing, model context lengths, model capabilities, provider latency or uptime, throughput limits, supported parameters, wants to search/filter/compare models, or find the fastest provider for a model.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/openrouter-models
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: openrouter-oauth
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+spec:
+  title: openrouter oauth
+  description: "Implement \"Sign In with OpenRouter\" using OAuth PKCE — framework-agnostic, no SDK or client registration required. Use when the user wants to add OpenRouter login, authentication, sign-in buttons, OAuth, or AI model inference API keys for browser-based apps. No client registration, no backend, no secrets required."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/openrouter-oauth
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: ops-and-setup-anti-sleep
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+    namespace: ops-and-setup
+spec:
+  title: anti sleep
+  description: "Keep the user's MacBook awake with macOS caffeinate — prevent sleep, screen dimming, or both, for a set duration or while a process runs. Use when the user says \"don't let my mac sleep\", \"keep the screen on\", \"anti-sleep\", \"caffeinate\", or wants the machine awake overnight / during a long build."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/ops-and-setup/anti-sleep
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: ops-and-setup-google-safe-browsing
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+    namespace: ops-and-setup
+spec:
+  title: google safe browsing
+  description: "Prevent and fix Google Safe Browsing \"Dangerous site\" flags. Use when launching a public web app, buying/picking a domain, building a login or signup page, or when any site shows a red \"Dangerous site\" / \"Deceptive site\" warning in Chrome, Brave, Safari, Firefox, or Edge. Triggers on \"dangerous site\", \"deceptive site\", \"site blocked\", \"safe browsing\", \"phishing flag\", \"red warning screen\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/ops-and-setup/google-safe-browsing
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: ops-and-setup-setup-help
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+    namespace: ops-and-setup
+spec:
+  title: setup help
+  description: "Walk the user through setting up anything step by step. Use when the user asks for help setting up, configuring, installing, or getting something working — \"help me set up X\", \"walk me through this\", \"setup-help\". Differentiator: gives one current step at a time, then always lists every remaining setup step after each response."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/ops-and-setup/setup-help
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: peekaboo
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+spec:
+  title: peekaboo
+  description: Capture and automate macOS UI with the Peekaboo CLI.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/peekaboo
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: personal-edit-article
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+    namespace: personal
+spec:
+  title: edit article
+  description: Edit and improve articles by restructuring sections, improving clarity, and tightening prose. Use when user wants to edit, revise, or improve an article draft.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/personal/edit-article
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: productivity-grill-me
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+    namespace: productivity
+spec:
+  title: grill me
+  description: A relentless interview to sharpen a plan or design.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/productivity/grill-me
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: productivity-grilling
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+    namespace: productivity
+spec:
+  title: grilling
+  description: "Grill the user relentlessly about a plan or design. Use when the user wants to stress-test a plan before building, or uses any 'grill' trigger phrases."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/productivity/grilling
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: research-and-web-browser-harness
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+    namespace: research-and-web
+spec:
+  title: browser harness
+  description: "Direct browser control via CDP. Use when the user wants to automate, scrape, test, or interact with web pages. Connects to the user's already-running Chrome."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/research-and-web/browser-harness
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: research-and-web-research-prompt
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+    namespace: research-and-web
+spec:
+  title: research prompt
+  description: "Write a single-paragraph Deep Research prompt to hand to a human researcher (or a deep-research AI). Use when the user wants a research brief, a \"deep research prompt\", a one-paragraph task for a researcher, or asks \"what should our researcher look for\". Produces ONE tight paragraph with full context, numbered sub-questions, and per-finding output format."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/research-and-web/research-prompt
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: swap-integration
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+spec:
+  title: swap integration
+  description: "Integrate Uniswap swaps into applications. Use when user says \"integrate swaps\", \"uniswap\", \"trading api\", \"add swap functionality\", \"build a swap frontend\", \"create a swap script\", \"smart contract swap integration\", \"use Universal Router\", \"Trading API\", or mentions swapping tokens via Uniswap."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/swap-integration
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: thinking-and-docs-brain-to-docs
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+    namespace: thinking-and-docs
+spec:
+  title: brain to docs
+  description: "Use when the user wants to extract project vision, decisions, and preferences from his head into clear documentation (README + ADRs) through a back-and-forth Q&A loop. Triggers on \"brain-to-docs\", \"build out the docs\", \"extract the vision\", \"let's document this project\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/thinking-and-docs/brain-to-docs
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: thinking-and-docs-read-all-adrs
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+    namespace: thinking-and-docs
+spec:
+  title: read all adrs
+  description: "Read every ADR markdown file in the project's docs/adr/ folder so you have full context on past decisions. Use only when the user explicitly calls it."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/thinking-and-docs/read-all-adrs
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: v4-sdk-integration
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+spec:
+  title: v4 sdk integration
+  description: "App-layer SDK guide for building swap and liquidity experiences directly with the Uniswap v4 SDK. Use when user asks about \"v4 sdk\", \"uniswap v4\", \"v4 swap\", \"v4 liquidity\", \"PoolManager\", \"V4Planner\", \"StateView\", \"PositionManager\", \"pool state\", \"v4 position\", \"uniswap sdk\", or when building swap/liquidity UX directly with SDKs rather than via the Trading API."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/v4-sdk-integration
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: v4-security-foundations
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: utilities
+    kind: skill
+spec:
+  title: v4 security foundations
+  description: "Security-first Uniswap v4 hook development. Use when user mentions \"v4 hooks\", \"hook security\", \"PoolManager\", \"beforeSwap\", \"afterSwap\", or asks about V4 hook best practices, vulnerabilities, or audit requirements."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/v4-security-foundations

@@ -1,0 +1,949 @@
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: google-cloud-iam-recommendations-fetcher
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: google-cloud
+    kind: skill
+    namespace: google
+spec:
+  title: iam recommendations fetcher
+  description: "Fetches raw IAM recommendations and associated security insights from Google Cloud for a specified target scope (Organization, Folder, or Project). Use when you need to retrieve security recommendations before analyzing or applying them. Don't use for applying/acting on recommendations (use the recommendation applier skill) or for general allow policy querying (use the allow policy viewer skill)."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/google/cloud/iam-recommendations-fetcher
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: google-cloud-workload-manager-basics
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: google-cloud
+    kind: skill
+    namespace: google
+spec:
+  title: workload manager basics
+  description: "Use this skill to manage Google Cloud Workload Manager evaluations, rules, scanned resources, and validation results by using public client libraries and the REST API. Use when you need to inspect workload best-practice rules, create and run evaluations for Google Cloud general best practices, SAP, SQL Server, or custom organizational rules, review violations, export results to BigQuery, or automate Workload Manager through client libraries because no service-specific public CLI or MCP server is available. Don't use for general Google Compute Engine instance management, VPC configuration, or standard IAM auditing."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/google/cloud/workload-manager-basics
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-accelerated-computing-cudf
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: accelerated computing cudf
+  description: Official NVIDIA-authored guidance for NVIDIA cuDF GPU DataFrames, pandas acceleration, dask-cuDF, ETL, joins, groupby, CSV/Parquet I/O, nullable semantics, and multi-GPU DataFrame workloads.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/accelerated-computing-cudf
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-aiq-deploy
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: aiq deploy
+  description: Use when asked to install, deploy, run, validate, troubleshoot, or stop NVIDIA AI-Q Blueprint infrastructure.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/aiq-deploy
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-aiq-research
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: aiq research
+  description: Use when asked to run deep research or AI-Q research through a reachable NVIDIA AI-Q Blueprint backend.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/aiq-research
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-amc-run-sample-calibration
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: amc run sample calibration
+  description: "Run end-to-end calibration on the shipped sample dataset (sdg_08_2_sample_data_010926.zip) against a running AMC microservice. Use when user says 'test sample dataset', 'run sample calibration', 'verify AMC install', or 'launch and test'."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/amc-run-sample-calibration
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-amc-run-video-calibration
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: amc run video calibration
+  description: "Calibrate a new dataset from pre-recorded video files via the AutoMagicCalib REST API. Use when user has local MP4s and says 'calibrate my videos', 'run AMC on these videos', or similar."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/amc-run-video-calibration
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-amc-setup-calibration-stack
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: amc setup calibration stack
+  description: "Launch AutoMagicCalib microservice and web UI from NGC release images via Docker Compose. Use when user says 'deploy auto calibration', 'launch auto calibration', 'launch AMC', 'start MS+UI', or 'set up auto-magic-calib'. Requires NGC API key."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/amc-setup-calibration-stack
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-cudaq-guide
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: cudaq guide
+  description: CUDA-Q onboarding guide for installation, test programs, GPU simulation, QPU hardware, and quantum applications.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/cudaq-guide
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-cufolio
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: cufolio
+  description: Use when a user asks to build, optimize, backtest, rebalance, or analyze a stock portfolio with Mean-CVaR, efficient frontiers, scenario generation, or NVIDIA cuOpt.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/cufolio
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-cuopt-developer
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: cuopt developer
+  description: Modify, build, test, debug, and contribute to NVIDIA cuOpt (C++/CUDA, Python, server, CI). Use for solver internals, PRs, DCO, and code conventions.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/cuopt-developer
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-cuopt-install
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: cuopt install
+  description: Install cuOpt for Python, C, or server via pip, conda, or Docker; verify the install. For building cuOpt from source, see cuopt-developer.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/cuopt-install
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-cuopt-multi-objective-exploration
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: cuopt multi objective exploration
+  description: Trace and interpret the Pareto frontier across competing objectives using repeated single-objective cuOpt solves (weighted-sum and ε-constraint).
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/cuopt-multi-objective-exploration
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-cuopt-numerical-optimization-api
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: cuopt numerical optimization api
+  description: LP, MILP, and QP (beta) with cuOpt — Python, C, and CLI. Use when the user is solving LP, MILP, or QP with any cuOpt interface.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/cuopt-numerical-optimization-api
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-cuopt-numerical-optimization-formulation
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: cuopt numerical optimization formulation
+  description: LP, MILP, QP — concepts, problem-text parsing, and formulation patterns (parameters, constraints, decisions, objective). Concepts only; no API.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/cuopt-numerical-optimization-formulation
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-cuopt-routing-api-python
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: cuopt routing api python
+  description: Vehicle routing (VRP, TSP, PDP) with cuOpt — Python API only. Use when the user is building or solving routing in Python.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/cuopt-routing-api-python
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-cuopt-server-api-python
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: cuopt server api python
+  description: cuOpt REST server — start server, endpoints, Python/curl client examples. Use when the user is deploying or calling the REST API.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/cuopt-server-api-python
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-cupynumeric-hdf5
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: cupynumeric hdf5
+  description: "Read and write large cuPyNumeric arrays to HDF5 with Legate's parallel, distributed HDF5 I/O (legate.io.hdf5: to_file, from_file, from_file_batched). Use when a developer needs to save a cuPyNumeric array to an .h5/.hdf5 file, load an HDF5 dataset into a distributed cuPyNumeric array, read a large HDF5 dataset in chunks, hand arrays to an HPC pipeline as a single file, or accelerate HDF5 disk I/O with GPUDirect Storage (GDS). Do not use it for Parquet/cuDF/raw-binary or other sharded/custom layouts (see the cupynumeric-parallel-data-load skill), Zarr or object-store/S3 output, .npz or pickled archives, plain h5py without cuPyNumeric, or pure array compute such as FFT, matmul, or reductions."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/cupynumeric-hdf5
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-cupynumeric-install
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: cupynumeric install
+  description: Install and verify cuPyNumeric for Python — requirements, commands, verification. Source builds are out of scope.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/cupynumeric-install
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-cupynumeric-migration-readiness
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: cupynumeric migration readiness
+  description: "Pre-migration readiness assessor for porting NumPy to cuPyNumeric. Use BEFORE substantial porting work begins when the user asks whether code will scale on GPU, whether they should migrate to cuPyNumeric, which NumPy patterns transfer cleanly, what must be refactored before porting, or mentions pre-port assessment, scaling analysis, or refactor planning. Inspect the user's source code, look up NumPy usage, cross-reference the cuPyNumeric API support manifest, and distinguish distributed-scaling-friendly patterns from blockers such as unsupported APIs, scalar synchronization, host round-trips, Python/object-heavy control flow, shape/data-dependent branching, and in-place mutation hazards. Produce a verdict of READY, LIGHT REFACTOR, SIGNIFICANT REFACTOR, or NOT RECOMMENDED, with concrete refactor pointers."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/cupynumeric-migration-readiness
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-cupynumeric-parallel-data-load
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: cupynumeric parallel data load
+  description: "Load a sharded, on-disk dataset (sharded .npy, Parquet/Arrow, raw binary, sharded HDF5, custom layouts) into a distributed cuPyNumeric ndarray via a manual partition + leaf @task launch with CPU/OMP/GPU variants. Use when no single-call loader fits, including when per-shard row counts differ across files. Prefer cupynumeric.load or legate.io.hdf5.from_file when they apply."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/cupynumeric-parallel-data-load
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-dali-dynamic-mode
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: dali dynamic mode
+  description: "DALI imperative dynamic mode (`nvidia.dali.experimental.dynamic`, ndd): use when working on ndd code or migrating pipelines; skip pipeline-only tasks."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/dali-dynamic-mode
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-data-designer
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: data designer
+  description: Use when the user wants to create a dataset, generate synthetic data, or build a data generation pipeline with the standalone Data Designer skill.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/data-designer
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-deepstream-dev
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: deepstream dev
+  description: NVIDIA DeepStream SDK 9.0 development with Python pyservicemaker API. Use when building video analytics pipelines, GStreamer-based video processing, TensorRT inference integration, object detection/tracking, or Kafka/message broker integration.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/deepstream-dev
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-deepstream-generate-pipeline
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: deepstream generate pipeline
+  description: "Build DeepStream GStreamer pipelines interactively. Use when the user asks about pipelines for video/image inference, detection, tracking, or streaming — including natural phrases like 'pipeline to infer on image', 'run inference on video', 'detect objects in stream', 'save inference output', 'deepstream pipeline', 'gst-launch pipeline', 'process video with detection', 'build a pipeline', or any request involving GStreamer/DeepStream elements (nvinfer, nvstreammux, nvtracker, etc.)."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/deepstream-generate-pipeline
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-deepstream-import-vision-model
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: deepstream import vision model
+  description: "Use this skill to bring any vision model from HuggingFace or NVIDIA NGC into an NVIDIA DeepStream pipeline with end-to-end automation: ONNX download, SafeTensors export, TRT engine build, custom nvinfer bbox parser, multi-stream benchmark, and PDF report. Object detection models only."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/deepstream-import-vision-model
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-deepstream-profile-pipeline
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: deepstream profile pipeline
+  description: Profile a DeepStream pipeline with Nsight Systems and derive its configs from the measurement. Use when the user asks for an efficient, performant, or profiled pipeline — or to benchmark, tune, or measure FPS.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/deepstream-profile-pipeline
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-deepstream-sop
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: deepstream sop
+  description: "Use this skill when building, deploying, evaluating, debugging, or measuring latency for the DeepStream SOP Inference Microservice — a GPU-accelerated FastAPI service that detects whether operators perform assembly-line steps in order via event boundary detection (GEBD) plus VLM classification. Trigger even if the user does not name it: verify operator step sequence, detect missing or out-of-order SOP steps, score factory/work-cell video for procedure compliance, run VLM-based SOP checking on industrial cameras, or call /v1/chat/completions with a file, RTSP, or Basler camera. Also trigger for its internals: SOPVideoProcessor, DeepStream GEBD model (e.g. DDM) via Triton CAPI, nvds_custom_postprocess, Cosmos Reason 1/2 vLLM, SSE streaming, Kafka NvProto/JSON output, Basler/Pylon camera + emulation, Docker compose, chunk-level latency. Do NOT trigger for generic DeepStream pipelines, object detection/tracking, NIM imports, or video summarization."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/deepstream-sop
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-dicom-metadata-extract
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: dicom metadata extract
+  description: Used for extracting selected metadata from one DICOM file and flagging standard-tag PHI presence. Not for anonymization or clinical use.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/dicom-metadata-extract
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-dicom-series-preflight
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: dicom series preflight
+  description: Used for header-only preflight of one DICOM series folder before conversion or inference. Not for de-identification or clinical clearance.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/dicom-series-preflight
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-dicom-series-to-volume
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: dicom series to volume
+  description: Used for converting one CT DICOM series folder to a HU NIfTI volume with affine evidence. Not for multi-frame DICOM or clinical use.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/dicom-series-to-volume
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-digital-health-clinical-asr-build
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: digital health clinical asr build
+  description: Stage 2 of the Clinical ASR Flywheel. Use when curating clinical terms, tagging IPA, and synthesizing a NeMo manifest. NOT for scoring (use /digital-health-clinical-asr-eval).
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/digital-health-clinical-asr-build
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-digital-health-clinical-asr-eval
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: digital health clinical asr eval
+  description: Stage 3 of Clinical ASR Flywheel. Score a NeMo manifest, produce the five-section KER leaderboard (by-ipa_source diagnostic). Not for ASR auth (/riva-asr).
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/digital-health-clinical-asr-eval
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-digital-health-clinical-asr-finetune
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: digital health clinical asr finetune
+  description: Stage 4 of the Clinical ASR Flywheel. Use when priority KER is above 0.3 to run stock NeMo SFT on Parakeet TDT v2 and offline cycle N+1 re-eval. NOT for generic word boosting (use /finetune-asr).
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/digital-health-clinical-asr-finetune
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-digital-health-clinical-asr-setup
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: digital health clinical asr setup
+  description: "Stage 1 of Clinical ASR Flywheel. Use when bootstrapping a cycle: NVCF+MW disclosure, NVIDIA_API_KEY check, deps install, TTS+ASR smoke test."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/digital-health-clinical-asr-setup
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-dynamo-interconnect-check
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: dynamo interconnect check
+  description: "Validate that a Dynamo deployment's NIXL/UCX/NCCL interconnect is ready for disaggregated serving over RDMA/NVLink. Use after recipe-runner brings a deployment up (especially disagg/multi-node) to confirm the KV transport is correct; use troubleshoot for diagnosing already-failed pods."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/dynamo-interconnect-check
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-dynamo-recipe-runner
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: dynamo recipe runner
+  description: Select, validate, patch, and deploy existing NVIDIA Dynamo Kubernetes recipes. Use for model/backend/GPU/deployment-mode recipe bring-up; use router-starter for router-only mode work and troubleshoot for broken deployments.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/dynamo-recipe-runner
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-dynamo-router-starter
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: dynamo router starter
+  description: Start or patch Dynamo router modes and run router endpoint smoke checks. Use for round-robin, KV-aware, least-loaded, or device-aware routing setup; use recipe-runner for recipe deployment and troubleshoot for failure diagnosis.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/dynamo-router-starter
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-dynamo-troubleshoot
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: dynamo troubleshoot
+  description: Diagnose failed or unhealthy Dynamo deployments. Use when pods, model-cache jobs, PVCs, workers, frontend/router health, endpoints, or benchmark jobs fail; use recipe-runner/router-starter before this for normal bring-up.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/dynamo-troubleshoot
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-earth2studio-create-datasource
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: earth2studio create datasource
+  description: Create and validate Earth2Studio data source wrappers (DataSource, ForecastSource, DataFrameSource, ForecastFrameSource) from remote stores. Do NOT use for fetching data with existing sources, model inference, or installation tasks.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/earth2studio-create-datasource
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-earth2studio-create-diagnostic
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: earth2studio create diagnostic
+  description: Create Earth2Studio diagnostic model wrappers for single-step data transformations, including simple derived diagnostics, packaged AutoModel diagnostics, and generative or diffusion diagnostics. Do NOT use for prognostic time-stepping models, data sources, or installation.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/earth2studio-create-diagnostic
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-earth2studio-create-prognostic
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: earth2studio create prognostic
+  description: Create Earth2Studio prognostic (time-stepping forecast) model wrappers. Do NOT use for diagnostic models, data sources, or installation.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/earth2studio-create-prognostic
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-earth2studio-data-fetch
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: earth2studio data fetch
+  description: Fetch weather/climate data via Earth2Studio data sources for specific variables and times. Do NOT use for inference pipelines, model discovery, or installation.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/earth2studio-data-fetch
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-earth2studio-deterministic-forecast
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: earth2studio deterministic forecast
+  description: Build deterministic forecast scripts with Earth2Studio (model, data source, IO, inference). Do NOT use for ensemble, diagnostics, data-only fetch, or install.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/earth2studio-deterministic-forecast
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-earth2studio-discover
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: earth2studio discover
+  description: Find Earth2Studio models, data sources, and examples for a weather/climate use case. Do NOT use for writing inference code, downloading data, or installation.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/earth2studio-discover
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-earth2studio-install
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: earth2studio install
+  description: Guide installing Earth2Studio via uv or pip, selecting model extras, and configuring the environment. Do NOT use for writing inference code, choosing models, or PhysicsNeMo questions.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/earth2studio-install
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-holoscan-install-conda
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: holoscan install conda
+  description: Install Holoscan SDK v4.3+ via Conda in a CUDA 13 environment. Use for Conda installs; redirect CUDA 12 hosts to container/wheel.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/holoscan-install-conda
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-holoscan-install-container
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: holoscan install container
+  description: Install Holoscan SDK via the NGC Docker container. Use for container-based installs; not for native apt/pip/Conda installs.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/holoscan-install-container
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-holoscan-install-debian
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: holoscan install debian
+  description: Install Holoscan SDK natively on Ubuntu via apt. Use for C++ installs on Ubuntu; pair with /holoscan-install-wheel for Python.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/holoscan-install-debian
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: nvidia-holoscan-install-source
+  tag: skillhub
+  labels:
+    app: skillhub
+    catalog: skillhub
+    category: nvidia-accelerated-computing
+    kind: skill
+    namespace: nvidia
+spec:
+  title: holoscan install source
+  description: "Build Holoscan SDK from source via the in-tree ./run script. Use only when published packages don't meet the user's needs."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/skillhub-main"
+      subfolder: skills/nvidia/holoscan-install-source
