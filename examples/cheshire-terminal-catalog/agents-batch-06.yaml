@@ -1,0 +1,449 @@
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-x402-provider-author
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: payments
+    tag.authoring: true
+    tag.catalog: true
+    tag.providers: true
+    tag.solana: true
+    tag.x402: true
+spec:
+  title: x402 Provider Author
+  description: Creates provider specs and catalog entries for new paid APIs in the x402 fleet.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-x402-provider-author:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-x402-provider-catalog
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: payments
+    tag.catalog: true
+    tag.providers: true
+    tag.routing: true
+    tag.solana: true
+    tag.x402: true
+spec:
+  title: x402 Provider Catalog Agent
+  description: Provider discovery, cost-aware routing, and catalog selection for the x402 fleet.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-x402-provider-catalog:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-x402-research-broker
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: payments
+    tag.live-data: true
+    tag.narratives: true
+    tag.research: true
+    tag.solana: true
+    tag.x402: true
+spec:
+  title: x402 Research Broker
+  description: Live research purchasing and provider routing for token, protocol, and market narratives.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-x402-research-broker:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-x402-signal-monetizer
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: payments
+    tag.monetization: true
+    tag.providers: true
+    tag.signals: true
+    tag.solana: true
+    tag.x402: true
+spec:
+  title: x402 Signal Monetizer
+  description: Turns Solana research and trading signals into monetizable x402 products and feeds.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-x402-signal-monetizer:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-x402-solana-rpc-broker
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: payments
+    tag.analytics: true
+    tag.helius: true
+    tag.rpc: true
+    tag.solana: true
+    tag.x402: true
+spec:
+  title: x402 Solana RPC Broker
+  description: Buys or brokers paid Solana RPC and chain analytics access with cost-aware routing.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-x402-solana-rpc-broker:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-x402-webhook-settlement
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: payments
+    tag.callbacks: true
+    tag.settlement: true
+    tag.solana: true
+    tag.webhooks: true
+    tag.x402: true
+spec:
+  title: x402 Webhook Settlement Agent
+  description: Handles payment-backed webhook receipts, delivery accounting, and callback verification.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-x402-webhook-settlement:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-yield-optimizer
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.defi: true
+    tag.farming: true
+    tag.optimization: true
+    tag.staking: true
+    tag.yield: true
+spec:
+  title: DeFi Yield Optimizer
+  description: Maximizes yield across Solana DeFi protocols with risk-adjusted returns
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-yield-optimizer:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: spa-tokenomics-analyst
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: crypto
+    tag.clawd: true
+    tag.governance: true
+    tag.spa: true
+    tag.staking: true
+    tag.tokenomics: true
+spec:
+  title: Cheshire Terminal SPA Tokenomics Analyst
+  description: "Cheshire Terminal agent: Expert in SPA token economics, staking rewards, and protocol revenue"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/spa-tokenomics-analyst:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: stablecoin-comparator
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.comparison: true
+    tag.dai: true
+    tag.stablecoin: true
+    tag.usdc: true
+    tag.usdt: true
+spec:
+  title: Stablecoin Deep Comparator
+  description: "Cheshire Terminal agent: Compare stablecoin mechanisms, risks, and use cases"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/stablecoin-comparator:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: staking-rewards-calculator
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: tools
+    tag.calculator: true
+    tag.pos: true
+    tag.rewards: true
+    tag.staking: true
+    tag.yields: true
+spec:
+  title: Staking Rewards Calculator
+  description: "Cheshire Terminal agent: Calculate and optimize staking rewards across protocols"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/staking-rewards-calculator:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: staking-unstaking-solana-metaplex-core
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: nft
+    tag.metaplex: true
+    tag.mpl-core: true
+    tag.solana: true
+    tag.staking: true
+    tag.unstaking: true
+spec:
+  title: Staking Unstaking Solana Metaplex Core
+  description: CAAP-authenticated staking and unstaking operator for Metaplex Core agent assets on Solana.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/staking-unstaking-solana-metaplex-core:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: token-unlock-tracker
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: crypto
+    tag.analysis: true
+    tag.supply: true
+    tag.tokenomics: true
+    tag.unlocks: true
+    tag.vesting: true
+spec:
+  title: Token Unlock Schedule Tracker
+  description: "Cheshire Terminal agent: Monitor and analyze token unlock events and their market impact"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/token-unlock-tracker:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: usds-stablecoin-expert
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.clawd: true
+    tag.defi: true
+    tag.stablecoin: true
+    tag.usds: true
+    tag.yield: true
+spec:
+  title: Cheshire Terminal USDs Stablecoin Expert
+  description: "Cheshire Terminal agent: Specialist in $CLAWD USDs mechanism, collateralization, and yield strategies"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/usds-stablecoin-expert:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: vespa-optimizer
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: tools
+    tag.clawd: true
+    tag.optimization: true
+    tag.staking: true
+    tag.vespa: true
+    tag.voting-power: true
+spec:
+  title: Cheshire Terminal veSPA Optimizer
+  description: "Cheshire Terminal agent: Maximize returns through optimal veSPA locking strategies"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/vespa-optimizer:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: wallet-security-advisor
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: security
+    tag.best-practices: true
+    tag.hardware: true
+    tag.safety: true
+    tag.security: true
+    tag.wallet: true
+spec:
+  title: Crypto Wallet Security Advisor
+  description: "Cheshire Terminal agent: Best practices for securing crypto wallets and assets"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/wallet-security-advisor:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: whale-watcher
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: crypto
+    tag.analytics: true
+    tag.monitoring: true
+    tag.on-chain: true
+    tag.trading: true
+    tag.whale: true
+spec:
+  title: Crypto Whale Watcher
+  description: "Cheshire Terminal agent: Track and analyze large wallet movements and whale behavior"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/whale-watcher:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: yield-dashboard-builder
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: trading
+    tag.analytics: true
+    tag.dashboard: true
+    tag.monitoring: true
+    tag.portfolio: true
+    tag.tracking: true
+spec:
+  title: Personal DeFi Dashboard Builder
+  description: "Cheshire Terminal agent: Design and track your custom DeFi portfolio dashboard"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/yield-dashboard-builder:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: yield-sustainability-analyst
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.analysis: true
+    tag.defi: true
+    tag.sustainability: true
+    tag.tokenomics: true
+    tag.yield: true
+spec:
+  title: DeFi Yield Sustainability Analyst
+  description: "Cheshire Terminal agent: Analyze whether high yields are sustainable or temporary"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/yield-sustainability-analyst:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src

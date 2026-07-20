@@ -1,0 +1,624 @@
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: airdrop-hunter
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: trading
+    tag.airdrop: true
+    tag.allocation: true
+    tag.farming: true
+    tag.rewards: true
+    tag.strategy: true
+spec:
+  title: DeFi Airdrop Hunter
+  description: "Cheshire Terminal agent: Identify and strategize for potential protocol airdrops"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/airdrop-hunter:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: alpha-leak-detector
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: crypto
+    tag.alpha: true
+    tag.opportunities: true
+    tag.research: true
+    tag.signals: true
+    tag.trading: true
+spec:
+  title: "Crypto Alpha & Signal Detector"
+  description: "Cheshire Terminal agent: Identify trading alpha and early signals in DeFi markets"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/alpha-leak-detector:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: apy-vs-apr-educator
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: tools
+    tag.apr: true
+    tag.apy: true
+    tag.defi: true
+    tag.education: true
+    tag.yields: true
+spec:
+  title: APY vs APR Educator
+  description: "Cheshire Terminal agent: Explain and calculate the difference between APY and APR in DeFi"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/apy-vs-apr-educator:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: bridge-security-analyst
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: security
+    tag.bridge: true
+    tag.cross-chain: true
+    tag.multichain: true
+    tag.risk: true
+    tag.security: true
+spec:
+  title: Cross-Chain Bridge Security Analyst
+  description: "Cheshire Terminal agent: Evaluate bridge security and recommend safest cross-chain routes"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/bridge-security-analyst:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: cheshire-terminal
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.anchor: true
+    tag.cheshire-terminal: true
+    tag.cheshire-terminal-solana-agents: true
+    tag.solana: true
+    tag.x402: true
+spec:
+  title: Cheshire Terminal
+  description: The sovereign AI oracle of the Cheshire Terminal Solana Agents ecosystem. Solana-native, x402-powered, CAAP/1.0 authenticated. Built on the Leviathan runtime with immutable Three Laws.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/cheshire-terminal:2.1.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: clawd-bridge-assistant
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: programming
+    tag.arbitrum: true
+    tag.bridge: true
+    tag.clawd: true
+    tag.cross-chain: true
+    tag.layer-2: true
+spec:
+  title: Cheshire Terminal Bridge Assistant
+  description: "Cheshire Terminal agent: Guide users through cross-chain bridging with optimal routes and costs"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/clawd-bridge-assistant:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: clawd-firecrawl
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: research
+    tag.clawd: true
+    tag.firecrawl: true
+    tag.research: true
+    tag.scraping: true
+    tag.search: true
+spec:
+  title: CLAWD Firecrawl Researcher
+  description: Web research agent backed by Firecrawl — scrape, search, map, and crawl any site.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/clawd-firecrawl:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/public/api/agents/catalog
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: clawd-formal-verification
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: security
+    tag.clawd: true
+    tag.formal-verification: true
+    tag.invariants: true
+    tag.risk: true
+    tag.solana: true
+spec:
+  title: Clawd Formal Verification
+  description: Formal verification, invariant gates, and attestation workflows for Cheshire Terminal Solana skills, registries, risk engines, and Metaplex execution delegation.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/clawd-formal-verification:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: clawd-gateway-runtime
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: infrastructure
+    tag.clawd: true
+    tag.gateway: true
+    tag.solana: true
+    tag.telegram: true
+    tag.x402: true
+spec:
+  title: Clawd Gateway Runtime
+  description: Telegram and HTTP gateway runtime for Cheshire Terminal Solana agent registry, skill hub, webhook, x402, and Solana service routes.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/clawd-gateway-runtime:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: clawd-governance-guide
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: governance
+    tag.clawd: true
+    tag.dao: true
+    tag.governance: true
+    tag.proposals: true
+    tag.voting: true
+spec:
+  title: Cheshire Terminal Governance Guide
+  description: "Cheshire Terminal agent: Navigate $CLAWD DAO proposals, voting, and protocol upgrades"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/clawd-governance-guide:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: clawd-grok-runtime
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: trading
+    tag.clawd: true
+    tag.grok: true
+    tag.perps: true
+    tag.solana: true
+    tag.xai: true
+spec:
+  title: Clawd Grok Runtime
+  description: Grok-powered Solana CLI runtime for multi-agent research, coding, Phoenix/Vulcan perps workflows, x402 tools, and paper-first trading.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/clawd-grok-runtime:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: clawd-liquidity-strategist
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.amm: true
+    tag.clawd: true
+    tag.impermanent-loss: true
+    tag.liquidity: true
+    tag.yield-farming: true
+spec:
+  title: Cheshire Terminal Liquidity Strategist
+  description: "Cheshire Terminal agent: Optimize liquidity provision strategies across $CLAWD pools"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/clawd-liquidity-strategist:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: clawd-mayhem-mode
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: trading
+    tag.clawd: true
+    tag.genesis: true
+    tag.mayhem: true
+    tag.metaplex: true
+    tag.solana: true
+spec:
+  title: CLAWD Mayhem Mode
+  description: The Cheshire Terminal Solana all-purpose combat agent. Trades, deploys, launches tokens, mints NFTs, and orchestrates Metaplex programs end-to-end — Agent Registry, Genesis, Core, Token Metadata, Bubblegum, and Candy Machine.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/clawd-mayhem-mode:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/public/api/agents/catalog
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: clawd-onboarding-guide
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: education
+    tag.beginner: true
+    tag.clawd: true
+    tag.education: true
+    tag.onboarding: true
+    tag.tutorial: true
+spec:
+  title: Cheshire Terminal Onboarding Guide
+  description: "Cheshire Terminal agent: Help newcomers understand and start using $CLAWD protocol"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/clawd-onboarding-guide:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: clawd-operator-runtime
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: dev-tools
+    tag.acp: true
+    tag.clawd: true
+    tag.operator: true
+    tag.orchestration: true
+    tag.solana: true
+spec:
+  title: Clawd Operator Runtime
+  description: Autonomous operator-loop runtime with multi-adapter agent execution, checkpoints, prompt archiving, metrics, and ACP support.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/clawd-operator-runtime:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: clawd-portfolio-tracker
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: trading
+    tag.analytics: true
+    tag.clawd: true
+    tag.dashboard: true
+    tag.portfolio: true
+    tag.tracking: true
+spec:
+  title: Cheshire Terminal Portfolio Tracker
+  description: "Cheshire Terminal agent: Track and analyze your complete $CLAWD ecosystem holdings"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/clawd-portfolio-tracker:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: clawd-pump-runtime
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: trading
+    tag.clawd: true
+    tag.copy-trading: true
+    tag.pumpfun: true
+    tag.pumpswap: true
+    tag.solana: true
+spec:
+  title: Clawd Pump Runtime
+  description: Rust PumpFun/PumpSwap runtime for wallet monitoring, copy trading, parser diagnostics, risk gates, Telegram alerts, and paper-first Solana execution.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/clawd-pump-runtime:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: clawd-pumpfun-official
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: trading
+    tag.payment-gated: true
+    tag.pumpfun: true
+    tag.solana: true
+    tag.tokenized-agent: true
+    tag.x402: true
+spec:
+  title: CLAWD × Pump.fun Official Agent
+  description: "The official Cheshire Terminal Solana pump.fun agent. Payment-gated random number generator (0.1 SOL), wallet-connected launch screening, claims + buyback tracking, and Telegram alerts — all wired through @pump-fun/agent-payments-sdk."
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/clawd-pumpfun-official:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/public/api/agents/catalog
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: clawd-risk-monitor
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: security
+    tag.audit: true
+    tag.clawd: true
+    tag.monitoring: true
+    tag.risk: true
+    tag.security: true
+spec:
+  title: Cheshire Terminal Risk Monitor
+  description: "Cheshire Terminal agent: Track and analyze security risks across $CLAWD smart contracts"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/clawd-risk-monitor:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: clawd-router-runtime
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: infrastructure
+    tag.clawd: true
+    tag.llm: true
+    tag.openrouter: true
+    tag.router: true
+    tag.solana: true
+spec:
+  title: Cheshire Terminal Router Runtime
+  description: OpenAI-compatible LLM router for Cheshire Terminal Solana agents with auto model scoring, platform key validation, CLAWD holder tiers, and x402 payment checks.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/clawd-router-runtime:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: clawd-web3-domain-agent
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: infrastructure
+    tag.clawd: true
+    tag.cloudflare: true
+    tag.dnslink: true
+    tag.ipfs: true
+    tag.web3-domain: true
+spec:
+  title: .clawd Web3 Domain Agent
+  description: Mint and operate Cheshire Terminal Solana Agents-native web3 identities backed by IPFS, DNSLink, x402, and holder-gated agent features.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/clawd-web3-domain-agent:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/public/api/agents/catalog
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: clawd-yield-aggregator
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.apy: true
+    tag.clawd: true
+    tag.farming: true
+    tag.optimization: true
+    tag.yield: true
+spec:
+  title: Cheshire Terminal Yield Aggregator
+  description: "Cheshire Terminal agent: Find and optimize best yield opportunities in $CLAWD ecosystem"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/clawd-yield-aggregator:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: clawdex
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.browser-use: true
+    tag.claude-code: true
+    tag.codex: true
+    tag.coding: true
+    tag.orchestrator: true
+spec:
+  title: Clawdex
+  description: "Dual-engine coding agent: Claude Code for reasoning + OpenAI Codex for execution + Browser Use for web research — all running in isolated Upstash boxes"
+  modelProvider: anthropic
+  modelName: claude-sonnet-4-6
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/clawdex:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: crypto-news-analyst
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: crypto
+    tag.analysis: true
+    tag.market: true
+    tag.news: true
+    tag.research: true
+    tag.sentiment: true
+spec:
+  title: Crypto News Analyst
+  description: "Cheshire Terminal agent: Aggregate and analyze breaking crypto news from CoinDesk, The Block, Decrypt, and major publications"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/crypto-news-analyst:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: crypto-tax-strategist
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: trading
+    tag.accounting: true
+    tag.compliance: true
+    tag.optimization: true
+    tag.strategy: true
+    tag.tax: true
+spec:
+  title: Crypto Tax Strategy Advisor
+  description: "Cheshire Terminal agent: Optimize crypto taxes and provide tax-efficient DeFi strategies"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/crypto-tax-strategist:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src

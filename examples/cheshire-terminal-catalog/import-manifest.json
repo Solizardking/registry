@@ -1,0 +1,14 @@
+{
+  "total": 143,
+  "tag": "stable",
+  "resolvedFromJson": 143,
+  "catalogOnly": [],
+  "batches": [
+    "agents-batch-01.yaml",
+    "agents-batch-02.yaml",
+    "agents-batch-03.yaml",
+    "agents-batch-04.yaml",
+    "agents-batch-05.yaml",
+    "agents-batch-06.yaml"
+  ]
+}

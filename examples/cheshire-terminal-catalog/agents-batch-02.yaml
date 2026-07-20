@@ -1,0 +1,624 @@
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: defi-insurance-advisor
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.coverage: true
+    tag.insurance: true
+    tag.protection: true
+    tag.risk: true
+    tag.safety: true
+spec:
+  title: "DeFi Insurance & Risk Coverage Advisor"
+  description: "Cheshire Terminal agent: Navigate DeFi insurance options for smart contract protection"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/defi-insurance-advisor:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: defi-onboarding-mentor
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: education
+    tag.beginner: true
+    tag.defi-basics: true
+    tag.education: true
+    tag.onboarding: true
+    tag.tutorial: true
+spec:
+  title: DeFi Beginner Onboarding Mentor
+  description: "Cheshire Terminal agent: Guide complete beginners through their first DeFi experiences"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/defi-onboarding-mentor:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: defi-protocol-comparator
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.analysis: true
+    tag.comparison: true
+    tag.defi: true
+    tag.protocols: true
+    tag.research: true
+spec:
+  title: DeFi Protocol Comparison Expert
+  description: "Cheshire Terminal agent: Compare similar DeFi protocols across features, risks, and yields"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/defi-protocol-comparator:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: defi-risk-scoring-engine
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: security
+    tag.analysis: true
+    tag.assessment: true
+    tag.framework: true
+    tag.risk: true
+    tag.scoring: true
+spec:
+  title: DeFi Protocol Risk Scoring Engine
+  description: "Cheshire Terminal agent: Comprehensive risk assessment framework for DeFi protocols"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/defi-risk-scoring-engine:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: defi-yield-farmer
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.apy: true
+    tag.defi: true
+    tag.optimization: true
+    tag.strategy: true
+    tag.yield-farming: true
+spec:
+  title: DeFi Yield Farming Strategist
+  description: "Cheshire Terminal agent: Identify and optimize yield farming opportunities across DeFi protocols"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/defi-yield-farmer:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: dex-aggregator-optimizer
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.aggregator: true
+    tag.dex: true
+    tag.optimization: true
+    tag.routing: true
+    tag.swap: true
+spec:
+  title: DEX Aggregator Route Optimizer
+  description: "Cheshire Terminal agent: Find optimal swap routes across DEX aggregators"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/dex-aggregator-optimizer:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: gas-optimization-expert
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: tools
+    tag.efficiency: true
+    tag.ethereum: true
+    tag.gas: true
+    tag.layer-2: true
+    tag.optimization: true
+spec:
+  title: Gas Cost Optimization Expert
+  description: "Cheshire Terminal agent: Minimize gas costs and optimize transaction timing"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/gas-optimization-expert:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: governance-proposal-analyst
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: governance
+    tag.analysis: true
+    tag.dao: true
+    tag.governance: true
+    tag.proposals: true
+    tag.voting: true
+spec:
+  title: DAO Governance Proposal Analyst
+  description: "Cheshire Terminal agent: Analyze and explain DAO governance proposals and their implications"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/governance-proposal-analyst:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: impermanent-loss-calculator
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: tools
+    tag.amm: true
+    tag.calculator: true
+    tag.defi: true
+    tag.impermanent-loss: true
+    tag.liquidity: true
+spec:
+  title: Impermanent Loss Calculator
+  description: "Cheshire Terminal agent: Calculate and explain impermanent loss scenarios for LP positions"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/impermanent-loss-calculator:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: layer2-comparison-guide
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.arbitrum: true
+    tag.ethereum: true
+    tag.layer-2: true
+    tag.optimism: true
+    tag.scaling: true
+spec:
+  title: Layer 2 Comparison Guide
+  description: "Cheshire Terminal agent: Compare Ethereum L2 solutions: Arbitrum, Optimism, Base, zkSync"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/layer2-comparison-guide:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: liquidation-risk-manager
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: tools
+    tag.collateral: true
+    tag.defi: true
+    tag.lending: true
+    tag.liquidation: true
+    tag.risk: true
+spec:
+  title: Liquidation Risk Manager
+  description: "Cheshire Terminal agent: Monitor and manage liquidation risks in lending protocols"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/liquidation-risk-manager:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: liquidity-pool-analyzer
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.amm: true
+    tag.analysis: true
+    tag.defi: true
+    tag.liquidity-pools: true
+    tag.risk: true
+spec:
+  title: Liquidity Pool Deep Analyzer
+  description: "Cheshire Terminal agent: Analyze LP pool health, risks, and optimal entry/exit timing"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/liquidity-pool-analyzer:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: mev-protection-advisor
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: security
+    tag.flashbots: true
+    tag.front-running: true
+    tag.mev: true
+    tag.protection: true
+    tag.security: true
+spec:
+  title: MEV Protection Advisor
+  description: "Cheshire Terminal agent: Protect users from front-running, sandwich attacks, and MEV exploitation"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/mev-protection-advisor:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: narrative-trend-analyst
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: crypto
+    tag.analysis: true
+    tag.market-cycles: true
+    tag.narrative: true
+    tag.sentiment: true
+    tag.trends: true
+spec:
+  title: "Crypto Narrative & Trend Analyst"
+  description: "Cheshire Terminal agent: Track and analyze dominant narratives and trends in crypto markets"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/narrative-trend-analyst:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: nft-liquidity-advisor
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.collateral: true
+    tag.defi: true
+    tag.lending: true
+    tag.liquidity: true
+    tag.nft: true
+spec:
+  title: "NFT Liquidity & Lending Advisor"
+  description: "Cheshire Terminal agent: Navigate NFT-backed lending and liquidity solutions"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/nft-liquidity-advisor:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: pay-agent
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: dev-tools
+    tag.mcp: true
+    tag.mpp: true
+    tag.pay: true
+    tag.pay-sh: true
+    tag.x402: true
+spec:
+  title: Pay Agent
+  description: pay.sh workflow agent for sandbox-first HTTP 402 calls, Pay MCP setup, provider discovery, and payment gateway specs.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/pay-agent:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/public/api/agents/catalog
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: portfolio-rebalancing-advisor
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: trading
+    tag.allocation: true
+    tag.optimization: true
+    tag.portfolio: true
+    tag.rebalancing: true
+    tag.strategy: true
+spec:
+  title: DeFi Portfolio Rebalancing Advisor
+  description: "Cheshire Terminal agent: Optimize portfolio allocation and rebalancing strategies"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/portfolio-rebalancing-advisor:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: protocol-revenue-analyst
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.analysis: true
+    tag.defi: true
+    tag.fundamentals: true
+    tag.revenue: true
+    tag.tokenomics: true
+spec:
+  title: "Protocol Revenue & Fundamentals Analyst"
+  description: "Cheshire Terminal agent: Analyze DeFi protocol business models and revenue generation"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/protocol-revenue-analyst:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: protocol-treasury-analyst
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: governance
+    tag.allocation: true
+    tag.capital: true
+    tag.dao: true
+    tag.runway: true
+    tag.treasury: true
+spec:
+  title: "DAO Treasury & Resource Analyst"
+  description: "Cheshire Terminal agent: Analyze DAO treasury holdings, runway, and capital allocation"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/protocol-treasury-analyst:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: pump-fun-sdk-expert
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.bonding-curve: true
+    tag.pump-fun: true
+    tag.sdk: true
+    tag.solana: true
+    tag.token-creation: true
+spec:
+  title: Pump Fun SDK Expert
+  description: "Cheshire Terminal agent: Specialized assistant for the the Pump SDK — token creation, bonding curve trading, fee sharing, and AMM migration on Solana"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/pump-fun-sdk-expert:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: robinhood-agent-forge
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: dev-tools
+    tag.agent-forge: true
+    tag.cross-chain: true
+    tag.erc-8004: true
+    tag.evm: true
+    tag.robinhood-chain: true
+spec:
+  title: Robinhood + Solana Agent Forge
+  description: Choose Robinhood Chain or Solana, then create a chain-native agent identity through an explicit wallet-reviewed flow.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/robinhood-agent-forge:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: smart-contract-auditor
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: security
+    tag.audit: true
+    tag.risk: true
+    tag.security: true
+    tag.smart-contracts: true
+    tag.solidity: true
+spec:
+  title: Smart Contract Security Auditor
+  description: "Cheshire Terminal agent: Review and assess smart contract security for DeFi protocols"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/smart-contract-auditor:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/defi-agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-agent-orchestrator
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.agentic: true
+    tag.coordination: true
+    tag.multi-agent: true
+    tag.orchestrator: true
+    tag.workflow: true
+spec:
+  title: Multi-Agent Trading Orchestrator
+  description: Coordinates multiple specialized agents for comprehensive market analysis and execution
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-agent-orchestrator:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-airdrop-farmer
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.airdrop: true
+    tag.eligibility: true
+    tag.farming: true
+    tag.points: true
+    tag.strategy: true
+spec:
+  title: Airdrop Strategy Optimizer
+  description: Maximizes airdrop eligibility across Solana protocols through strategic on-chain activity
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-airdrop-farmer:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-alpha-aggregator
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.aggregation: true
+    tag.alpha: true
+    tag.ranking: true
+    tag.signals: true
+    tag.trade-ideas: true
+spec:
+  title: Alpha Signal Aggregator
+  description: Aggregates and ranks alpha signals from multiple data sources into actionable trade ideas
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-alpha-aggregator:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src

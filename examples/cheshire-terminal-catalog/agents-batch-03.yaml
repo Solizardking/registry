@@ -1,0 +1,618 @@
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-anchor-developer
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.anchor: true
+    tag.development: true
+    tag.rust: true
+    tag.smart-contract: true
+    tag.solana: true
+spec:
+  title: Anchor Program Developer
+  description: Expert in developing Solana programs with Anchor framework for DeFi applications
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-anchor-developer:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-anomaly-detector
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.anomaly-detection: true
+    tag.fraud: true
+    tag.manipulation: true
+    tag.rug-pull: true
+spec:
+  title: On-Chain Anomaly Detector
+  description: ML-powered detection of unusual on-chain activity, potential rugs, and market manipulation
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-anomaly-detector:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-arbitrage-scanner
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.arbitrage: true
+    tag.cross-dex: true
+    tag.profit: true
+    tag.scanner: true
+spec:
+  title: Cross-DEX Arbitrage Scanner
+  description: Identifies and executes arbitrage opportunities across Solana DEXes and CEXes
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-arbitrage-scanner:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-autonomous-trader
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.adaptive: true
+    tag.agent: true
+    tag.ai-trading: true
+    tag.autonomous: true
+    tag.self-managing: true
+spec:
+  title: Autonomous Trading Agent
+  description: Self-managing trading agent with goal-setting, strategy selection, and adaptive execution
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-autonomous-trader:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-bot-architect
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.architecture: true
+    tag.automation: true
+    tag.bot: true
+    tag.trading-system: true
+spec:
+  title: Trading Bot Architect
+  description: Designs and builds production trading bot architectures for Solana
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-bot-architect:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-chart-pattern-ai
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.ai: true
+    tag.chart-patterns: true
+    tag.computer-vision: true
+    tag.pattern-recognition: true
+spec:
+  title: AI Chart Pattern Recognition
+  description: Computer vision-powered chart pattern detection for Solana token charts
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-chart-pattern-ai:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-clawd-cost-planner
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: payments
+    tag.budget: true
+    tag.clawd: true
+    tag.cost: true
+    tag.planning: true
+    tag.solana: true
+spec:
+  title: Clawd Cost Planner
+  description: Pre-call cost planning and budget enforcement for x402-enabled workflows.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-clawd-cost-planner:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-clawd-mail-concierge
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.agentmail: true
+    tag.clawd: true
+    tag.concierge: true
+    tag.email: true
+    tag.support: true
+spec:
+  title: Clawd Mail Concierge
+  description: Mail concierge for the Cheshire Terminal merchant network, handling inbox triage, routing, and operator-safe replies
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-clawd-mail-concierge:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-clawd-payment-debugger
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: payments
+    tag.clawd: true
+    tag.debugger: true
+    tag.mpp: true
+    tag.solana: true
+    tag.x402: true
+spec:
+  title: Clawd Payment Debugger
+  description: Debugs x402 and MPP challenge-response cycles for payment-enabled Solana agents.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-clawd-payment-debugger:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-clawd-payment-gateway
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: payments
+    tag.clawd: true
+    tag.mpp: true
+    tag.payment: true
+    tag.solana: true
+    tag.x402: true
+spec:
+  title: Cheshire Terminal Solana Payment Gateway
+  description: x402 and MPP payment gateway for stablecoin-gated API access on Solana.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-clawd-payment-gateway:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-clawd-provider-scorer
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: payments
+    tag.clawd: true
+    tag.providers: true
+    tag.routing: true
+    tag.scoring: true
+    tag.solana: true
+spec:
+  title: Clawd Provider Scorer
+  description: Scores providers by fit, freshness, cost, and operational safety for the fleet.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-clawd-provider-scorer:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-clawd-quote-relay
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: payments
+    tag.clawd: true
+    tag.pricing: true
+    tag.quotes: true
+    tag.relay: true
+    tag.solana: true
+spec:
+  title: Clawd Quote Relay
+  description: Normalizes quotes, prices, and spend estimates for downstream Solana agents.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-clawd-quote-relay:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-clawd-usdc-allocator
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: payments
+    tag.allocator: true
+    tag.clawd: true
+    tag.solana: true
+    tag.treasury: true
+    tag.usdc: true
+spec:
+  title: Clawd USDC Allocator
+  description: Allocates USDC across agents, payment float, and execution needs in the fleet treasury.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-clawd-usdc-allocator:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-clawd-wallet-guardian
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: payments
+    tag.biometric: true
+    tag.clawd: true
+    tag.security: true
+    tag.solana: true
+    tag.wallet: true
+spec:
+  title: Clawd Wallet Guardian
+  description: Biometric approval, wallet safety, and prompt-injection defense for paid Solana agents.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-clawd-wallet-guardian:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-cross-chain-bridge
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.bridge: true
+    tag.cross-chain: true
+    tag.debridge: true
+    tag.security: true
+    tag.wormhole: true
+spec:
+  title: Cross-Chain Bridge Analyst
+  description: Analyzes bridge security, routing, and arbitrage opportunities between Solana and other chains
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-cross-chain-bridge:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-dark-ralph-mail-briefing
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.agentmail: true
+    tag.alpha: true
+    tag.briefing: true
+    tag.dark-ralph: true
+    tag.email: true
+spec:
+  title: Dark Ralph Mail Briefing Desk
+  description: Premium briefing inbox agent for high-signal market notes, alpha follow-ups, and paid research routing
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-dark-ralph-mail-briefing:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-data-pipeline
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.analytics: true
+    tag.data-pipeline: true
+    tag.geyser: true
+    tag.helius: true
+    tag.indexing: true
+spec:
+  title: Blockchain Data Pipeline
+  description: "Builds data pipelines for Solana on-chain data: indexing, parsing, and analytics"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-data-pipeline:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-dex-aggregator
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.dex: true
+    tag.jupiter: true
+    tag.solana: true
+    tag.swap: true
+    tag.trading: true
+spec:
+  title: Solana DEX Aggregator
+  description: Expert in Jupiter, Raydium, and Orca routing for optimal swap execution on Solana
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-dex-aggregator:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-dexter-mail-operator
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.agentmail: true
+    tag.checkout: true
+    tag.dexter: true
+    tag.email: true
+    tag.quotes: true
+spec:
+  title: Dexter Mail Operator
+  description: Checkout and quoting inbox agent for Clawd paid products, storefront conversions, and buyer handoff
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-dexter-mail-operator:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-funding-rate-arb
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.arbitrage: true
+    tag.carry-trade: true
+    tag.delta-neutral: true
+    tag.funding-rate: true
+spec:
+  title: Funding Rate Arbitrage Bot
+  description: Identifies and executes funding rate arbitrage between Solana perps and spot markets
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-funding-rate-arb:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-helius-specialist
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.das: true
+    tag.enhanced-api: true
+    tag.helius: true
+    tag.rpc: true
+    tag.webhooks: true
+spec:
+  title: Helius API Specialist
+  description: Expert in Helius DAS, webhooks, Enhanced Transactions, and RPC for Solana development
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-helius-specialist:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-hermes-mail-settlement
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.agentmail: true
+    tag.email: true
+    tag.hermes: true
+    tag.settlement: true
+    tag.x402: true
+spec:
+  title: HERMES Mail Settlement Controller
+  description: Settlement-control inbox agent for x402, MPP, MoonPay, and payment failure escalation across the Clawd commerce stack
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-hermes-mail-settlement:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-impermanent-loss-calc
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.amm: true
+    tag.concentrated: true
+    tag.impermanent-loss: true
+    tag.liquidity: true
+spec:
+  title: Impermanent Loss Calculator
+  description: Precise IL calculations for Solana LP positions with concentrated liquidity modeling
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-impermanent-loss-calc:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/src
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-jupiter-router
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: trading
+    tag.dex: true
+    tag.jupiter: true
+    tag.routing: true
+    tag.solana: true
+    tag.trading: true
+spec:
+  title: Solana Jupiter Router
+  description: Find the best swap route on Solana with price impact, slippage, and priority fee guidance via Jupiter v6
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-jupiter-router:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/public/api/agents/catalog
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-kamino-picker
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-terminal-agents
+    category: defi
+    tag.defi: true
+    tag.kamino: true
+    tag.lending: true
+    tag.solana: true
+    tag.yield: true
+spec:
+  title: Solana Kamino Vault Picker
+  description: Pick the right Kamino lending, Multiply, or Liquidity vault with net APY, liquidation math, and risk breakdown
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/clawd-agents/solana-kamino-picker:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal"
+      subfolder: agents/public/api/agents/catalog
