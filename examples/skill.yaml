@@ -1,0 +1,19 @@
+# skill.yaml — Skill resource example
+#
+# Skills are documentation / knowledge packages (typically a SKILL.md tree
+# in a git repository). There is no build step — apply directly.
+#
+# Scaffold with: arctl init skill summarize
+# Apply with:    arctl apply -f examples/skill.yaml
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: summarize
+  tag: latest
+spec:
+  title: Summarization
+  description: "Summarizes long text into concise form"
+  source:
+    repository:
+      url: https://github.com/acme/agent-skills
+      subfolder: skills/summarize

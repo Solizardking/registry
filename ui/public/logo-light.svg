@@ -1,0 +1,17 @@
+<svg width="220" height="40" viewBox="0 0 220 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="claw-light" x1="4" y1="4" x2="34" y2="36" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9945FF"/>
+      <stop offset="1" stop-color="#14F195"/>
+    </linearGradient>
+  </defs>
+  <!-- Mark -->
+  <rect x="0" y="2" width="36" height="36" rx="9" fill="#0B0B10" stroke="url(#claw-light)" stroke-width="1.2"/>
+  <path d="M25.5 12.2c-1.4-1.9-3.7-3.1-6.3-3.1-4.9 0-8.9 3.8-8.9 8.5s4 8.5 8.9 8.5c2.6 0 4.9-1.2 6.3-3.1" stroke="url(#claw-light)" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+  <path d="M22.8 14.6c1 1.2 1.6 2.8 1.6 4.5s-0.6 3.3-1.6 4.5" stroke="url(#claw-light)" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+  <path d="M26.4 9.8c1.8 0.2 3.3 1.2 4.1 2.7" stroke="#14F195" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+  <circle cx="27" cy="27.5" r="2.3" fill="#14F195"/>
+  <!-- Wordmark -->
+  <text x="46" y="26" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="18" font-weight="700" letter-spacing="0.04em" fill="#18181B">CLAWD</text>
+  <text x="124" y="26" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="18" font-weight="500" letter-spacing="0.02em" fill="#71717A">Registry</text>
+</svg>

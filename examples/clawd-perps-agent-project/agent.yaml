@@ -1,0 +1,36 @@
+# clawd-perps-agent-project/agent.yaml
+#
+# Standalone Agent project that references the clawd-perps MCP server.
+# Apply the MCP server first (or use the multi-doc examples/clawd-perps-agent.yaml).
+#
+# Apply with:
+#   arctl apply -f examples/clawd-perps-mcp/mcp.yaml
+#   arctl apply -f examples/clawd-perps-agent-project/agent.yaml
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: clawd-perps-trader
+  tag: stable
+  labels:
+    app: clawd
+    type: perps-trader
+    protocol: solana
+spec:
+  title: Clawd Perps Trader
+  description: >
+    Solana perpetuals trading agent powered by the Phoenix Rise SDK.
+    Reads real-time market data, builds unsigned order instructions,
+    monitors margin and liquidation risk via Hawkeye on-chain RPC.
+    Supports market, limit, and stop-loss orders across SOL, ETH, BTC perp markets.
+    All order building is preview-safe by default; live mode requires explicit
+    LIVE_TRADING=true + OPERATOR_CONFIRMED=true + PERPS_SIM_ONLY=false.
+  modelProvider: anthropic
+  modelName: claude-sonnet-4-20250514
+  source:
+    repository:
+      url: https://github.com/Solizardking/cheshire-terminal-main
+      subfolder: core-ai/clawd-perps-agent
+  mcpServers:
+    - kind: MCPServer
+      name: clawd-perps
+      tag: stable

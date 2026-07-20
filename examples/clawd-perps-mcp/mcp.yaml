@@ -1,0 +1,29 @@
+# clawd-perps-mcp/mcp.yaml
+#
+# Remote MCP server pointing at a locally-running Clawd Perps agent.
+# The registry does not deploy this server — it only catalogs the endpoint
+# so agents can discover and reference it.
+#
+# Prerequisites:
+#   cd /path/to/clawd-perps-agent && npm start   # serves at localhost:8080
+#
+# Apply with:
+#   arctl apply -f examples/clawd-perps-mcp/mcp.yaml
+apiVersion: ar.dev/v1alpha1
+kind: MCPServer
+metadata:
+  name: clawd-perps
+  tag: stable
+  labels:
+    app: clawd
+    type: perps
+    protocol: solana
+    transport: http
+spec:
+  title: Clawd Perps Agent
+  description: >
+    Solana Phoenix perpetuals MCP server providing 17 tools for market data,
+    order execution, and margin management via the Rise SDK, with Vulcan CLI fallback.
+  remote:
+    type: streamable-http
+    url: http://localhost:8080

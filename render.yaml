@@ -1,0 +1,49 @@
+# Render Blueprint — Agent Registry API Server
+# https://render.com/docs/blueprint-spec
+
+services:
+  # ── Agent Registry API Server ──
+  - type: web
+    name: agentregistry-api
+    runtime: docker
+    region: oregon
+    plan: starter
+    dockerfilePath: ./docker/server.Dockerfile
+    dockerContext: .
+    healthCheckPath: /v0/health
+    envVars:
+      # Server address (internal port Render maps to 443)
+      - key: AGENT_REGISTRY_SERVER_ADDRESS
+        value: ":8080"
+      
+      # Database — uses Render's managed PostgreSQL (create via Dashboard first)
+      - key: AGENT_REGISTRY_DATABASE_URL
+        fromDatabase:
+          name: agentregistry-db
+          property: connectionString
+      
+      # JWT key for auth (generate a random 32-byte hex string)
+      - key: AGENT_REGISTRY_JWT_PRIVATE_KEY
+        generateValue: true
+      
+      # Platform mode
+      - key: AGENT_REGISTRY_PLATFORM_MODE
+        value: "docker"
+      
+      # Log level
+      - key: AGENT_REGISTRY_LOG_LEVEL
+        value: "info"
+      
+      # Version
+      - key: AGENT_REGISTRY_VERSION
+        value: "v0.3.3"
+
+databases:
+  - name: agentregistry-db
+    region: oregon
+    plan: starter
+    databaseName: agentregistry
+    user: agentregistry
+    ipAllowList: [] # only allow internal connections
+</write_to_file>
+</file>

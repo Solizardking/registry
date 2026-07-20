@@ -1,0 +1,107 @@
+# Example Agent with Metaplex on-chain identity on Solana.
+#
+# This agent is registered on Solana via Metaplex's Agent Registry and
+# optionally has a Genesis token launch linked to its identity.
+#
+# To create the on-chain Core asset + register identity:
+#   arctl metaplex mint-agent "My Agent" --uri "https://arweave.net/metadata.json"
+#
+# To apply this YAML to the registry:
+#   arctl apply -f examples/metaplex-agent.yaml
+#
+# Note: MCP server refs must already exist (or apply them first). Kind is
+# required on every ResourceRef.
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: metaplex-trader
+  tag: stable
+  labels:
+    app.kubernetes.io/metaplex: "true"
+    app.kubernetes.io/network: "solana-mainnet"
+spec:
+  title: "Metaplex Trading Agent"
+  description: >
+    An autonomous trading agent registered on Solana via the Metaplex
+    Agent Registry. The agent has an MPL Core asset on-chain, an
+    AgentIdentity PDA for discoverability, and an Asset Signer PDA
+    as its built-in wallet.
+
+  modelProvider: gemini
+  modelName: gemini-2.5-flash
+
+  source:
+    image: ghcr.io/acme/metaplex-trader:v1.0.0
+    repository:
+      url: https://github.com/acme/metaplex-trader
+      branch: main
+
+  # MCP servers this agent references for on-chain interactions.
+  # Kind is required; tag empty resolves to the literal "latest" tag.
+  mcpServers:
+    - kind: MCPServer
+      name: solana-rpc
+      tag: stable
+    - kind: MCPServer
+      name: metaplex-api
+      tag: latest
+
+  # Metaplex on-chain identity and token launch fields.
+  # These are populated after the agent is minted on Solana.
+  metaplex:
+    # The MPL Core asset address on Solana (set after minting)
+    coreAssetAddress: ""
+
+    # The AgentIdentity PDA derived from the Core asset
+    agentIdentityPDA: ""
+
+    # The Asset Signer PDA (built-in wallet, no private key)
+    assetSignerPDA: ""
+
+    # The agent's canonical token mint (set after Genesis launch)
+    agentTokenMintAddress: ""
+
+    # URI pointing to the EIP-8004 registration JSON document
+    agentRegistrationURI: "https://arweave.net/agent-registration.json"
+
+    # MPL Core collection this agent belongs to
+    collectionAddress: ""
+
+    # Solana cluster
+    network: "solana-mainnet"
+
+    # Executive profile PDA for off-chain operation
+    executiveProfilePDA: ""
+
+    # Genesis launch type: bondingCurve (default) or launchpool
+    launchType: "bondingCurve"
+
+    # Token metadata for Genesis launch
+    tokenMetadata:
+      name: "Metaplex Trader Token"
+      symbol: "MPT"
+      image: "https://gateway.irys.xyz/your-image-id"
+      uri: "https://arweave.net/token-metadata.json"
+
+    # EIP-8004 registration document (off-chain metadata)
+    registrationDocument:
+      type: "https://eips.ethereum.org/EIPS/eip-8004#registration-v1"
+      name: "Metaplex Trading Agent"
+      description: "An autonomous agent that executes DeFi strategies on Solana."
+      image: "https://arweave.net/agent-avatar.png"
+      services:
+        - name: "web"
+          endpoint: "https://metaplex.com/agent/<ASSET_ADDRESS>"
+        - name: "A2A"
+          endpoint: "https://metaplex.com/agent/<ASSET_ADDRESS>/agent-card.json"
+          version: "0.3.0"
+        - name: "MCP"
+          endpoint: "https://metaplex.com/agent/<ASSET_ADDRESS>/mcp"
+          version: "2025-06-18"
+      active: true
+      registrations:
+        - agentId: "<MINT_ADDRESS>"
+          agentRegistry: "solana:101:metaplex"
+      supportedTrust:
+        - reputation
+        - crypto-economic

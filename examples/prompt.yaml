@@ -1,0 +1,23 @@
+# prompt.yaml — Prompt resource example
+#
+# Prompts are reusable instruction templates stored in the registry.
+# There is no build step — apply directly.
+#
+# Scaffold with: arctl init prompt summarizer-system-prompt
+# Apply with:    arctl apply -f examples/prompt.yaml
+apiVersion: ar.dev/v1alpha1
+kind: Prompt
+metadata:
+  name: summarizer-system-prompt
+  tag: latest
+spec:
+  description: "Default system prompt for summarization agents"
+  content: |
+    You are a document summarization assistant. Given a document,
+    produce a concise summary that captures the key points.
+
+    Guidelines:
+    - Keep summaries under 200 words
+    - Preserve factual accuracy
+    - Use bullet points for lists of 3+ items
+    - Highlight any action items or deadlines

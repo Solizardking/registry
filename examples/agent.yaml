@@ -1,0 +1,30 @@
+# agent.yaml — minimal Agent example
+#
+# Scaffold a full project with:
+#   arctl init agent summarizer --framework adk --language python \
+#     --model-provider gemini --model-name gemini-2.5-flash
+#   arctl build summarizer/ --push
+#   arctl apply -f summarizer/agent.yaml
+#
+# Or apply this standalone manifest (image must already exist):
+#   arctl apply -f examples/agent.yaml
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: summarizer
+  tag: latest
+spec:
+  title: Document Summarizer
+  description: "An agent that summarizes documents"
+  modelProvider: gemini # OpenAI | Anthropic | Gemini | AzureOpenAI | Agentgateway
+  modelName: gemini-2.5-flash
+  source:
+    image: ghcr.io/acme/summarizer:v1.0.0
+    # repository:                 # optional: link to source code
+    #   url: https://github.com/acme/summarizer
+  # References to other registry resources -- resolved at deploy time:
+  # mcpServers:
+  #   - kind: MCPServer
+  #     name: acme-fetch        # published via: arctl apply -f examples/mcp.yaml
+  #     tag: stable
+  # See full-stack.yaml for a complete example with all dependencies.
