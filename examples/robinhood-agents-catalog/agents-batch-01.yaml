@@ -1,0 +1,644 @@
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: airdrop-hunter
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: trading
+    forge: cheshire-terminal
+    tag.airdrop: true
+    tag.allocation: true
+    tag.farming: true
+    tag.rewards: true
+    tag.strategy: true
+spec:
+  title: DeFi Airdrop Hunter
+  description: "Cheshire Terminal agent: Identify and strategize for potential protocol airdrops"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/airdrop-hunter:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/airdrop-hunter.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: alice-character-json
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: character
+    forge: cheshire-terminal
+    kind: character
+    tag.character: true
+    tag.cross-chain: true
+    tag.solana: true
+    tag.trading: true
+spec:
+  title: Alice
+  description: Alice is a fully integrated AI Agent that combines on-chain crypto trading with AI-driven Twitter engagement.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/alice-character-json:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/alice-character-json.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: alpha-leak-detector
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: crypto
+    forge: cheshire-terminal
+    tag.alpha: true
+    tag.opportunities: true
+    tag.research: true
+    tag.signals: true
+    tag.trading: true
+spec:
+  title: "Crypto Alpha & Signal Detector"
+  description: "Cheshire Terminal agent: Identify trading alpha and early signals in DeFi markets"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/alpha-leak-detector:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/alpha-leak-detector.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: apy-vs-apr-educator
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: tools
+    forge: cheshire-terminal
+    tag.apr: true
+    tag.apy: true
+    tag.defi: true
+    tag.education: true
+    tag.yields: true
+spec:
+  title: APY vs APR Educator
+  description: "Cheshire Terminal agent: Explain and calculate the difference between APY and APR in DeFi"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/apy-vs-apr-educator:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/apy-vs-apr-educator.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: bengraham
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: character
+    forge: cheshire-terminal
+    tag.character: true
+    tag.finance: true
+    tag.fundamentals: true
+    tag.value-investing: true
+spec:
+  title: Benjamin Graham
+  description: Benjamin Graham is an AI Agent specializing in value investing principles.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/bengraham:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/bengraham.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: billackman
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: character
+    forge: cheshire-terminal
+    tag.activist-investing: true
+    tag.character: true
+    tag.concentrated: true
+    tag.finance: true
+spec:
+  title: Bill Ackman
+  description: Bill Ackman is an AI Agent specializing in activist investing and concentrated portfolio management.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/billackman:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/billackman.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: bridge-security-analyst
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: security
+    forge: cheshire-terminal
+    tag.bridge: true
+    tag.cross-chain: true
+    tag.multichain: true
+    tag.risk: true
+    tag.security: true
+spec:
+  title: Cross-Chain Bridge Security Analyst
+  description: "Cheshire Terminal agent: Evaluate bridge security and recommend safest cross-chain routes"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/bridge-security-analyst:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/bridge-security-analyst.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: cathiewood
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: character
+    forge: cheshire-terminal
+    tag.character: true
+    tag.disruptive-innovation: true
+    tag.finance: true
+    tag.growth: true
+spec:
+  title: Cathie Wood
+  description: Cathie Wood focuses on disruptive innovation and exponential growth potential in technology-enabled sectors. She invests in companies leveraging breakthrough technologies, emphasizing long-term growth over immediate profitability, and accepts higher volatility for potentially market-beating returns.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/cathiewood:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/cathiewood.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: charliemunger
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: character
+    forge: cheshire-terminal
+    tag.character: true
+    tag.finance: true
+    tag.investing: true
+    tag.mental-models: true
+spec:
+  title: Charlie Munger
+  description: Charlie Munger is an AI Agent specializing in multidisciplinary thinking and rational investment decision-making.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/charliemunger:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/charliemunger.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: cheshire-character-json
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: character
+    forge: cheshire-terminal
+    kind: character
+    tag.character: true
+    tag.generative: true
+    tag.oracle: true
+    tag.solana: true
+spec:
+  title: Cheshire
+  description: Cheshire is a multimodal AI agent specializing in creative generation across digital realms.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/cheshire-character-json:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/cheshire-character-json.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: clawd-bridge-assistant
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: programming
+    forge: cheshire-terminal
+    tag.arbitrum: true
+    tag.bridge: true
+    tag.clawd: true
+    tag.cross-chain: true
+    tag.layer-2: true
+spec:
+  title: Cheshire Terminal Bridge Assistant
+  description: "Cheshire Terminal agent: Guide users through cross-chain bridging with optimal routes and costs"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/clawd-bridge-assistant:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/clawd-bridge-assistant.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: clawd-governance-guide
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: governance
+    forge: cheshire-terminal
+    tag.clawd: true
+    tag.dao: true
+    tag.governance: true
+    tag.proposals: true
+    tag.voting: true
+spec:
+  title: Cheshire Terminal Governance Guide
+  description: "Cheshire Terminal agent: Navigate $CLAWD DAO proposals, voting, and protocol upgrades"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/clawd-governance-guide:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/clawd-governance-guide.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: clawd-liquidity-strategist
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: defi
+    forge: cheshire-terminal
+    tag.amm: true
+    tag.clawd: true
+    tag.impermanent-loss: true
+    tag.liquidity: true
+    tag.yield-farming: true
+spec:
+  title: Cheshire Terminal Liquidity Strategist
+  description: "Cheshire Terminal agent: Optimize liquidity provision strategies across $CLAWD pools"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/clawd-liquidity-strategist:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/clawd-liquidity-strategist.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: clawd-onboarding-guide
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: education
+    forge: cheshire-terminal
+    tag.beginner: true
+    tag.clawd: true
+    tag.education: true
+    tag.onboarding: true
+    tag.tutorial: true
+spec:
+  title: Cheshire Terminal Onboarding Guide
+  description: "Cheshire Terminal agent: Help newcomers understand and start using $CLAWD protocol"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/clawd-onboarding-guide:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/clawd-onboarding-guide.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: clawd-portfolio-tracker
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: trading
+    forge: cheshire-terminal
+    tag.analytics: true
+    tag.clawd: true
+    tag.dashboard: true
+    tag.portfolio: true
+    tag.tracking: true
+spec:
+  title: Cheshire Terminal Portfolio Tracker
+  description: "Cheshire Terminal agent: Track and analyze your complete $CLAWD ecosystem holdings"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/clawd-portfolio-tracker:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/clawd-portfolio-tracker.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: clawd-risk-monitor
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: security
+    forge: cheshire-terminal
+    tag.audit: true
+    tag.clawd: true
+    tag.monitoring: true
+    tag.risk: true
+    tag.security: true
+spec:
+  title: Cheshire Terminal Risk Monitor
+  description: "Cheshire Terminal agent: Track and analyze security risks across $CLAWD smart contracts"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/clawd-risk-monitor:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/clawd-risk-monitor.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: clawd-yield-aggregator
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: defi
+    forge: cheshire-terminal
+    tag.apy: true
+    tag.clawd: true
+    tag.farming: true
+    tag.optimization: true
+    tag.yield: true
+spec:
+  title: Cheshire Terminal Yield Aggregator
+  description: "Cheshire Terminal agent: Find and optimize best yield opportunities in $CLAWD ecosystem"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/clawd-yield-aggregator:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/clawd-yield-aggregator.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: clawd
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: character
+    forge: cheshire-terminal
+    tag.character: true
+    tag.oracle: true
+    tag.solana: true
+    tag.x402: true
+spec:
+  title: Clawd
+  description: Clawd is the on-chain oracle of ClawdBrowser, a Claude-powered intelligence wired directly into Solana programs.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/clawd:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/clawd.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: crypto-news-analyst
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: crypto
+    forge: cheshire-terminal
+    tag.analysis: true
+    tag.market: true
+    tag.news: true
+    tag.research: true
+    tag.sentiment: true
+spec:
+  title: Crypto News Analyst
+  description: "Cheshire Terminal agent: Aggregate and analyze breaking crypto news from CoinDesk, The Block, Decrypt, and major publications"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/crypto-news-analyst:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/crypto-news-analyst.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: crypto-tax-strategist
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: trading
+    forge: cheshire-terminal
+    tag.accounting: true
+    tag.compliance: true
+    tag.optimization: true
+    tag.strategy: true
+    tag.tax: true
+spec:
+  title: Crypto Tax Strategy Advisor
+  description: "Cheshire Terminal agent: Optimize crypto taxes and provide tax-efficient DeFi strategies"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/crypto-tax-strategist:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/crypto-tax-strategist.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: defi-insurance-advisor
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: defi
+    forge: cheshire-terminal
+    tag.coverage: true
+    tag.insurance: true
+    tag.protection: true
+    tag.risk: true
+    tag.safety: true
+spec:
+  title: "DeFi Insurance & Risk Coverage Advisor"
+  description: "Cheshire Terminal agent: Navigate DeFi insurance options for smart contract protection"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/defi-insurance-advisor:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/defi-insurance-advisor.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: defi-onboarding-mentor
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: education
+    forge: cheshire-terminal
+    tag.beginner: true
+    tag.defi-basics: true
+    tag.education: true
+    tag.onboarding: true
+    tag.tutorial: true
+spec:
+  title: DeFi Beginner Onboarding Mentor
+  description: "Cheshire Terminal agent: Guide complete beginners through their first DeFi experiences"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/defi-onboarding-mentor:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/defi-onboarding-mentor.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: defi-protocol-comparator
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: defi
+    forge: cheshire-terminal
+    tag.analysis: true
+    tag.comparison: true
+    tag.defi: true
+    tag.protocols: true
+    tag.research: true
+spec:
+  title: DeFi Protocol Comparison Expert
+  description: "Cheshire Terminal agent: Compare similar DeFi protocols across features, risks, and yields"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/defi-protocol-comparator:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/defi-protocol-comparator.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: defi-risk-scoring-engine
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: security
+    forge: cheshire-terminal
+    tag.analysis: true
+    tag.assessment: true
+    tag.framework: true
+    tag.risk: true
+    tag.scoring: true
+spec:
+  title: DeFi Protocol Risk Scoring Engine
+  description: "Cheshire Terminal agent: Comprehensive risk assessment framework for DeFi protocols"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/defi-risk-scoring-engine:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/defi-risk-scoring-engine.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: defi-yield-farmer
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: defi
+    forge: cheshire-terminal
+    tag.apy: true
+    tag.defi: true
+    tag.optimization: true
+    tag.strategy: true
+    tag.yield-farming: true
+spec:
+  title: DeFi Yield Farming Strategist
+  description: "Cheshire Terminal agent: Identify and optimize yield farming opportunities across DeFi protocols"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/defi-yield-farmer:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/defi-yield-farmer.json

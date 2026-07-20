@@ -1,0 +1,647 @@
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: dex-aggregator-optimizer
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: defi
+    forge: cheshire-terminal
+    tag.aggregator: true
+    tag.dex: true
+    tag.optimization: true
+    tag.routing: true
+    tag.swap: true
+spec:
+  title: DEX Aggregator Route Optimizer
+  description: "Cheshire Terminal agent: Find optimal swap routes across DEX aggregators"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/dex-aggregator-optimizer:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/dex-aggregator-optimizer.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: gas-optimization-expert
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: tools
+    forge: cheshire-terminal
+    tag.efficiency: true
+    tag.ethereum: true
+    tag.gas: true
+    tag.layer-2: true
+    tag.optimization: true
+spec:
+  title: Gas Cost Optimization Expert
+  description: "Cheshire Terminal agent: Minimize gas costs and optimize transaction timing"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/gas-optimization-expert:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/gas-optimization-expert.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: governance-proposal-analyst
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: governance
+    forge: cheshire-terminal
+    tag.analysis: true
+    tag.dao: true
+    tag.governance: true
+    tag.proposals: true
+    tag.voting: true
+spec:
+  title: DAO Governance Proposal Analyst
+  description: "Cheshire Terminal agent: Analyze and explain DAO governance proposals and their implications"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/governance-proposal-analyst:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/governance-proposal-analyst.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: hedgefund
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: character
+    forge: cheshire-terminal
+    tag.character: true
+    tag.hedge-fund: true
+    tag.investing: true
+    tag.multi-persona: true
+spec:
+  title: Hedge Fund Desk
+  description: Ben Graham, Warren Buffett, Charlie Munger, Bill Ackman, Cathie Wood
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/hedgefund:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/hedgefund.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: impermanent-loss-calculator
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: tools
+    forge: cheshire-terminal
+    tag.amm: true
+    tag.calculator: true
+    tag.defi: true
+    tag.impermanent-loss: true
+    tag.liquidity: true
+spec:
+  title: Impermanent Loss Calculator
+  description: "Cheshire Terminal agent: Calculate and explain impermanent loss scenarios for LP positions"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/impermanent-loss-calculator:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/impermanent-loss-calculator.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: layer2-comparison-guide
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: defi
+    forge: cheshire-terminal
+    tag.arbitrum: true
+    tag.ethereum: true
+    tag.layer-2: true
+    tag.optimism: true
+    tag.scaling: true
+spec:
+  title: Layer 2 Comparison Guide
+  description: "Cheshire Terminal agent: Compare Ethereum L2 solutions: Arbitrum, Optimism, Base, zkSync"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/layer2-comparison-guide:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/layer2-comparison-guide.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: liquidation-risk-manager
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: tools
+    forge: cheshire-terminal
+    tag.collateral: true
+    tag.defi: true
+    tag.lending: true
+    tag.liquidation: true
+    tag.risk: true
+spec:
+  title: Liquidation Risk Manager
+  description: "Cheshire Terminal agent: Monitor and manage liquidation risks in lending protocols"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/liquidation-risk-manager:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/liquidation-risk-manager.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: liquidity-pool-analyzer
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: defi
+    forge: cheshire-terminal
+    tag.amm: true
+    tag.analysis: true
+    tag.defi: true
+    tag.liquidity-pools: true
+    tag.risk: true
+spec:
+  title: Liquidity Pool Deep Analyzer
+  description: "Cheshire Terminal agent: Analyze LP pool health, risks, and optimal entry/exit timing"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/liquidity-pool-analyzer:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/liquidity-pool-analyzer.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: mad-hatter-character-json
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: character
+    forge: cheshire-terminal
+    kind: character
+    tag.agents: true
+    tag.character: true
+    tag.orchestration: true
+    tag.web3: true
+spec:
+  title: Mad Hatter
+  description: The Mad Hatter is a masterful orchestrator of Web3 agentic systems, blending technical brilliance with whimsical creativity.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/mad-hatter-character-json:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/mad-hatter-character-json.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: mev-protection-advisor
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: security
+    forge: cheshire-terminal
+    tag.flashbots: true
+    tag.front-running: true
+    tag.mev: true
+    tag.protection: true
+    tag.security: true
+spec:
+  title: MEV Protection Advisor
+  description: "Cheshire Terminal agent: Protect users from front-running, sandwich attacks, and MEV exploitation"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/mev-protection-advisor:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/mev-protection-advisor.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: narrative-trend-analyst
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: crypto
+    forge: cheshire-terminal
+    tag.analysis: true
+    tag.market-cycles: true
+    tag.narrative: true
+    tag.sentiment: true
+    tag.trends: true
+spec:
+  title: "Crypto Narrative & Trend Analyst"
+  description: "Cheshire Terminal agent: Track and analyze dominant narratives and trends in crypto markets"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/narrative-trend-analyst:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/narrative-trend-analyst.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: nft-liquidity-advisor
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: defi
+    forge: cheshire-terminal
+    tag.collateral: true
+    tag.defi: true
+    tag.lending: true
+    tag.liquidity: true
+    tag.nft: true
+spec:
+  title: "NFT Liquidity & Lending Advisor"
+  description: "Cheshire Terminal agent: Navigate NFT-backed lending and liquidity solutions"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/nft-liquidity-advisor:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/nft-liquidity-advisor.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: portfolio-rebalancing-advisor
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: trading
+    forge: cheshire-terminal
+    tag.allocation: true
+    tag.optimization: true
+    tag.portfolio: true
+    tag.rebalancing: true
+    tag.strategy: true
+spec:
+  title: DeFi Portfolio Rebalancing Advisor
+  description: "Cheshire Terminal agent: Optimize portfolio allocation and rebalancing strategies"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/portfolio-rebalancing-advisor:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/portfolio-rebalancing-advisor.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: protocol-revenue-analyst
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: defi
+    forge: cheshire-terminal
+    tag.analysis: true
+    tag.defi: true
+    tag.fundamentals: true
+    tag.revenue: true
+    tag.tokenomics: true
+spec:
+  title: "Protocol Revenue & Fundamentals Analyst"
+  description: "Cheshire Terminal agent: Analyze DeFi protocol business models and revenue generation"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/protocol-revenue-analyst:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/protocol-revenue-analyst.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: protocol-treasury-analyst
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: governance
+    forge: cheshire-terminal
+    tag.allocation: true
+    tag.capital: true
+    tag.dao: true
+    tag.runway: true
+    tag.treasury: true
+spec:
+  title: "DAO Treasury & Resource Analyst"
+  description: "Cheshire Terminal agent: Analyze DAO treasury holdings, runway, and capital allocation"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/protocol-treasury-analyst:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/protocol-treasury-analyst.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: pump-fun-sdk-expert
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: defi
+    forge: cheshire-terminal
+    tag.bonding-curve: true
+    tag.pump-fun: true
+    tag.sdk: true
+    tag.solana: true
+    tag.token-creation: true
+spec:
+  title: Pump Fun SDK Expert
+  description: "Cheshire Terminal agent: Specialized assistant for the the Pump SDK — token creation, bonding curve trading, fee sharing, and AMM migration on Solana"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/pump-fun-sdk-expert:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/pump-fun-sdk-expert.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: smart-contract-auditor
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: security
+    forge: cheshire-terminal
+    tag.audit: true
+    tag.risk: true
+    tag.security: true
+    tag.smart-contracts: true
+    tag.solidity: true
+spec:
+  title: Smart Contract Security Auditor
+  description: "Cheshire Terminal agent: Review and assess smart contract security for DeFi protocols"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/smart-contract-auditor:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/smart-contract-auditor.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: spa-tokenomics-analyst
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: crypto
+    forge: cheshire-terminal
+    tag.clawd: true
+    tag.governance: true
+    tag.spa: true
+    tag.staking: true
+    tag.tokenomics: true
+spec:
+  title: Cheshire Terminal SPA Tokenomics Analyst
+  description: "Cheshire Terminal agent: Expert in SPA token economics, staking rewards, and protocol revenue"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/spa-tokenomics-analyst:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/spa-tokenomics-analyst.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: stablecoin-comparator
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: defi
+    forge: cheshire-terminal
+    tag.comparison: true
+    tag.dai: true
+    tag.stablecoin: true
+    tag.usdc: true
+    tag.usdt: true
+spec:
+  title: Stablecoin Deep Comparator
+  description: "Cheshire Terminal agent: Compare stablecoin mechanisms, risks, and use cases"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/stablecoin-comparator:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/stablecoin-comparator.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: staking-rewards-calculator
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: tools
+    forge: cheshire-terminal
+    tag.calculator: true
+    tag.pos: true
+    tag.rewards: true
+    tag.staking: true
+    tag.yields: true
+spec:
+  title: Staking Rewards Calculator
+  description: "Cheshire Terminal agent: Calculate and optimize staking rewards across protocols"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/staking-rewards-calculator:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/staking-rewards-calculator.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: token-unlock-tracker
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: crypto
+    forge: cheshire-terminal
+    tag.analysis: true
+    tag.supply: true
+    tag.tokenomics: true
+    tag.unlocks: true
+    tag.vesting: true
+spec:
+  title: Token Unlock Schedule Tracker
+  description: "Cheshire Terminal agent: Monitor and analyze token unlock events and their market impact"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/token-unlock-tracker:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/token-unlock-tracker.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: usds-stablecoin-expert
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: defi
+    forge: cheshire-terminal
+    tag.clawd: true
+    tag.defi: true
+    tag.stablecoin: true
+    tag.usds: true
+    tag.yield: true
+spec:
+  title: Cheshire Terminal USDs Stablecoin Expert
+  description: "Cheshire Terminal agent: Specialist in $CLAWD USDs mechanism, collateralization, and yield strategies"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/usds-stablecoin-expert:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/usds-stablecoin-expert.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: vespa-optimizer
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: tools
+    forge: cheshire-terminal
+    tag.clawd: true
+    tag.optimization: true
+    tag.staking: true
+    tag.vespa: true
+    tag.voting-power: true
+spec:
+  title: Cheshire Terminal veSPA Optimizer
+  description: "Cheshire Terminal agent: Maximize returns through optimal veSPA locking strategies"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/vespa-optimizer:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/vespa-optimizer.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: wallet-security-advisor
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: security
+    forge: cheshire-terminal
+    tag.best-practices: true
+    tag.hardware: true
+    tag.safety: true
+    tag.security: true
+    tag.wallet: true
+spec:
+  title: Crypto Wallet Security Advisor
+  description: "Cheshire Terminal agent: Best practices for securing crypto wallets and assets"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/wallet-security-advisor:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/wallet-security-advisor.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: warrenbuffet
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: character
+    forge: cheshire-terminal
+    tag.character: true
+    tag.finance: true
+    tag.long-term: true
+    tag.value-investing: true
+spec:
+  title: Warren Buffett
+  description: Warren Buffett combines quantitative analysis with qualitative business assessment, focusing on competitive advantages, quality management, and long-term value creation. He has evolved from pure Graham-style value investing to emphasize business quality and durable competitive advantages.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/warrenbuffet:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/warrenbuffet.json

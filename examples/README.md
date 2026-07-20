@@ -43,6 +43,18 @@ arctl apply -f examples/clawd-perps-agent.yaml
 | [`clawd-perps-mcp/mcp.yaml`](./clawd-perps-mcp/mcp.yaml) | MCPServer | Remote perps MCP (localhost:8080) |
 | [`clawd-perps-agent-project/agent.yaml`](./clawd-perps-agent-project/agent.yaml) | Agent | Agent-only project referencing clawd-perps |
 
+## Robinhood Agents forge catalog
+
+Import the dual-chain forge package (`agents/*.json` + examples) under tag `robinhood`:
+
+```bash
+python3 scripts/import-robinhood-agents.py \
+  --source /path/to/robinhood-agents \
+  --apply --registry-url http://localhost:12121
+```
+
+Batches: [`robinhood-agents-catalog/`](./robinhood-agents-catalog/).
+
 ## Cheshire Terminal catalog (bulk)
 
 Import the full Cheshire Terminal Solana agents hub (143 agents) as catalog

@@ -1,0 +1,129 @@
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: whale-watcher
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: crypto
+    forge: cheshire-terminal
+    tag.analytics: true
+    tag.monitoring: true
+    tag.on-chain: true
+    tag.trading: true
+    tag.whale: true
+spec:
+  title: Crypto Whale Watcher
+  description: "Cheshire Terminal agent: Track and analyze large wallet movements and whale behavior"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/whale-watcher:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/whale-watcher.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: yield-dashboard-builder
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: trading
+    forge: cheshire-terminal
+    tag.analytics: true
+    tag.dashboard: true
+    tag.monitoring: true
+    tag.portfolio: true
+    tag.tracking: true
+spec:
+  title: Personal DeFi Dashboard Builder
+  description: "Cheshire Terminal agent: Design and track your custom DeFi portfolio dashboard"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/yield-dashboard-builder:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/yield-dashboard-builder.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: yield-sustainability-analyst
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: defi
+    forge: cheshire-terminal
+    tag.analysis: true
+    tag.defi: true
+    tag.sustainability: true
+    tag.tokenomics: true
+    tag.yield: true
+spec:
+  title: DeFi Yield Sustainability Analyst
+  description: "Cheshire Terminal agent: Analyze whether high yields are sustainable or temporary"
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/yield-sustainability-analyst:1"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: agents/yield-sustainability-analyst.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: robinhood-open-research-agent
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: forge-example
+    chain-id: 46630
+    forge: cheshire-terminal
+    platform: robinhood
+    tag.chain-46630: true
+    tag.robinhood: true
+spec:
+  title: Open Research Agent
+  description: Publishes verifiable research.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ipfs://bafy-example"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: examples/robinhood-agent.json
+---
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: solana-open-research-agent
+  tag: robinhood
+  labels:
+    app: robinhood-agents
+    catalog: robinhood-agents
+    category: forge-example
+    forge: cheshire-terminal
+    platform: solana
+    tag.chain-unknown: true
+    tag.solana: true
+spec:
+  title: Open Research Agent
+  description: Publishes verifiable research.
+  modelProvider: clawdrouter
+  modelName: auto
+  source:
+    image: "ghcr.io/solizardking/robinhood-agents/solana-open-research-agent:1.0.0"
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: examples/solana-agent.json
+  metaplex:
+    network: "solana-mainnet"
+    launchType: "bondingCurve"
