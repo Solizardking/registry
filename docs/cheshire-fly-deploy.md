@@ -4,8 +4,8 @@
 
 | Surface | URL |
 |---------|-----|
-| **API + native UI** | https://cheshire-agentregistry.fly.dev |
-| **Health** | https://cheshire-agentregistry.fly.dev/v0/health |
+| **API + native UI** | https://registry.cheshireterminal.ai |
+| **Health** | https://registry.cheshireterminal.ai/v0/health |
 | **Cheshire SPA page** | https://cheshireterminal.ai/agent-registry |
 | **Same-origin proxy** | https://cheshire-clawd-terminal.fly.dev/api/agent-registry/* |
 
@@ -13,7 +13,7 @@
 
 - `cheshire-agentregistry` — Go `arctl-server` + embedded Next UI
 - `cheshire-agentregistry-db` — Fly Postgres (flex)
-- `cheshire-clawd-terminal` — sets `AGENT_REGISTRY_URL=https://cheshire-agentregistry.fly.dev`
+- `cheshire-clawd-terminal` — sets `AGENT_REGISTRY_URL=https://registry.cheshireterminal.ai`
 
 ## Deploy / redeploy
 
@@ -27,7 +27,7 @@ Or: `./scripts/deploy-fly.sh`
 ## Publish catalog YAML
 
 ```bash
-curl -X POST https://cheshire-agentregistry.fly.dev/v0/apply \
+curl -X POST https://registry.cheshireterminal.ai/v0/apply \
   -H 'Content-Type: application/yaml' \
   --data-binary @examples/clawd-perps-agent.yaml
 ```
