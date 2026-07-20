@@ -18,7 +18,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/solana-lending-strategist:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/solana-lending-strategist:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -43,7 +43,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/solana-liquidation-bot:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/solana-liquidation-bot:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -68,7 +68,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/solana-lsd-analyst:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/solana-lsd-analyst:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -93,7 +93,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/solana-macro-analyst:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/solana-macro-analyst:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -118,7 +118,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/solana-market-maker:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/solana-market-maker:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -143,7 +143,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/solana-memecoin-analyst:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/solana-memecoin-analyst:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -168,7 +168,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/solana-mev-protector:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/solana-mev-protector:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -193,7 +193,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/solana-mpl-core-launcher:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/solana-mpl-core-launcher:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/public/api/agents/catalog
@@ -218,7 +218,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/solana-nanoclawd-cache-keeper:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/solana-nanoclawd-cache-keeper:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -243,7 +243,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/solana-nanoclawd-microtransaction:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/solana-nanoclawd-microtransaction:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -268,7 +268,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/solana-nanoclawd-sandbox-runner:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/solana-nanoclawd-sandbox-runner:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -293,7 +293,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/solana-narrative-tracker:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/solana-narrative-tracker:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -318,7 +318,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/solana-nemoclawd-defi-router:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/solana-nemoclawd-defi-router:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -343,7 +343,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/solana-nemoclawd-settlement-ops:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/solana-nemoclawd-settlement-ops:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -368,7 +368,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/solana-nemoclawd-yield-treasurer:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/solana-nemoclawd-yield-treasurer:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -393,7 +393,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/solana-nft-floor-trader:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/solana-nft-floor-trader:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -418,7 +418,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/solana-onchain-metrics:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/solana-onchain-metrics:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -443,7 +443,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/solana-onchain-sleuth:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/solana-onchain-sleuth:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -468,7 +468,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/solana-openclawd-agent-staking:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/solana-openclawd-agent-staking:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -493,7 +493,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/solana-openclawd-orchestrator:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/solana-openclawd-orchestrator:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -518,7 +518,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/solana-openclawd-pulse-monitor:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/solana-openclawd-pulse-monitor:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -543,7 +543,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/solana-openclawd-shell-auditor:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/solana-openclawd-shell-auditor:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -568,7 +568,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/solana-openclawd-skill-router:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/solana-openclawd-skill-router:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -593,7 +593,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/solana-openclawd-spawn-manager:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/solana-openclawd-spawn-manager:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -617,7 +617,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/solana-order-flow-analyst:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/solana-order-flow-analyst:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src

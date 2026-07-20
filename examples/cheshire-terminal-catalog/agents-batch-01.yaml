@@ -18,7 +18,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/airdrop-hunter:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/airdrop-hunter:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/defi-agents/src
@@ -43,7 +43,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/alpha-leak-detector:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/alpha-leak-detector:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/defi-agents/src
@@ -68,7 +68,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/apy-vs-apr-educator:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/apy-vs-apr-educator:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/defi-agents/src
@@ -93,7 +93,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/bridge-security-analyst:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/bridge-security-analyst:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/defi-agents/src
@@ -143,7 +143,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/clawd-bridge-assistant:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/clawd-bridge-assistant:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/defi-agents/src
@@ -168,7 +168,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/clawd-firecrawl:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/clawd-firecrawl:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/public/api/agents/catalog
@@ -193,7 +193,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/clawd-formal-verification:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/clawd-formal-verification:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -218,7 +218,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/clawd-gateway-runtime:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/clawd-gateway-runtime:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -243,7 +243,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/clawd-governance-guide:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/clawd-governance-guide:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/defi-agents/src
@@ -268,7 +268,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/clawd-grok-runtime:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/clawd-grok-runtime:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -293,7 +293,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/clawd-liquidity-strategist:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/clawd-liquidity-strategist:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/defi-agents/src
@@ -318,7 +318,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/clawd-mayhem-mode:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/clawd-mayhem-mode:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/public/api/agents/catalog
@@ -343,7 +343,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/clawd-onboarding-guide:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/clawd-onboarding-guide:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/defi-agents/src
@@ -368,7 +368,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/clawd-operator-runtime:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/clawd-operator-runtime:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -393,7 +393,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/clawd-portfolio-tracker:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/clawd-portfolio-tracker:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/defi-agents/src
@@ -418,7 +418,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/clawd-pump-runtime:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/clawd-pump-runtime:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -443,7 +443,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/clawd-pumpfun-official:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/clawd-pumpfun-official:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/public/api/agents/catalog
@@ -468,7 +468,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/clawd-risk-monitor:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/clawd-risk-monitor:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/defi-agents/src
@@ -493,7 +493,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/clawd-router-runtime:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/clawd-router-runtime:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -518,7 +518,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/clawd-web3-domain-agent:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/clawd-web3-domain-agent:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/public/api/agents/catalog
@@ -543,7 +543,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/clawd-yield-aggregator:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/clawd-yield-aggregator:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/defi-agents/src
@@ -568,7 +568,7 @@ spec:
   modelProvider: anthropic
   modelName: claude-sonnet-4-6
   source:
-    image: "ghcr.io/solizardking/clawd-agents/clawdex:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/clawdex:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/src
@@ -593,7 +593,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/crypto-news-analyst:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/crypto-news-analyst:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/defi-agents/src
@@ -618,7 +618,7 @@ spec:
   modelProvider: clawdrouter
   modelName: auto
   source:
-    image: "ghcr.io/solizardking/clawd-agents/crypto-tax-strategist:1.0.0"
+    image: "ghcr.io/solizardking/clawd-agents/crypto-tax-strategist:1"
     repository:
       url: "https://github.com/Solizardking/cheshire-terminal"
       subfolder: agents/defi-agents/src

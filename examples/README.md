@@ -43,6 +43,19 @@ arctl apply -f examples/clawd-perps-agent.yaml
 | [`clawd-perps-mcp/mcp.yaml`](./clawd-perps-mcp/mcp.yaml) | MCPServer | Remote perps MCP (localhost:8080) |
 | [`clawd-perps-agent-project/agent.yaml`](./clawd-perps-agent-project/agent.yaml) | Agent | Agent-only project referencing clawd-perps |
 
+## Cheshire Terminal catalog (bulk)
+
+Import the full Cheshire Terminal Solana agents hub (143 agents) as catalog
+entries:
+
+```bash
+python3 scripts/import-cheshire-agents.py \
+  --source /path/to/cheshire-terminal/agents \
+  --apply --registry-url http://localhost:12121
+```
+
+Checked-in batches live under [`cheshire-terminal-catalog/`](./cheshire-terminal-catalog/).
+
 ## Clawd Perps
 
 See [docs/clawd-perps-integration.md](../docs/clawd-perps-integration.md).
