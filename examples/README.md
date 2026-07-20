@@ -69,6 +69,20 @@ python3 scripts/import-skillhub.py \
 
 Batches: [`skillhub-catalog/`](./skillhub-catalog/) · tag `skillhub` · site https://skills.x402.wtf
 
+## Host SkillHub (local + site)
+
+```bash
+# Local site + registry publish
+./scripts/host-skillhub-local.sh /path/to/skillhub-main
+# → http://127.0.0.1:8787/  and  http://localhost:12121
+
+# Production site (Vercel project skillhub)
+# cd skillhub-main && vercel link --project skillhub --yes && vercel deploy --prod --yes
+# → https://skills.x402.wtf
+```
+
+
+
 ## Skills catalog
 
 Import Cheshire Terminal `SKILL.md` packages as registry Skill resources:
