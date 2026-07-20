@@ -55,6 +55,18 @@ python3 scripts/import-robinhood-agents.py \
 
 Batches: [`robinhood-agents-catalog/`](./robinhood-agents-catalog/).
 
+## Skills catalog
+
+Import Cheshire Terminal `SKILL.md` packages as registry Skill resources:
+
+```bash
+python3 scripts/import-skills.py \
+  --source-root /path/to/cheshire-terminal \
+  --apply --registry-url https://cheshire-agentregistry.fly.dev
+```
+
+Batches: [`skills-catalog/`](./skills-catalog/).
+
 ## Cheshire Terminal catalog (bulk)
 
 Import the full Cheshire Terminal Solana agents hub (143 agents) as catalog

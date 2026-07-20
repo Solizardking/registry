@@ -1,0 +1,679 @@
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: solana-redpill-verifier
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Solana Redpill Verifier
+  description: "Solana RedPill TEE verifier development and operations for the `web/solana-redpill-verifier` stack. Use for Pinocchio SVM proof storage, TeeProofV2 PDA layout, StoreProofV2 transactions, RedPill/TDX and NVIDIA NRAS attestation anchoring, CLAWD TEE Gateway setup, OpenAI-compatible attested inference proxying, Solana Attestation Service Token-2022 credentials, TypeScript client integration, OP-TEE signer integration, deployment, and debugging proof anchoring on Solana."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/solana-redpill-verifier
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: solana-rent-free-dev
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Solana Rent Free Dev
+  description: ">"
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/solana-rent-free-dev
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: songsee
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Songsee
+  description: Generate spectrograms and feature-panel visualizations from audio with the songsee CLI.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/songsee
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: sonoscli
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Sonoscli
+  description: Control Sonos speakers (discover/status/play/volume/group).
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/sonoscli
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: cheshire-skills-sponge-wallet
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Sponge Wallet
+  description: Crypto wallet, token swaps, cross-chain bridges, and access to paid external services (search, image gen, web scraping, AI, and more) via x402 payments.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/sponge-wallet
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: spotify-player
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Spotify Player
+  description: Terminal Spotify playback/search via spogo (preferred) or spotify_player.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/spotify-player
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: stripe
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Stripe
+  description: ">"
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/stripe
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: summarize
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Summarize
+  description: Summarize or extract text/transcripts from URLs, podcasts, and local files (great fallback for “transcribe this YouTube/video”).
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/summarize
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: swap-integration
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Swap Integration
+  description: "Integrate Uniswap swaps into applications. Use when user says \"integrate swaps\", \"uniswap\", \"trading api\", \"add swap functionality\", \"build a swap frontend\", \"create a swap script\", \"smart contract swap integration\", \"use Universal Router\", \"Trading API\", or mentions swapping tokens via Uniswap."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/swap-integration
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: swarm-orchestrator
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Swarm Orchestrator
+  description: Orchestrate multi-bot trading swarms on Pump.fun with persona-driven agents
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/swarm-orchestrator
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: testing
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Testing
+  description: For testing with Light Protocol programs and clients on localnet, devnet, and mainnet validation.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/testing
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: things-mac
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Things Mac
+  description: "Manage Things 3 via the `things` CLI on macOS (add/update projects+todos via URL scheme; read/search/list from the local Things database). Use when a user asks Clawdbot to add a task to Things, list inbox/today/upcoming, search tasks, or inspect projects/areas/tags."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/things-mac
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: tmux
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Tmux
+  description: Remote-control tmux sessions for interactive CLIs by sending keystrokes and scraping pane output.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/tmux
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: trello
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Trello
+  description: Manage Trello boards, lists, and cards via the Trello REST API.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/trello
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: video-frames
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Video Frames
+  description: Extract frames or short clips from videos using ffmpeg.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/video-frames
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: voice-call
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Voice Call
+  description: Start voice calls via the Clawdbot voice-call plugin.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/voice-call
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Vulcan
+  description: Entry-point skill for Phoenix perpetuals through Vulcan/Rise SDK inside solana-clawd. Use before answering or acting on Vulcan, Phoenix DEX, Solana perps, paper trading, live trading, margin, TP/SL, TWAP, grid, TA strategies, or perps agent setup.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/vulcan
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-error-recovery
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Vulcan Error Recovery
+  description: Error category routing and recovery for Vulcan/Phoenix perps. Use on failed CLI/MCP calls, tx failures, auth/config/API/network/rate-limit errors, and strategy recovery.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/vulcan-error-recovery
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-execution-modes
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Vulcan Execution Modes
+  description: "Canonical Vulcan execution mode taxonomy: Observe, Paper, Dry-Run, Confirm-Each, Auto-Execute. Use before launching strategies or live-capable perps flows."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/vulcan-execution-modes
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-grid-trading
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Vulcan Grid Trading
+  description: Grid trading with layered limit orders on Phoenix perpetuals. Use for grid setup, monitoring, pausing/stopping, and live/paper grid strategy safety.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/vulcan-grid-trading
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-lot-size-calculator
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Vulcan Lot Size Calculator
+  description: Convert desired token/notional amounts to Phoenix base lots. Use whenever a Vulcan command requires size/base lots.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/vulcan-lot-size-calculator
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-margin-operations
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Vulcan Margin Operations
+  description: Vulcan/Phoenix collateral, deposits, withdrawals, transfers, isolated margin, leverage tiers, and margin health.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/vulcan-margin-operations
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-market-intel
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Vulcan Market Intel
+  description: Phoenix market data, tickers, orderbooks, candles, funding, spreads, liquidity, and pre-trade market context.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/vulcan-market-intel
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-onboarding
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Vulcan Onboarding
+  description: First-run Vulcan setup for paper trading, wallet, registration, collateral, MCP skills, and live readiness.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/vulcan-onboarding
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-portfolio-intel
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Vulcan Portfolio Intel
+  description: "Phoenix portfolio snapshots: margin, positions, resting orders, funding exposure, PnL, and account reporting."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/vulcan-portfolio-intel
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-position-management
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Vulcan Position Management
+  description: List, show, close, reduce Phoenix positions and attach/cancel TP/SL.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/vulcan-position-management
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-quickstart
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Vulcan Quickstart
+  description: Five-minute Vulcan quickstart for install, health check, first market read, and first paper trade.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/vulcan-quickstart
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-risk-management
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Vulcan Risk Management
+  description: "Risk checks for Phoenix perps: margin health, leverage tiers, liquidation distance, notional caps, exposure, stops, and strategy guardrails."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/vulcan-risk-management
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-skills-index
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Vulcan Skills Index
+  description: Index for the bundled Vulcan skill pack exposed through solana-clawd. Use to discover the correct focused Vulcan skill.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/vulcan-skills-index
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-ta-strategy
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Vulcan Ta Strategy
+  description: Technical-analysis-driven Phoenix strategy runner using declarative rules and Vulcan strategy ledgers.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/vulcan-ta-strategy
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-technical-analysis
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Vulcan Technical Analysis
+  description: "Technical indicators and trigger evaluation for Phoenix markets: RSI, MACD, BBands, ATR, ADX, VWAP, Stoch, SMA, EMA."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/vulcan-technical-analysis
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-tpsl-management
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Vulcan Tpsl Management
+  description: Take-profit and stop-loss setup, cancellation, laddered exits, position-side rules, and verification for Vulcan/Phoenix.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/vulcan-tpsl-management
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-trade-execution
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Vulcan Trade Execution
+  description: "Safe Phoenix order execution via Vulcan: pre-trade checks, market/limit orders, paper/dry-run/live gates, and post-trade verification."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/vulcan-trade-execution
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: vulcan-twap-execution
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Vulcan Twap Execution
+  description: "TWAP strategy execution on Phoenix perps using Vulcan's first-class runner, tick logs, ledgers, status/monitor/finalize controls."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/vulcan-twap-execution
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: wacli
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Wacli
+  description: Send WhatsApp messages to other people or search/sync WhatsApp history via the wacli CLI (not for normal user chats).
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/wacli
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: weather
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Weather
+  description: Get current weather and forecasts (no API key required).
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/weather
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: web-perf
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Web Perf
+  description: Analyzes web performance using Chrome DevTools MCP. Measures Core Web Vitals (LCP, INP, CLS) and supplementary metrics (FCP, TBT, Speed Index), identifies render-blocking resources, network dependency chains, layout shifts, caching issues, and accessibility gaps. Use when asked to audit, profile, debug, or optimize page load performance, Lighthouse scores, or site speed. Biases towards retrieval from current documentation over pre-trained knowledge.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/web-perf
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: workers-best-practices
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Workers Best Practices
+  description: Reviews and authors Cloudflare Workers code against production best practices. Load when writing new Workers, reviewing Worker code, configuring wrangler.jsonc, or checking for common Workers anti-patterns (streaming, floating promises, global state, secrets, bindings, observability). Biases towards retrieval from Cloudflare docs over pre-trained knowledge.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/workers-best-practices
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: wrangler
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Wrangler
+  description: Cloudflare Workers CLI for deploying, developing, and managing Workers, KV, R2, D1, Vectorize, Hyperdrive, Workers AI, Containers, Queues, Workflows, Pipelines, and Secrets Store. Load before running wrangler commands to ensure correct syntax and best practices. Biases towards retrieval from Cloudflare docs over pre-trained knowledge.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/wrangler
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: youtube-clipper
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Youtube Clipper
+  description: ">"
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/youtube-clipper

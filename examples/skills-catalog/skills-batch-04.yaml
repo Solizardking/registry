@@ -1,0 +1,679 @@
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: cheshire-skills-pump-ai-agents
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Pump Ai Agents
+  description: Create and maintain AI-agent integration files for Pump.fun SDK work, including AGENTS/CLAUDE/COPILOT/GEMINI instructions, .well-known discovery, LLM context docs, skills registries, MCP prompts, and terminal rules. Use when wiring agents to Pump.fun development workflows.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/pump-ai-agents
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: cheshire-skills-pump-bonding-curve
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Pump Bonding Curve
+  description: Implement Pump.fun bonding-curve math for token pricing, buy/sell quotes, fee-aware calculations, market cap, tiered fees, ceiling division, virtual versus real reserves, and migration edge cases. Use when reviewing or coding Pump.fun pricing logic.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/pump-bonding-curve
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: cheshire-skills-pump-build-release
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Pump Build Release
+  description: Run and maintain Pump.fun SDK build, release, and publishing workflows across TypeScript, Rust, npm, Vercel, Makefile targets, linting, semantic release, and MCP server distribution. Use when preparing or debugging Pump.fun package releases.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/pump-build-release
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: cheshire-skills-pump-claims-readonly
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Pump Claims Readonly
+  description: "Query Pump.fun claim state without sending transactions: unclaimed token incentives, creator vault balances, volume accumulators, distributable fees, current-day token previews, and Pump/PumpAMM aggregate views. Use for read-only claim and fee diagnostics."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/pump-claims-readonly
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: cheshire-skills-pump-fee-sharing
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Pump Fee Sharing
+  description: Configure and distribute Pump.fun creator fees through the PumpFees program with BPS shareholder splits, admin management, validation, and Pump/PumpAMM fee consolidation for graduated tokens. Use when setting up or paying creator fee shares.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/pump-fee-sharing
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: cheshire-skills-pump-fee-system
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Pump Fee System
+  description: Implement and audit the Pump.fun fee system, including market-cap fee tiers, creator fee vaults across Pump and PumpAMM, basis-point arithmetic, ceiling division, fee simulation, and dust-safe calculations. Use for protocol fee logic and creator-fee accounting.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/pump-fee-system
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: cheshire-skills-pump-mcp-server
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Pump Mcp Server
+  description: Build and operate a Pump.fun Model Context Protocol server for AI agents, covering stdio transport, wallet/session safety, quoting, transaction builders, fee management, analytics, AMM operations, and prompt/resource design. Use when exposing Pump.fun operations through MCP.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/pump-mcp-server
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: cheshire-skills-pump-rust-vanity
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Pump Rust Vanity
+  description: Build production Rust vanity-address tooling for Pump.fun/Solana wallets with Rayon parallelism, solana-sdk key generation, Base58 prefix/suffix matching, secure file output, zeroization, and Criterion benchmarks. Use for high-throughput vanity generation.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/pump-rust-vanity
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: cheshire-skills-pump-sdk-core
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Pump Sdk Core
+  description: "Build and extend the Pump.fun SDK core: offline TypeScript instruction builders, online RPC helpers, account decoders, PDAs, token creation, buy/sell, migration, fee collection, PumpAMM, PumpFees, and Mayhem support. Use for SDK API and implementation work."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/pump-sdk-core
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: cheshire-skills-pump-security
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Pump Security
+  description: "Apply Pump.fun SDK security practices across Rust, TypeScript, and Bash: key handling, memory zeroization, secure file I/O, input validation, privilege boundaries, dependency auditing, and wallet/tool hardening. Use for Pump.fun security reviews and fixes."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/pump-security
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: cheshire-skills-pump-shell-scripts
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Pump Shell Scripts
+  description: Write and maintain secure Bash tooling for Pump.fun/Solana workflows, including vanity generation wrappers, keypair verification, batch jobs, dependency audits, test orchestration, file permissions, input validation, and cleanup traps.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/pump-shell-scripts
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: cheshire-skills-pump-solana-architecture
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Pump Solana Architecture
+  description: Design Pump.fun Solana program architecture, PDAs, account layouts, global singletons, per-token state, per-user accumulators, Mayhem accounts, and cross-program coordination across Pump, PumpAMM, PumpFees, and Mayhem. Use for account-model or PDA work.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/pump-solana-architecture
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: cheshire-skills-pump-solana-dev
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Pump Solana Dev
+  description: "Apply Solana development patterns used by Pump.fun: Anchor IDL interaction, SPL Token and Token-2022 handling, transaction instruction composition, RPC batching, account decoding, simulation, BN arithmetic, and cross-program coordination."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/pump-solana-dev
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: cheshire-skills-pump-solana-wallet
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Pump Solana Wallet
+  description: Generate and validate secure Solana wallets for Pump.fun workflows using official Solana libraries, Ed25519 keypairs, offline operation, memory zeroization, secure file permissions, and Rust/TypeScript/Bash implementations.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/pump-solana-wallet
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: cheshire-skills-pump-testing
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Pump Testing
+  description: Design and run Pump.fun SDK test infrastructure across Rust, TypeScript, Python, and Bash, including unit tests, integration tests, security tests, fuzzing, shell orchestration, Criterion benchmarks, coverage, and CI gates.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/pump-testing
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: cheshire-skills-pump-token-incentives
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Pump Token Incentives
+  description: Implement and operate Pump.fun PUMP token incentive rewards with day-indexed epochs, pro-rata volume distribution, user/global accumulators, sync and claim flows, and Pump/PumpAMM cross-program aggregation.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/pump-token-incentives
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: cheshire-skills-pump-token-lifecycle
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Pump Token Lifecycle
+  description: Manage the full Pump.fun token lifecycle from creation through bonding-curve trading, graduation detection, AMM migration, AMM trading, creator fee collection, and volume tracking with PumpSdk and OnlinePumpSdk.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/pump-token-lifecycle
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: cheshire-skills-pump-ts-vanity
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Pump Ts Vanity
+  description: "Build educational TypeScript vanity-address tooling for Pump.fun/Solana wallets with @solana/web3.js, async generators, event-loop yielding, prefix/suffix matching, batch search, and best-effort memory zeroization."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/pump-ts-vanity
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pumpfun
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Pumpfun
+  description: Entry-point router for the local Pump.fun skill suite. Use when the user asks about launching Pump.fun tokens, bonding-curve or AMM trading, quotes, fees, claims, incentives, SDK work, agent/MCP integration, security, testing, or release workflows.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/pumpfun
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pumpfun-analytics
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Pumpfun Analytics
+  description: Quick Pump.fun analytics shortcut for bonding curve state, graduation progress, price impact, token pricing, fee tiers, and buy/sell quote checks. Use for lightweight read-only token analysis.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/pumpfun-analytics
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pumpfun-fees
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Pumpfun Fees
+  description: Quick Pump.fun fee shortcut for creator fee sharing setup, shareholder BPS splits, claim/distribution flows, fee-tier checks, token incentives, and automated fee monitoring.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/pumpfun-fees
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pumpfun-launcher
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Pumpfun Launcher
+  description: Quick Pump.fun token-launch shortcut for creating tokens with the Pump SDK, optional initial buys, metadata upload flow, Mayhem mode, and launch safety checks.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/pumpfun-launcher
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pumpfun-trading
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Pumpfun Trading
+  description: Quick Pump.fun trading shortcut for buy/sell flow selection, bonding curve versus AMM state checks, slippage handling, risk controls, and SDK trade instruction building.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/pumpfun-trading
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: review-animations
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Review Animations
+  description: "Reviews animation and motion code against a high craft bar derived from Emil Kowalski's design engineering philosophy. Default to flagging; approval is earned."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/review-animations
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: rh-bonded-launch
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Rh Bonded Launch
+  description: ">"
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/rh-bonded-launch
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: sag
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Sag
+  description: ElevenLabs text-to-speech with mac-style say UX.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/sag
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: sandbox-sdk
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Sandbox Sdk
+  description: Build sandboxed applications for secure code execution. Load when building AI code execution, code interpreters, CI/CD systems, interactive dev environments, or executing untrusted code. Covers Sandbox SDK lifecycle, commands, files, code interpreter, and preview URLs. Biases towards retrieval from Cloudflare docs over pre-trained knowledge.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/sandbox-sdk
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: session-logs
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Session Logs
+  description: Search and analyze your own session logs (older/parent conversations) using jq.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/session-logs
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: shadcn
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Shadcn
+  description: "Manages shadcn components and projects — adding, searching, fixing, debugging, styling, and composing UI, including chat interfaces. Provides project context, component docs, and usage examples. Applies when working with shadcn/ui, component registries, presets, --preset codes, or any project with a components.json file. Also triggers for \"shadcn init\", \"create an app with --preset\", or \"switch to --preset\"."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/shadcn
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: sherpa-onnx-tts
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Sherpa Onnx Tts
+  description: Local text-to-speech via sherpa-onnx (offline, no cloud)
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/sherpa-onnx-tts
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: skill-creator
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Skill Creator
+  description: Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/skill-creator
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: skillhub-onchain
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Skillhub Onchain
+  description: ">"
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/skillhub-onchain
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: slack
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Slack
+  description: Use when you need to control Slack from Clawdbot via the slack tool, including reacting to messages or pinning/unpinning items in Slack channels or DMs.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/slack
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: solana-clawd
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Solana Clawd
+  description: "One-shot setup and operation guide for the solana-clawd agentic engine. Use when: cloning the repo, setting up MCP tools, starting the Telegram bot, deploying to Fly.io/Netlify, hatching blockchain buddies, running OODA loops, configuring voice mode (ElevenLabs + Grok), minting Metaplex agents, managing the vault, running the worker swarm, or contributing to the project. Covers all 31 MCP tools, 18 buddy species, 9 spinners, 60+ Telegram commands, 95 skills, and the full repo structure."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/solana-clawd
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: solana-clawd-agentic-commerce
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Solana Clawd Agentic Commerce
+  description: Build and operate Solana CLAWD agents that spend through Pay CLI, expose paid stores, mint Metaplex-readable identities, and launch Genesis agent tokens.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/solana-clawd-agentic-commerce
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: solana-clawd-agents
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Solana Clawd Agents
+  description: Use the imported Solana Clawd Agents hub catalog to browse, validate, build, deploy, mint, stake, and integrate production-ready Solana agent definitions, including x402 paid-agent APIs, MCP catalog endpoints, Cloudflare Worker API, Metaplex Core minting, and agent JSON schema workflows.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/solana-clawd-agents
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: solana-common-errors
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Solana Common Errors
+  description: ">"
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/solana-common-errors
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: solana-dev
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Solana Dev
+  description: "Use when user asks to \"build a Solana dapp\", \"write an Anchor program\", \"create a token\", \"debug Solana errors\", \"set up wallet connection\", \"test my Solana program\", \"deploy to devnet\", or \"explain Solana concepts\" (rent, accounts, PDAs, CPIs, etc.). Also use for quick on-chain lookups via public RPC + curl — \"what's the balance of <wallet>\", \"look up transaction <sig>\", \"token balance for <account>\", \"check this address on mainnet/devnet\". End-to-end Solana development playbook covering wallet connection, Anchor/Pinocchio programs, Codama client generation, LiteSVM/Mollusk/Surfpool testing, security checklists, and JSON-RPC curl lookups against public clusters. Integrates with the Solana MCP server for live documentation search. Prefers framework-kit (@solana/client + @solana/react-hooks) for UI, wallet-standard-first connection (incl. ConnectorKit), @solana/kit for client/RPC code, and @solana/web3-compat for legacy boundaries."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/solana-dev
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: qedgen
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Qedgen
+  description: "Formally verify programs by writing Lean 4 proofs. Trigger this skill whenever the user wants to formally verify code, generate Lean 4 proofs, prove properties about algorithms or smart contracts, verify invariants, convert program logic into formal specifications, or anything involving Lean 4 and formal verification. Also trigger when the user mentions \"qedgen\", \"lean proof\", \"formal proof\", \"verify my code\", \"prove correctness\", \"formal verification\", or wants mathematical guarantees about their implementation."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/solana-formal-verification
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: solana-ralphy-skill
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Solana Ralphy Skill
+  description: Autonomous AI coding loop for Solana development that combines Ralphy-style task execution with Solana program, token launch, dApp, testing, and multi-engine coding workflows. Use when running PRD-driven or parallel Solana implementation tasks.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/solana-ralphy-skill

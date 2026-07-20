@@ -1,0 +1,679 @@
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-admin-ops
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: agents-skills
+    kind: skill
+spec:
+  title: Pump Admin Ops
+  description: Admin and authority operations for the Pump protocol — set coin creator, update token incentives, set IDL authority, claim cashback, Mayhem mode, and BothPrograms cross-program admin instructions.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: agents/skills/pump-admin-ops
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-ai-agents
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: agents-skills
+    kind: skill
+spec:
+  title: Pump Ai Agents
+  description: AI agent integration layer for the Pump SDK — agent instruction files, .well-known discovery, LLM context documents, 15+ skill files, MCP server prompts, and terminal management rules for GitHub Copilot, Claude, and Gemini.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: agents/skills/pump-ai-agents
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-bonding-curve
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: agents-skills
+    kind: skill
+spec:
+  title: Pump Bonding Curve
+  description: Constant-product AMM bonding curve math for Pump token pricing — buy/sell quoting, fee-aware calculations, market cap computation, tiered fees, ceiling division, virtual vs real reserves, and edge-case handling.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: agents/skills/pump-bonding-curve
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-build-release
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: agents-skills
+    kind: skill
+spec:
+  title: Pump Build Release
+  description: Build and release pipeline for the Pump SDK — tsup TypeScript builds, Cargo release profiles, semantic release with commitizen, npm publishing, linting, Makefile targets, Vercel deployment, and MCP server distribution.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: agents/skills/pump-build-release
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-claims-readonly
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: agents-skills
+    kind: skill
+spec:
+  title: Pump Claims Readonly
+  description: Read-only query methods for PumpFun claims — unclaimed token rewards, creator vault balances, volume accumulators, distributable fees, and current-day token previews across Pump and PumpAMM programs.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: agents/skills/pump-claims-readonly
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-fee-sharing
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: agents-skills
+    kind: skill
+spec:
+  title: Pump Fee Sharing
+  description: Configure and distribute creator fees to multiple shareholders using the PumpFees program with BPS-based share allocation, admin management, and cross-program fee consolidation for graduated tokens.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: agents/skills/pump-fee-sharing
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-fee-system
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: agents-skills
+    kind: skill
+spec:
+  title: Pump Fee System
+  description: Complete Pump protocol fee system — tiered protocol fees based on market cap, creator fee collection across two programs, basis point arithmetic, and ceiling division for dust-safe calculations.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: agents/skills/pump-fee-system
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-mcp-server
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: agents-skills
+    kind: skill
+spec:
+  title: Pump Mcp Server
+  description: Model Context Protocol server exposing 53 tools, 3 resource types, and 3 prompts for AI agent consumption — quoting, building transactions, fee management, analytics, AMM operations, social fees, wallet operations over stdio transport.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: agents/skills/pump-mcp-server
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-rust-vanity
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: agents-skills
+    kind: skill
+spec:
+  title: Pump Rust Vanity
+  description: Production-grade multi-threaded Rust vanity address generator for Solana — 100K+ keys/sec using Rayon parallel iterators with solana-sdk, Base58 pattern matching, prefix/suffix support, security-hardened file output, and Criterion benchmarks.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: agents/skills/pump-rust-vanity
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-sdk-core
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: agents-skills
+    kind: skill
+spec:
+  title: Pump Sdk Core
+  description: Build and extend the core Pump SDK — an offline-first TypeScript SDK that constructs Solana TransactionInstructions for token creation, buying, selling, migration, and creator fee collection across three on-chain programs (Pump, PumpAMM, PumpFees).
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: agents/skills/pump-sdk-core
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-security
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: agents-skills
+    kind: skill
+spec:
+  title: Pump Security
+  description: Defense-in-depth security across Rust, TypeScript, and Bash for the Pump SDK — cryptographic key handling, memory zeroization, secure file I/O, input validation, privilege management, dependency auditing, and a 60+ item security checklist.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: agents/skills/pump-security
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-shell-scripts
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: agents-skills
+    kind: skill
+spec:
+  title: Pump Shell Scripts
+  description: Production-quality Bash scripts for Solana vanity generation, keypair verification, batch operations, dependency auditing, and test orchestration — with security-hardened patterns including file permissions, input validation, and cleanup traps.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: agents/skills/pump-shell-scripts
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-solana-architecture
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: agents-skills
+    kind: skill
+spec:
+  title: Pump Solana Architecture
+  description: "Design and derive Program Derived Addresses (PDAs) and account layouts across the Pump ecosystem's four Solana programs — global singletons, per-token accounts, per-user accumulators, and cross-program coordination patterns."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: agents/skills/pump-solana-architecture
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-solana-dev
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: agents-skills
+    kind: skill
+spec:
+  title: Pump Solana Dev
+  description: Solana development patterns used in the Pump SDK — Anchor IDL-based program interaction, SPL Token and Token-2022 management, transaction construction with instruction composition, RPC batching, and cross-program coordination.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: agents/skills/pump-solana-dev
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-solana-wallet
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: agents-skills
+    kind: skill
+spec:
+  title: Pump Solana Wallet
+  description: Secure Solana wallet generation using official Solana Labs libraries — Ed25519 keypairs, memory zeroization, vanity address generation, offline-only operation, and multi-language implementations (Rust, TypeScript, Bash).
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: agents/skills/pump-solana-wallet
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-testing
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: agents-skills
+    kind: skill
+spec:
+  title: Pump Testing
+  description: Multi-language test infrastructure for the Pump SDK — Rust unit/integration/security/performance tests, TypeScript Jest tests, Python fuzz tests, shell test orchestration, Criterion benchmarks, and CI quality gates.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: agents/skills/pump-testing
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-token-incentives
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: agents-skills
+    kind: skill
+spec:
+  title: Pump Token Incentives
+  description: Volume-based PUMP token reward system with day-indexed epochs, pro-rata distribution, accumulator tracking, and cross-program claiming on Solana.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: agents/skills/pump-token-incentives
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-token-lifecycle
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: agents-skills
+    kind: skill
+spec:
+  title: Pump Token Lifecycle
+  description: Full token lifecycle from creation through bonding curve trading, graduation detection, AMM migration, fee collection, and volume tracking on Solana using PumpSdk and OnlinePumpSdk.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: agents/skills/pump-token-lifecycle
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: pump-ts-vanity
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: agents-skills
+    kind: skill
+spec:
+  title: Pump Ts Vanity
+  description: "Educational single-threaded TypeScript vanity address generator for Solana using @solana/web3.js with async iteration, event-loop yielding, streaming generator API, and best-effort memory zeroization."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: agents/skills/pump-ts-vanity
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: robinhood-agent-forge
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: agents-skills
+    kind: skill
+spec:
+  title: Robinhood Agent Forge
+  description: Prepare, register, inspect, and safely operate chain-scoped AI agent identities on Robinhood Chain (EVM/ERC-8004-compatible) or Solana (SVM/Metaplex Core) through Cheshire Terminal and the open-source robinhood-agents SDK. Use for chain selection, deployment verification, metadata, unsigned EVM registration intents, wallet-authorized sponsored Solana identity mints, ownership and authority review, reputation, validation, or guarded infrastructure deployment.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: agents/skills/robinhood-agent-forge
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: sponge-wallet
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: agents-skills
+    kind: skill
+spec:
+  title: Sponge Wallet
+  description: Crypto wallet, token swaps, cross-chain bridges, and access to paid external services (search, image gen, web scraping, AI, and more) via x402 payments.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: agents/skills/sponge-wallet
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: robinhood-agents-skills-robinhood-agent-forge
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: robinhood-agents-skills
+    kind: skill
+spec:
+  title: Robinhood Agent Forge
+  description: Prepare, register, inspect, and safely operate chain-scoped AI agent identities on Robinhood Chain (EVM/ERC-8004-compatible) or Solana (SVM/Metaplex Core) through Cheshire Terminal and the open-source robinhood-agents SDK. Use for chain selection, deployment verification, metadata, unsigned EVM registration intents, wallet-authorized sponsored Solana identity mints, ownership and authority review, reputation, validation, or guarded infrastructure deployment.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/robinhood-agents"
+      subfolder: skills/robinhood-agent-forge
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: 1password
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: 1Password
+  description: Set up and use 1Password CLI (op). Use when installing the CLI, enabling desktop app integration, signing in (single or multi-account), or reading/injecting/running secrets via op.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/1password
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: agent-browser
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Agent Browser
+  description: "Use the host-side `agent-browser` CLI for local browser smoke tests, screenshots, snapshots, and simple UI validation against forwarded localhost URLs."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/agent-browser
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: agent-desktop
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Agent Desktop
+  description: "Use the built-in `Computer` sub-agent with `agent-desktop` for macOS desktop automation. Apply when a task needs application launching, accessibility snapshots, stable element refs, window focusing, semantic clicks/typing, or visual confirmation outside the browser sandbox."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/agent-desktop
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: agents-sdk
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Agents Sdk
+  description: Build AI agents on Cloudflare Workers using the Agents SDK. Load when creating stateful agents, durable workflows, real-time WebSocket apps, scheduled tasks, MCP servers, chat applications, voice agents, or browser automation. Covers Agent class, state management, callable RPC, Workflows, durable execution, queues, retries, observability, and React hooks. Biases towards retrieval from Cloudflare docs over pre-trained knowledge.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/agents-sdk
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: animation-vocabulary
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Animation Vocabulary
+  description: "Reverse-lookup glossary that turns a vague description of a web animation or motion effect into its exact term (\"the bouncy thing when a popover opens\" → Pop in; \"the iOS rubber-band scroll\" → Rubber-banding). Use when the user asks \"what's it called when…\", or describes a motion effect without knowing its name and wants the right word to prompt an AI or designer with. For naming an effect, not designing or building one."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/animation-vocabulary
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: appkit
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Appkit
+  description: Guides developers through integrating Reown AppKit into web applications (React, Next.js, Vue, Nuxt, Svelte, vanilla JavaScript). Use when adding wallet connection, network switching, multi-chain support, or troubleshooting AppKit integration issues.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/appkit
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: apple-design
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Apple Design
+  description: "Apple's approach to interface design and fluid, physical motion, translated for the web. Use when building or reviewing gesture-driven UI, spring animations, drag/swipe/sheet interactions, momentum and interruptible transitions, translucent materials and depth, typography (optical sizing, tracking, leading), reduced-motion, or the design foundations (feedback, spatial consistency, restraint) behind Apple-style interfaces."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/apple-design
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: apple-notes
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Apple Notes
+  description: "Manage Apple Notes via the `memo` CLI on macOS (create, view, edit, delete, search, move, and export notes). Use when a user asks Clawdbot to add a note, list notes, search notes, or manage note folders."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/apple-notes
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: apple-reminders
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Apple Reminders
+  description: "Manage Apple Reminders via the `remindctl` CLI on macOS (list, add, edit, complete, delete). Supports lists, date filters, and JSON/plain output."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/apple-reminders
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: ask-mcp
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Ask Mcp
+  description: "For questions about Light Protocol's SDK, smart contracts and Solana development, Claude Code features, or agent skills. AI-powered answers grounded in repository context via DeepWiki MCP."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/ask-mcp
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: bear-notes
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Bear Notes
+  description: Create, search, and manage Bear notes via grizzly CLI.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/bear-notes
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: bird
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Bird
+  description: X/Twitter CLI for reading, searching, posting, and engagement via cookies.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/bird
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: blogwatcher
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Blogwatcher
+  description: Monitor blogs and RSS/Atom feeds for updates using the blogwatcher CLI.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/blogwatcher
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: blucli
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Blucli
+  description: BluOS CLI (blu) for discovery, playback, grouping, and volume.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/blucli
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: bluebubbles
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Bluebubbles
+  description: Build or update the BlueBubbles external channel plugin for Clawdbot (extension package, REST send/probe, webhook inbound).
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/bluebubbles
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: camsnap
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Camsnap
+  description: Capture frames or clips from RTSP/ONVIF cameras.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/camsnap
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: canvas
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Canvas
+  description: Display HTML content on connected Clawdbot nodes across Mac, iOS, and Android canvas views. Use for presenting generated HTML, dashboards, games, visualizations, and interactive demos through the Clawdbot canvas host and node bridge.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/canvas
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: cheshire-api
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Cheshire Api
+  description: ">"
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/cheshire-api

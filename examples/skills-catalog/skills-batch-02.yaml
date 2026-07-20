@@ -1,0 +1,679 @@
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: cheshire-terminal
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Cheshire Terminal
+  description: Operate and extend Cheshire Terminal, the cheshireterminal.ai voice-controlled Solana terminal powered by $CLAWD. Use when working on voice terminal flows, token launch commands, LiveKit voice integration, Jupiter swap surfaces, burn/staking flows, or any task that mentions Cheshire Terminal, cheshireterminal.ai, $CLAWD terminal, or Clawd voice commands.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/cheshire-terminal
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: clawd-agent-launchpad
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Clawd Agent Launchpad
+  description: Build, launch, stake, and manage Clawd or Cheshire Terminal agents. Use when working on Agent Launchpad, agent templates, agent builder, agent hub, deployed agent detail pages, runtime matrix, Metaplex agent minting, staking, agent chat, or Clawd/Cheshire agent lifecycle tasks.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/clawd-agent-launchpad
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: clawd-skills-installer
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Clawd Skills Installer
+  description: "Install and make Clawd, Cheshire Terminal, Solizardking, Vercel, and eve agent skills available to local coding agents. Use when a user asks to add all skills, install this repo with npx github, install into ~/.agents/skills, ~/.codex/skills, ~/.claude/skills, or an eve project's agent/skills directory."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/clawd-skills-installer
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: clawd-token-ops
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Clawd Token Ops
+  description: Work with $CLAWD token operations for Solana CLAWD and Cheshire Terminal. Use when checking or documenting the $CLAWD mint, token-gated balances, Jupiter buy/swap flows, burn tracking, holders, staking, treasury payments, or any task that asks to include the Clawd token address.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/clawd-token-ops
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: clawd-trading-terminal
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Clawd Trading Terminal
+  description: Use or implement Cheshire Terminal trading surfaces for $CLAWD and Solana markets. Use when working on live spot trading, Jupiter swaps, DFlow markets, OODA trading flows, Phoenix perps, DEX/contract explorer, wallet scanner, Pump page, token tickers, or Clawd trading terminal workflows.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/clawd-trading-terminal
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: clawdex
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Clawdex
+  description: Clawdex — dual-engine coding agent. Claude Code (reasoning + planning) + OpenAI Codex (fast execution) + Browser Use boxes (web research) + Upstash compute boxes (isolated sandboxes).
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/clawdex
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: clawdhub
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Clawdhub
+  description: Use the ClawdHub CLI to search, install, update, and publish agent skills from clawdhub.com. Use when you need to fetch new skills on the fly, sync installed skills to latest or a specific version, or publish new/updated skill folders with the npm-installed clawdhub CLI.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/clawdhub
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: cloudflare
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Cloudflare
+  description: Comprehensive Cloudflare platform skill covering Workers, Pages, storage (KV, D1, R2), AI (Workers AI, Vectorize, Agents SDK), feature flags (Flagship), networking (Tunnel, Spectrum), security (WAF, DDoS), and infrastructure-as-code (Terraform, Pulumi). Use for any Cloudflare development task. Biases towards retrieval from Cloudflare docs over pre-trained knowledge.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/cloudflare
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: cloudflare-email-service
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Cloudflare Email Service
+  description: "Send and receive transactional emails with Cloudflare Email Service (Email Sending + Email Routing). Use when building email sending (Workers binding or REST API), email routing, Agents SDK email handling, or integrating email into any app — Workers, Node.js, Python, Go, etc. Also use for email deliverability, SPF/DKIM/DMARC, wrangler email setup, MCP email tools, or when a coding agent needs to send emails. Even for simple requests like \"add email to my Worker\" — this skill has critical config details."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/cloudflare-email-service
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: cloudflare-one
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Cloudflare One
+  description: "Guides Cloudflare One Zero Trust and SASE work across Access, Gateway, WARP, Tunnel, Cloudflare WAN, DLP, CASB, device posture, and identity. Use when designing, configuring, troubleshooting, or reviewing Cloudflare One deployments. Retrieval-first: use current Cloudflare docs/API schemas instead of embedded product docs."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/cloudflare-one
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: cloudflare-one-migrations
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Cloudflare One Migrations
+  description: Plans migrations from Zscaler ZIA/ZPA, Palo Alto, legacy VPN, SWG, or SASE stacks to Cloudflare One. Use for migration assessments, policy mapping, rollout plans, and parity/gap analysis.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/cloudflare-one-migrations
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: coding-agent
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Coding Agent
+  description: Run Codex CLI, Claude Code, OpenCode, or Pi Coding Agent via background process for programmatic control.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/coding-agent
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: compressed-pda
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Compressed Pda
+  description: For client and program development on Solana ~160x cheaper and without rent-exemption for per-user state, DePIN registrations, or custom compressed accounts. Create, update, close, burn, and reinitialize compressed accounts.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/compressed-pda
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: compressed-token
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Compressed Token
+  description: "For compressed token operations on Solana ~400x cheaper than SPL: create mints with interface PDAs, mint, transfer, approve, revoke, compress, decompress, merge, and Token-2022 with compression. Compressed token accounts are always rent-free. @lightprotocol/compressed-token (TypeScript) with createRpc() from @lightprotocol/stateless.js."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/compressed-token
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: create-agent-tui
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Create Agent Tui
+  description: "Scaffolds a complete agent TUI in TypeScript using @openrouter/agent — like create-react-app for terminal agents. Generates a customizable terminal interface with three input styles, four tool display modes, ASCII banners, streaming output, session persistence, and configurable tools. Use when building an agent, creating a TUI, scaffolding an agent project, or building a coding assistant."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/create-agent-tui
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: dex-screener-scanner
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Dex Screener Scanner
+  description: "Automate DexScreener Solana token discovery and screening via browser automation. Navigate dexscreener.com/solana, scrape real-time token listings, filter by volume/liquidity/age/holders, and identify the best opportunities. Triggers: scan dexscreener, find new tokens, find trending tokens, screen Solana tokens, best tokens on Solana, dexscreener scanner."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/dex-screener-scanner
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: dflow-docs
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Dflow Docs
+  description: Discover and use DFlow documentation, Agent CLI, Trading API, Metadata API, Proof KYC, prediction markets, and the hosted DFlow docs MCP. Use before implementing DFlow features or when field-level endpoint details are needed.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/dflow-docs
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: dflow-kalshi-market-data
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Dflow Kalshi Market Data
+  description: "Read market data for a known Kalshi prediction market on DFlow — orderbook, trades, top-of-book prices, candlesticks, forecast-percentile history, and Kalshi in-game live data — via one-shot REST snapshots, historical ranges, or live WebSocket streams. Use when the user asks \"show me the orderbook for X\", \"get last hour of trades\", \"build a live price ticker\", \"stream orderbook depth\", \"pull 1-minute candles for the last day\", \"watch in-game scores for this sports market\", or \"alert me when the orderbook moves\". Do NOT use to discover markets matching a criterion (use `dflow-kalshi-market-scanner`), to place orders (use `dflow-kalshi-trading`), or to read a user's own positions/P&L (use `dflow-kalshi-portfolio`)."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/dflow-kalshi-market-data
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: dflow-kalshi-market-scanner
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Dflow Kalshi Market Scanner
+  description: "Find Kalshi prediction markets on DFlow that match a criterion — arbitrage (YES+NO<$1), cheap long-shots, near-certain short-dated plays, biggest movers, widest spreads, highest volume, closing soonest, and series/event-level scans. Use when the user asks \"where's the free money?\", \"any mispriced markets?\", \"cheap YES with volume\", \"what moved today?\", \"markets closing soon\", \"cheapest YES in this event\", \"top markets by volume\", or \"alert me when X happens\" (streaming). Do NOT use to place orders (use `dflow-kalshi-trading`), to view a user's own positions (use `dflow-kalshi-portfolio`), or for general live-data plumbing unrelated to a scan (use `dflow-kalshi-market-data`)."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/dflow-kalshi-market-scanner
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: dflow-kalshi-portfolio
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Dflow Kalshi Portfolio
+  description: "View what a wallet holds on DFlow's Kalshi prediction markets — current positions, unrealized mark-to-market, realized P&L, activity history, and redeemable winners. Use when the user asks \"what are my positions?\", \"what do I own?\", \"am I up or down?\", \"what's my fill history?\", \"what can I redeem?\", \"mark my portfolio to market\", or \"show me this wallet's DFlow activity\". Read-only. Do NOT use to place sells or redemptions (use `dflow-kalshi-trading`), for market-wide data unrelated to a wallet (use `dflow-kalshi-market-data`), or to discover new markets (use `dflow-kalshi-market-scanner`)."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/dflow-kalshi-portfolio
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: dflow-kalshi-trading
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Dflow Kalshi Trading
+  description: "Buy, sell, or redeem YES/NO outcome tokens on Kalshi prediction markets via DFlow. Use when the user wants to bet on an event, place a Kalshi order, take a YES or NO position, exit a Kalshi position, redeem winning outcome tokens after a market resolves, tune priority fees on a PM trade, or build a gasless / sponsored PM flow where the app pays tx / ATA / market-init costs. Covers both the `dflow` CLI and the DFlow Trading API. Do NOT use to discover markets, view positions, stream prices, complete Proof KYC, or for non-Kalshi spot swaps."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/dflow-kalshi-trading
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: dflow-phantom-connect
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Dflow Phantom Connect
+  description: "Build Solana wallet-connected apps with Phantom Connect SDKs and DFlow trading. Use when user asks to connect a Phantom wallet, integrate Phantom in React, React Native, or vanilla JS, sign messages or transactions, build token-gated pages, mint NFTs, accept crypto payments, swap tokens with DFlow, trade prediction markets, or integrate Proof KYC verification. Covers @phantom/react-sdk, @phantom/react-native-sdk, @phantom/browser-sdk, DFlow spot trading, DFlow prediction markets, and DFlow Proof identity verification. Do NOT use for Ethereum or EVM wallet integrations, or non-DFlow DEX routing."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/dflow-phantom-connect
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: dflow-platform-fees
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Dflow Platform Fees
+  description: "Monetize a DFlow integration by collecting a builder-defined fee on trades your app routes through the Trade API — either a fixed percentage (spot + PM) via `platformFeeBps`, or a probability-weighted dynamic fee (PM outcome tokens only) via `platformFeeScale`. Use when the user asks \"how do I take a cut of trades?\", \"add a builder fee\", \"monetize my swap UI\", \"charge a platform fee\", \"how does platformFeeBps / platformFeeScale work?\", or \"where do my fees get paid?\". Do NOT use to run a trade itself (use `dflow-spot-trading` or `dflow-kalshi-trading` — both also cover priority fees and sponsored / gasless flows)."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/dflow-platform-fees
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: dflow-proof-kyc
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Dflow Proof Kyc
+  description: "Integrate DFlow Proof — a Solana wallet identity-verification primitive (Stripe Identity under the hood) — for either (a) gating your own app's features behind KYC, or (b) completing the mandatory verification step for Kalshi prediction-market buys on DFlow. Use when the user asks \"how do I KYC a wallet?\", \"check if a wallet is verified\", \"add KYC to my DeFi app\", \"handle unverified_wallet_not_allowed / PROOF_NOT_VERIFIED\", \"redirect to dflow.net/proof\", or \"gate a feature by jurisdiction or identity\". Do NOT use to actually place trades (use `dflow-kalshi-trading`), for geoblocking (separate concern, handled inline in the trading skill), for age gating (Proof doesn't currently verify age), or for spot swaps (no KYC required)."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/dflow-proof-kyc
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: dflow-spot-trading
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Dflow Spot Trading
+  description: "Swap any pair of Solana tokens via DFlow. Use when the user wants to trade, swap, or convert tokens on Solana, get a price quote, build a swap UI, tune priority fees so a swap lands under congestion, or build a gasless / sponsored swap where the app pays fees. Covers both the `dflow` CLI and the DFlow Trading API. Do NOT use for Kalshi prediction-market YES/NO trades or builder-side platform fees."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/dflow-spot-trading
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: discord
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Discord
+  description: "Use when you need to control Discord from Clawdbot via the discord tool: send messages, react, post or upload stickers, upload emojis, run polls, manage threads/pins/search, create/edit/delete channels and categories, fetch permissions or member/role/channel info, or handle moderation actions in Discord DMs or channels."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/discord
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: durable-objects
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Durable Objects
+  description: Create and review Cloudflare Durable Objects. Use when building stateful coordination (chat rooms, multiplayer games, booking systems), implementing RPC methods, SQLite storage, alarms, WebSockets, or reviewing DO code for best practices. Covers Workers integration, wrangler config, and testing with Vitest. Biases towards retrieval from Cloudflare docs over pre-trained knowledge.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/durable-objects
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: eightctl
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Eightctl
+  description: Control Eight Sleep pods (status, temperature, alarms, schedules).
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/eightctl
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: emil-design-eng
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Emil Design Eng
+  description: "This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisions, and the invisible details that make software feel great."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/emil-design-eng
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: find-skills
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Find Skills
+  description: "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/find-skills
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: food-order
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Food Order
+  description: "Reorder Foodora orders + track ETA/status with ordercli. Never confirm without explicit user approval. Triggers: order food, reorder, track ETA."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/food-order
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: agent-skill-creator
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Agent Skill Creator
+  description: ">-"
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/forge
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: gateway-node-ops
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Gateway Node Ops
+  description: How to spawn a SolanaOS Gateway and connect headless nodes
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/gateway-node-ops
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: gemini
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Gemini
+  description: "Gemini CLI for one-shot Q&A, summaries, and generation."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/gemini
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: gifgrep
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Gifgrep
+  description: Search GIF providers with CLI/TUI, download results, and extract stills/sheets.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/gifgrep
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: github
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Github
+  description: "Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/github
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: gog
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Gog
+  description: Google Workspace CLI for Gmail, Calendar, Drive, Contacts, Sheets, and Docs.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/gog
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: google-agent-registry
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Google Agent Registry
+  description: ">"
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/google-agent-registry
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: goplaces
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Goplaces
+  description: Query Google Places API (New) via the goplaces CLI for text search, place details, resolve, and reviews. Use for human-friendly place lookup or JSON output for scripts.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/goplaces
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: himalaya
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Himalaya
+  description: "CLI to manage emails via IMAP/SMTP. Use `himalaya` to list, read, write, reply, forward, search, and organize emails from the terminal. Supports multiple accounts and message composition with MML (MIME Meta Language)."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/himalaya

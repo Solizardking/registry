@@ -1,0 +1,33 @@
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: zk
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Zk
+  description: For custom ZK Solana programs and privacy-preserving applications to prevent double spending. Guide to integrate rent-free nullifier PDAs for double-spend prevention.
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/zk
+---
+apiVersion: ar.dev/v1alpha1
+kind: Skill
+metadata:
+  name: zkrouter
+  tag: stable
+  labels:
+    app: cheshire-terminal
+    catalog: cheshire-skills
+    kind: skill
+spec:
+  title: Zkrouter
+  description: "Self-hosted OpenAI-compatible LLM router — smart tier-based routing, ZK-stamped routing decisions, mode overrides, free OpenRouter at install via the Birth bot. Save 60-80% on inference costs by routing to the cheapest capable model across 12+ OpenRouter models."
+  source:
+    repository:
+      url: "https://github.com/Solizardking/cheshire-terminal-main"
+      subfolder: skills/zkrouter
