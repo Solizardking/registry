@@ -1,0 +1,64 @@
+# Agent Registry — Fly Machine deploy for Cheshire Terminal
+# App: cheshire-agentregistry
+# Deploy:  ./scripts/deploy-fly.sh
+#          or: fly deploy -c fly.toml --remote-only
+#
+# Prerequisites (once):
+#   fly apps create cheshire-agentregistry
+#   fly postgres create --name cheshire-agentregistry-db --region iad \
+#     --vm-size shared-cpu-1x --volume-size 1 --initial-cluster-size 1 --yes
+#   fly postgres attach cheshire-agentregistry-db -a cheshire-agentregistry
+#   # Map DATABASE_URL → AGENT_REGISTRY_DATABASE_URL (attach sets DATABASE_URL)
+#   JWT=$(openssl rand -hex 32)
+#   fly secrets set -a cheshire-agentregistry \
+#     AGENT_REGISTRY_JWT_PRIVATE_KEY="$JWT" \
+#     AGENT_REGISTRY_DATABASE_URL="$(fly ssh console -a cheshire-agentregistry -C 'printenv DATABASE_URL' 2>/dev/null || true)"
+#
+# After deploy, set on cheshire-clawd-terminal:
+#   fly secrets set -a cheshire-clawd-terminal \
+#     AGENT_REGISTRY_URL=https://cheshire-agentregistry.fly.dev
+
+app = 'cheshire-agentregistry'
+primary_region = 'iad'
+
+[build]
+  dockerfile = 'docker/server.Dockerfile'
+  # Multi-stage: Next.js UI export + Go arctl-server
+
+[deploy]
+  strategy = 'rolling'
+
+[env]
+  AGENT_REGISTRY_SERVER_ADDRESS = ':8080'
+  AGENT_REGISTRY_PLATFORM_MODE = 'docker'
+  AGENT_REGISTRY_LOG_LEVEL = 'info'
+  AGENT_REGISTRY_VERSION = 'v0.3.3'
+  AGENT_REGISTRY_ENABLE_REGISTRY_VALIDATION = 'false'
+  # MCP/gateway ports not exposed publicly; keep defaults off or local-only
+  AGENT_REGISTRY_MCP_PORT = '0'
+  AGENT_REGISTRY_AGENT_GATEWAY_PORT = '0'
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 1
+  processes = ['app']
+
+  [http_service.concurrency]
+    type = 'requests'
+    hard_limit = 100
+    soft_limit = 80
+
+  [[http_service.checks]]
+    interval = '15s'
+    timeout = '10s'
+    grace_period = '90s'
+    method = 'GET'
+    path = '/v0/health'
+
+[[vm]]
+  cpu_kind = 'shared'
+  cpus = 1
+  memory_mb = 1024
