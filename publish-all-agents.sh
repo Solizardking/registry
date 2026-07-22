@@ -1,28 +1,29 @@
 #!/bin/bash
-# Publish all Clawd agents to the local agentregistry server.
-# Each agent JSON file in /Users/8bit/Clawd-agents/src/ is transformed
-# and POSTed to the registry's /v0/agents endpoint.
+# Publish all agents to the local agentregistry server (localhost:12121).
+# Uses the canonical source at /Users/8bit/agents/agents/src/ via the
+# /v0/apply endpoint (multi-doc YAML apply).
+#
+# Preferred: ./publish-agents-public.py (Python, handles YAML edge cases)
+# Legacy: this script (uses /v0/agents POST per agent)
 
 set -euo pipefail
 
-REGISTRY="http://localhost:12121"
-SRC="/Users/8bit/Clawd-agents/src"
-SKIP_FILES="package.json"
+REGISTRY="${REGISTRY:-http://localhost:12121}"
+SRC="${SRC:-/Users/8bit/agents/agents/src}"
+SKIP_FILES="package.json tsconfig.json"
 
 count=0
 ok=0
 err=0
 
-echo "=== Publishing Clawd agents to agentregistry ($REGISTRY) ==="
+echo "=== Publishing agents to agentregistry ($REGISTRY) ==="
+echo "  Source: $SRC"
 echo ""
 
-# Clean up any leftover docker containers from previous failed attempts
-for prev in $(curl -s "$REGISTRY/v0/agents" | jq -r '.agents[]? | .name' 2>/dev/null); do
-  ver=$(curl -s "$REGISTRY/v0/agents/$prev/versions/latest" | jq -r '.version // empty' 2>/dev/null)
-  if [ -n "$ver" ]; then
-    echo "  [cleanup] removing existing: $prev v$ver"
-    curl -s -X DELETE "$REGISTRY/v0/agents/$prev/versions/$ver" > /dev/null 2>&1 || true
-  fi
+# Clean up any leftover entries from previous failed attempts
+for prev in $(curl -s "$REGISTRY/v0/agents" | jq -r '.items[]? | .metadata.name' 2>/dev/null | sort -u); do
+  echo "  [cleanup] removing existing: $prev"
+  curl -s -X DELETE "$REGISTRY/v0/agents/$prev/stable" > /dev/null 2>&1 || true
 done
 
 for f in "$SRC"/*.json; do
@@ -37,23 +38,20 @@ for f in "$SRC"/*.json; do
 
   count=$((count + 1))
 
-  # Extract fields from Clawd agent JSON
+  # Extract fields from agent JSON (cheshire-terminal format)
   name=$(jq -r '.name // .identifier // "'"$base"'"' "$f")
   title=$(jq -r '.meta.title // .displayName // .name // "'"$name"'"' "$f")
-  desc=$(jq -r '.description // .meta.description // ""' "$f")
+  desc=$(jq -r '.meta.description // .description // ""' "$f")
   ver=$(jq -r '.version // "1.0.0"' "$f")
-  author=$(jq -r '.author // ""' "$f")
-  modelProvider=$(jq -r '.config.model // "clawdrouter/auto"' "$f")
-  modelName=$(jq -r '.config.model // "auto"' "$f")
-  homepage=$(jq -r '.homepage // ""' "$f")
+  modelProvider=$(jq -r '.config.model // "clawdrouter/auto"' "$f" | cut -d/ -f1)
+  modelName=$(jq -r '.config.model // "auto"' "$f" | cut -d/ -f2-)
+  [ -z "$modelName" ] && modelName="auto"
   repo=$(jq -r '.metadata.github // ""' "$f")
-
-  # Map to fields the registry expects
-  framework=$(jq -r '.metadata.category // "agent"' "$f")
+  framework=$(jq -r '.meta.category // "agent"' "$f")
   image=$(jq -r '.registry.program_id // ""' "$f")
   [ -z "$image" ] && image="ghcr.io/solizardking/clawd-agents/$name:$ver"
 
-  # Build payload
+  # Build payload in agentregistry native format
   payload=$(jq -n \
     --arg name "$name" \
     --arg version "$ver" \
@@ -65,7 +63,6 @@ for f in "$SRC"/*.json; do
     --arg language "typescript" \
     --arg framework "$framework" \
     --arg repository "$repo" \
-    --arg websiteUrl "$homepage" \
     '{
       name: $name,
       version: $version,
@@ -76,8 +73,7 @@ for f in "$SRC"/*.json; do
       image: $image,
       language: $language,
       framework: $framework,
-      repository: {url: $repository},
-      websiteUrl: $websiteUrl
+      repository: {url: $repository}
     }')
 
   echo "[$count] $name v$ver ..."
@@ -88,7 +84,7 @@ for f in "$SRC"/*.json; do
     -d "$payload" 2>&1)
   code="${resp: -3}"
 
-  if [ "$code" = "200" ]; then
+  if [ "$code" = "200" ] || [ "$code" = "201" ]; then
     echo "  ✓ Created/updated"
     ok=$((ok + 1))
   else

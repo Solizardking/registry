@@ -11,7 +11,7 @@ set -euo pipefail
 REGISTRY="${REGISTRY:-http://localhost:12121}"
 AGENTS_DIR="/Users/8bit/agents/agents"
 SRC="${SRC:-${AGENTS_DIR}/src}"
-SKIP_FILES="package.json tsconfig.json"
+SKIP_FILES="package tsconfig"
 
 echo "=== Step 1: Rebuild static public API (catalog + registry + ACP) ==="
 cd "$AGENTS_DIR"
@@ -43,6 +43,12 @@ for f in "$SRC"/*.json; do
   name=$(jq -r '.name // .identifier // "'"$base"'"' "$f")
   title=$(jq -r '.meta.title // .displayName // .name // "'"$name"'"' "$f")
   desc=$(jq -r '.meta.description // .description // ""' "$f")
+  # Convert multiline descriptions to YAML pipe-syntax (|+ for trailing newline)
+  if echo "$desc" | grep -q -m1 . && [ "$(echo "$desc" | wc -l)" -gt 1 ]; then
+    desc_yaml="|"$'\n'"$(echo "$desc" | sed 's/^/  /')"
+  else
+    desc_yaml="$desc"
+  fi
   ver=$(jq -r '.version // "1.0.0"' "$f")
   author=$(jq -r '.author // ""' "$f")
   modelProvider=$(jq -r '.config.model // "clawdrouter/auto"' "$f")
