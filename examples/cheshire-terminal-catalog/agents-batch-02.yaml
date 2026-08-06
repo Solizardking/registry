@@ -20,7 +20,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/clawd-agents/defi-insurance-advisor:1"
     repository:
-      url: "https://github.com/Solizardking/cheshire-terminal"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/defi-agents/src
 ---
 apiVersion: ar.dev/v1alpha1
@@ -45,7 +45,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/clawd-agents/defi-onboarding-mentor:1"
     repository:
-      url: "https://github.com/Solizardking/cheshire-terminal"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/defi-agents/src
 ---
 apiVersion: ar.dev/v1alpha1
@@ -70,7 +70,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/clawd-agents/defi-protocol-comparator:1"
     repository:
-      url: "https://github.com/Solizardking/cheshire-terminal"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/defi-agents/src
 ---
 apiVersion: ar.dev/v1alpha1
@@ -95,7 +95,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/clawd-agents/defi-risk-scoring-engine:1"
     repository:
-      url: "https://github.com/Solizardking/cheshire-terminal"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/defi-agents/src
 ---
 apiVersion: ar.dev/v1alpha1
@@ -120,7 +120,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/clawd-agents/defi-yield-farmer:1"
     repository:
-      url: "https://github.com/Solizardking/cheshire-terminal"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/defi-agents/src
 ---
 apiVersion: ar.dev/v1alpha1
@@ -145,7 +145,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/clawd-agents/dex-aggregator-optimizer:1"
     repository:
-      url: "https://github.com/Solizardking/cheshire-terminal"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/defi-agents/src
 ---
 apiVersion: ar.dev/v1alpha1
@@ -170,7 +170,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/clawd-agents/gas-optimization-expert:1"
     repository:
-      url: "https://github.com/Solizardking/cheshire-terminal"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/defi-agents/src
 ---
 apiVersion: ar.dev/v1alpha1
@@ -195,7 +195,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/clawd-agents/governance-proposal-analyst:1"
     repository:
-      url: "https://github.com/Solizardking/cheshire-terminal"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/defi-agents/src
 ---
 apiVersion: ar.dev/v1alpha1
@@ -220,7 +220,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/clawd-agents/impermanent-loss-calculator:1"
     repository:
-      url: "https://github.com/Solizardking/cheshire-terminal"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/defi-agents/src
 ---
 apiVersion: ar.dev/v1alpha1
@@ -245,7 +245,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/clawd-agents/layer2-comparison-guide:1"
     repository:
-      url: "https://github.com/Solizardking/cheshire-terminal"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/defi-agents/src
 ---
 apiVersion: ar.dev/v1alpha1
@@ -270,7 +270,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/clawd-agents/liquidation-risk-manager:1"
     repository:
-      url: "https://github.com/Solizardking/cheshire-terminal"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/defi-agents/src
 ---
 apiVersion: ar.dev/v1alpha1
@@ -295,7 +295,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/clawd-agents/liquidity-pool-analyzer:1"
     repository:
-      url: "https://github.com/Solizardking/cheshire-terminal"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/defi-agents/src
 ---
 apiVersion: ar.dev/v1alpha1
@@ -320,7 +320,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/clawd-agents/mev-protection-advisor:1"
     repository:
-      url: "https://github.com/Solizardking/cheshire-terminal"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/defi-agents/src
 ---
 apiVersion: ar.dev/v1alpha1
@@ -345,7 +345,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/clawd-agents/narrative-trend-analyst:1"
     repository:
-      url: "https://github.com/Solizardking/cheshire-terminal"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/defi-agents/src
 ---
 apiVersion: ar.dev/v1alpha1
@@ -370,7 +370,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/clawd-agents/nft-liquidity-advisor:1"
     repository:
-      url: "https://github.com/Solizardking/cheshire-terminal"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/defi-agents/src
 ---
 apiVersion: ar.dev/v1alpha1
@@ -395,7 +395,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/clawd-agents/pay-agent:1"
     repository:
-      url: "https://github.com/Solizardking/cheshire-terminal"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/public/api/agents/catalog
 ---
 apiVersion: ar.dev/v1alpha1
@@ -420,7 +420,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/clawd-agents/portfolio-rebalancing-advisor:1"
     repository:
-      url: "https://github.com/Solizardking/cheshire-terminal"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/defi-agents/src
 ---
 apiVersion: ar.dev/v1alpha1
@@ -445,7 +445,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/clawd-agents/protocol-revenue-analyst:1"
     repository:
-      url: "https://github.com/Solizardking/cheshire-terminal"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/defi-agents/src
 ---
 apiVersion: ar.dev/v1alpha1
@@ -470,7 +470,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/clawd-agents/protocol-treasury-analyst:1"
     repository:
-      url: "https://github.com/Solizardking/cheshire-terminal"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/defi-agents/src
 ---
 apiVersion: ar.dev/v1alpha1
@@ -495,7 +495,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/clawd-agents/pump-fun-sdk-expert:1"
     repository:
-      url: "https://github.com/Solizardking/cheshire-terminal"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/defi-agents/src
 ---
 apiVersion: ar.dev/v1alpha1
@@ -520,7 +520,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/clawd-agents/robinhood-agent-forge:1"
     repository:
-      url: "https://github.com/Solizardking/cheshire-terminal"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/src
 ---
 apiVersion: ar.dev/v1alpha1
@@ -545,7 +545,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/clawd-agents/smart-contract-auditor:1"
     repository:
-      url: "https://github.com/Solizardking/cheshire-terminal"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/defi-agents/src
 ---
 apiVersion: ar.dev/v1alpha1
@@ -570,7 +570,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/clawd-agents/solana-agent-orchestrator:1"
     repository:
-      url: "https://github.com/Solizardking/cheshire-terminal"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/src
 ---
 apiVersion: ar.dev/v1alpha1
@@ -595,7 +595,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/clawd-agents/solana-airdrop-farmer:1"
     repository:
-      url: "https://github.com/Solizardking/cheshire-terminal"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/src
 ---
 apiVersion: ar.dev/v1alpha1
@@ -620,5 +620,5 @@ spec:
   source:
     image: "ghcr.io/solizardking/clawd-agents/solana-alpha-aggregator:1"
     repository:
-      url: "https://github.com/Solizardking/cheshire-terminal"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/src

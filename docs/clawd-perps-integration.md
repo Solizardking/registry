@@ -12,7 +12,7 @@ This document describes how to register and discover the perps agent through the
 
 Agent skill documentation for Rise SDK integration. Points at the `.claude/skills/` documentation in the `cheshire-terminal-main` repo.
 
-- **Source:** `https://github.com/Solizardking/cheshire-terminal-main` → `core-ai/clawd-perps-agent/.claude/skills`
+- **Source:** `https://github.com/Solizardking/agents` → `core-ai/clawd-perps-agent/.claude/skills`
 
 ### MCP Server: `clawd-perps` (17 tools)
 

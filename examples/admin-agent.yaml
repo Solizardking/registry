@@ -1,0 +1,43 @@
+# admin-agent.yaml
+#
+# Registry admin agent — human-approved operator that manages catalog
+# resources through Better Auth Agent Auth capabilities (see docs/agent-auth.md).
+#
+# Apply with:
+#   arctl apply -f examples/admin-agent.yaml
+#
+# Discovery (UI next dev on :3000):
+#   GET http://localhost:3000/.well-known/agent-configuration
+#
+# Capabilities (executed via Agent Auth JWT → onExecute → registry HTTP API):
+#   list_agents, get_agent, list_servers, get_server, list_skills, list_prompts,
+#   list_deployments, get_deployment, apply_manifest, delete_agent,
+#   registry_health, registry_version
+
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: registry-admin
+  tag: stable
+  labels:
+    app: agentregistry
+    role: admin
+    auth: agent-auth
+    catalog: platform
+spec:
+  title: Registry Admin Agent
+  description: >
+    Platform admin agent for AgentRegistry. Discovers the Better Auth Agent Auth
+    provider at /.well-known/agent-configuration, registers with delegated or
+    autonomous mode, and executes scoped admin capabilities (list/get/apply/delete
+    agents, MCP servers, skills, prompts, and deployments) after human approval.
+    Uses short-lived signed JWTs with replay protection — never stores long-lived
+    registry credentials in agent memory.
+  modelProvider: anthropic
+  modelName: claude-sonnet-4-20250514
+  source:
+    repository:
+      url: https://github.com/Solizardking/agents
+      subfolder: admin/registry-admin
+  # Agent Auth capability names (mirrored in ui/lib/agent-auth/capabilities.ts)
+  # are documented for operators; grants are issued by the Agent Auth provider.

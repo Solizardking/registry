@@ -27,7 +27,7 @@ from pathlib import Path
 
 
 DEFAULT_TAG = "stable"
-DEFAULT_REPO = "https://github.com/Solizardking/cheshire-terminal"
+DEFAULT_REPO = "https://github.com/Solizardking/agents"
 DEFAULT_MODEL = "clawdrouter/auto"
 BATCH_SIZE = 25
 

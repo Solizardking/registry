@@ -21,7 +21,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/airdrop-hunter:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/airdrop-hunter.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -47,7 +47,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/alice-character-json:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/alice-character-json.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -73,7 +73,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/alpha-leak-detector:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/alpha-leak-detector.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -99,7 +99,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/apy-vs-apr-educator:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/apy-vs-apr-educator.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -124,7 +124,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/bengraham:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/bengraham.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -149,7 +149,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/billackman:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/billackman.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -175,7 +175,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/bridge-security-analyst:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/bridge-security-analyst.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -200,7 +200,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/cathiewood:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/cathiewood.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -225,7 +225,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/charliemunger:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/charliemunger.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -251,7 +251,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/cheshire-character-json:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/cheshire-character-json.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -277,7 +277,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/clawd-bridge-assistant:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/clawd-bridge-assistant.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -303,7 +303,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/clawd-governance-guide:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/clawd-governance-guide.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -329,7 +329,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/clawd-liquidity-strategist:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/clawd-liquidity-strategist.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -355,7 +355,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/clawd-onboarding-guide:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/clawd-onboarding-guide.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -381,7 +381,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/clawd-portfolio-tracker:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/clawd-portfolio-tracker.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -407,7 +407,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/clawd-risk-monitor:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/clawd-risk-monitor.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -433,7 +433,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/clawd-yield-aggregator:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/clawd-yield-aggregator.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -458,7 +458,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/clawd:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/clawd.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -484,7 +484,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/crypto-news-analyst:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/crypto-news-analyst.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -510,7 +510,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/crypto-tax-strategist:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/crypto-tax-strategist.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -536,7 +536,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/defi-insurance-advisor:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/defi-insurance-advisor.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -562,7 +562,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/defi-onboarding-mentor:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/defi-onboarding-mentor.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -588,7 +588,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/defi-protocol-comparator:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/defi-protocol-comparator.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -614,7 +614,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/defi-risk-scoring-engine:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/defi-risk-scoring-engine.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -640,5 +640,5 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/defi-yield-farmer:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/defi-yield-farmer.json

@@ -28,7 +28,7 @@ spec:
   modelName: claude-sonnet-4-20250514
   source:
     repository:
-      url: https://github.com/Solizardking/cheshire-terminal-main
+      url: https://github.com/Solizardking/agents
       subfolder: core-ai/clawd-perps-agent
   mcpServers:
     - kind: MCPServer

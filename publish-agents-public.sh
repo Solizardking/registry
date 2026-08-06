@@ -74,7 +74,7 @@ for f in "$SRC"/*.json; do
 
   # Set repository URL
   if [ -z "$repo" ] || [ "$repo" = "null" ]; then
-    repo="https://github.com/Solizardking/cheshire-terminal"
+    repo="https://github.com/Solizardking/agents"
   fi
 
   # Append YAML document for this agent (using quoted scalars for safety)

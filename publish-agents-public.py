@@ -51,7 +51,7 @@ def build_agent_yaml(agent: dict) -> str:
     desc = agent.get("meta", {}).get("description") or agent.get("description") or ""
     ver = agent.get("version") or "1.0.0"
     model_provider_full = agent.get("config", {}).get("model") or "clawdrouter/auto"
-    repo_url = agent.get("metadata", {}).get("github") or "https://github.com/Solizardking/cheshire-terminal"
+    repo_url = agent.get("metadata", {}).get("github") or "https://github.com/Solizardking/agents"
     category = agent.get("meta", {}).get("category") or "defi"
     tags = agent.get("meta", {}).get("tags") or []
 

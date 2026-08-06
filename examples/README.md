@@ -25,6 +25,9 @@ arctl apply -f examples/metaplex-agent.yaml
 
 # Clawd Perps multi-doc (catalog-only; perps HTTP server need not be up)
 arctl apply -f examples/clawd-perps-agent.yaml
+
+# Registry admin agent (Agent Auth capabilities; see docs/agent-auth.md)
+arctl apply -f examples/admin-agent.yaml
 ```
 
 ## Catalog
@@ -32,6 +35,7 @@ arctl apply -f examples/clawd-perps-agent.yaml
 | File | Kind(s) | Notes |
 |------|---------|--------|
 | [`agent.yaml`](./agent.yaml) | Agent | Minimal agent with OCI image |
+| [`admin-agent.yaml`](./admin-agent.yaml) | Agent | Registry admin agent (Better Auth Agent Auth) |
 | [`mcp.yaml`](./mcp.yaml) | MCPServer | OCI package + stdio transport |
 | [`mcp-remote.yaml`](./mcp-remote.yaml) | MCPServer | Pre-running remote URL (`spec.remote`) |
 | [`skill.yaml`](./skill.yaml) | Skill | Git-backed skill package |

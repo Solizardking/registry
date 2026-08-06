@@ -21,7 +21,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/whale-watcher:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/whale-watcher.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -47,7 +47,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/yield-dashboard-builder:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/yield-dashboard-builder.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -73,7 +73,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/yield-sustainability-analyst:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/yield-sustainability-analyst.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -98,7 +98,7 @@ spec:
   source:
     image: "ipfs://bafy-example"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: examples/robinhood-agent.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -122,7 +122,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/solana-open-research-agent:1.0.0"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: examples/solana-agent.json
   metaplex:
     network: "solana-mainnet"

@@ -21,7 +21,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/dex-aggregator-optimizer:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/dex-aggregator-optimizer.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -47,7 +47,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/gas-optimization-expert:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/gas-optimization-expert.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -73,7 +73,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/governance-proposal-analyst:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/governance-proposal-analyst.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -98,7 +98,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/hedgefund:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/hedgefund.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -124,7 +124,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/impermanent-loss-calculator:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/impermanent-loss-calculator.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -150,7 +150,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/layer2-comparison-guide:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/layer2-comparison-guide.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -176,7 +176,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/liquidation-risk-manager:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/liquidation-risk-manager.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -202,7 +202,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/liquidity-pool-analyzer:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/liquidity-pool-analyzer.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -228,7 +228,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/mad-hatter-character-json:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/mad-hatter-character-json.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -254,7 +254,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/mev-protection-advisor:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/mev-protection-advisor.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -280,7 +280,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/narrative-trend-analyst:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/narrative-trend-analyst.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -306,7 +306,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/nft-liquidity-advisor:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/nft-liquidity-advisor.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -332,7 +332,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/portfolio-rebalancing-advisor:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/portfolio-rebalancing-advisor.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -358,7 +358,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/protocol-revenue-analyst:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/protocol-revenue-analyst.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -384,7 +384,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/protocol-treasury-analyst:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/protocol-treasury-analyst.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -410,7 +410,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/pump-fun-sdk-expert:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/pump-fun-sdk-expert.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -436,7 +436,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/smart-contract-auditor:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/smart-contract-auditor.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -462,7 +462,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/spa-tokenomics-analyst:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/spa-tokenomics-analyst.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -488,7 +488,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/stablecoin-comparator:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/stablecoin-comparator.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -514,7 +514,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/staking-rewards-calculator:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/staking-rewards-calculator.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -540,7 +540,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/token-unlock-tracker:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/token-unlock-tracker.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -566,7 +566,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/usds-stablecoin-expert:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/usds-stablecoin-expert.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -592,7 +592,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/vespa-optimizer:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/vespa-optimizer.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -618,7 +618,7 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/wallet-security-advisor:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/wallet-security-advisor.json
 ---
 apiVersion: ar.dev/v1alpha1
@@ -643,5 +643,5 @@ spec:
   source:
     image: "ghcr.io/solizardking/robinhood-agents/warrenbuffet:1"
     repository:
-      url: "https://github.com/Solizardking/robinhood-agents"
+      url: "https://github.com/Solizardking/agents"
       subfolder: agents/warrenbuffet.json

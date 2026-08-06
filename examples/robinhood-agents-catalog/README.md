@@ -1,7 +1,7 @@
 # Robinhood Agents catalog
 
 Generated `ar.dev/v1alpha1` Agent manifests imported from the
-[Robinhood Agents](https://github.com/Solizardking/robinhood-agents) forge package
+[Robinhood Agents](https://github.com/Solizardking/agents) forge package
 (`agents/*.json` + dual-chain `examples/`).
 
 ## Apply to a live registry

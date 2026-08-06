@@ -27,7 +27,7 @@ import sys
 from pathlib import Path
 
 DEFAULT_TAG = "robinhood"
-DEFAULT_REPO = "https://github.com/Solizardking/robinhood-agents"
+DEFAULT_REPO = "https://github.com/Solizardking/agents"
 DEFAULT_MODEL_PROVIDER = "clawdrouter"
 DEFAULT_MODEL_NAME = "auto"
 BATCH_SIZE = 25

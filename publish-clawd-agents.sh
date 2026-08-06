@@ -4,7 +4,7 @@ set -euo pipefail
 
 REGISTRY_URL="http://localhost:12121"
 CLAWD_AGENTS_DIR="/Users/8bit/Clawd-agents/src"
-GIT_REPO="https://github.com/Solizardking/Clawd-agents"
+GIT_REPO="https://github.com/Solizardking/agents"
 
 echo "Publishing all Clawd agents to agentregistry at $REGISTRY_URL..."
 echo ""

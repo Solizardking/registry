@@ -3,6 +3,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // better-sqlite3 is a native addon used by Better Auth (Agent Auth provider).
+  serverExternalPackages: ['better-sqlite3'],
   async rewrites() {
     return [
       {
@@ -17,6 +19,8 @@ const nextConfig = {
         source: '/v0.1/:path*',
         destination: 'http://localhost:12121/v0.1/:path*',
       },
+      // Note: App Router filesystem routes (e.g. /api/auth/*) take precedence
+      // over rewrites, so Better Auth is not proxied to the Go registry.
       {
         source: '/api/:path*',
         destination: 'http://localhost:12121/api/:path*',
