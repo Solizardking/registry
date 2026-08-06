@@ -1,8 +1,7 @@
 {
-  "installCommand": "npm install",
-  "buildCommand": "next build",
-  "outputDirectory": ".next",
-  "framework": "nextjs"
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "installCommand": "npm install --legacy-peer-deps",
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next"
 }
-</write_to_file>
-</file>
