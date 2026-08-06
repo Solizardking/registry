@@ -7,7 +7,12 @@
  * Usage: node scripts/with-export-excludes.mjs <command...>
  */
 import { spawnSync } from 'node:child_process'
-import { existsSync, mkdirSync, renameSync, rmSync } from 'node:fs'
+import {
+  cpSync,
+  existsSync,
+  mkdirSync,
+  rmSync,
+} from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -21,15 +26,21 @@ const PATHS = [
   // Auth modules import better-sqlite3 (native) — not needed for static catalog UI
 ]
 
+/** Copy+rm works across Docker overlay layers; renameSync can hit EXDEV. */
+function movePath(from, to) {
+  mkdirSync(dirname(to), { recursive: true })
+  if (existsSync(to)) rmSync(to, { recursive: true, force: true })
+  cpSync(from, to, { recursive: true })
+  rmSync(from, { recursive: true, force: true })
+}
+
 function stash() {
   mkdirSync(stashRoot, { recursive: true })
   for (const rel of PATHS) {
     const from = join(uiRoot, rel)
     const to = join(stashRoot, rel)
     if (!existsSync(from)) continue
-    mkdirSync(dirname(to), { recursive: true })
-    if (existsSync(to)) rmSync(to, { recursive: true, force: true })
-    renameSync(from, to)
+    movePath(from, to)
     console.log(`[export-excludes] stashed ${rel}`)
   }
 }
@@ -39,9 +50,7 @@ function restore() {
     const from = join(stashRoot, rel)
     const to = join(uiRoot, rel)
     if (!existsSync(from)) continue
-    mkdirSync(dirname(to), { recursive: true })
-    if (existsSync(to)) rmSync(to, { recursive: true, force: true })
-    renameSync(from, to)
+    movePath(from, to)
     console.log(`[export-excludes] restored ${rel}`)
   }
   rmSync(stashRoot, { recursive: true, force: true })
