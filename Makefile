@@ -106,7 +106,8 @@ help: ## Output the self-documenting make targets
 .PHONY: install-ui
 install-ui: ## Install UI dependencies
 	@echo "Installing UI dependencies..."
-	cd ui && npm install
+	# --legacy-peer-deps: better-auth optional peers (vite / better-sqlite3 ranges)
+	cd ui && npm install --legacy-peer-deps
 
 # Build the Next.js UI (outputs to internal/registry/api/ui/dist)
 .PHONY: build-ui
