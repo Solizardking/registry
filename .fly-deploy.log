@@ -1,0 +1,320 @@
+==> Verifying app config
+Validating fly.toml
+[32m✓[0m Configuration is valid
+--> Verified app config
+==> Building image
+Waiting for depot builder...
+
+==> Building image with Depot
+--> build:  (​)
+#1 [internal] load build definition from server.Dockerfile
+#1 transferring dockerfile: 3.69kB 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/golang:1.25-alpine
+#2 ...
+
+#3 [internal] load metadata for docker.io/library/ubuntu:22.04
+#3 DONE 0.3s
+
+#4 [internal] load metadata for docker.io/library/node:22-alpine
+#4 DONE 0.3s
+
+#2 [internal] load metadata for docker.io/library/golang:1.25-alpine
+#2 DONE 0.3s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 432B 0.0s done
+#5 DONE 0.1s
+
+#6 [ui-builder 1/8] FROM docker.io/library/node:22-alpine@sha256:c610fcdfb1d5b4740dd70c284ed3cb16bb857e0f7166196e36a5501df7a3aa32
+#6 resolve docker.io/library/node:22-alpine@sha256:c610fcdfb1d5b4740dd70c284ed3cb16bb857e0f7166196e36a5501df7a3aa32 done
+#6 DONE 0.0s
+
+#7 [runtime 1/7] FROM docker.io/library/ubuntu:22.04@sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f
+#7 resolve docker.io/library/ubuntu:22.04@sha256:3b06811b2afd352be909dd088a004166d665dc76d38b13eada33522a9d915c6f done
+#7 DONE 0.0s
+
+#8 [builder  1/10] FROM docker.io/library/golang:1.25-alpine@sha256:56961d79ea8129efddcc0b8643fd8a5416b4e6228cfd477e3fd61deb2672c587
+#8 resolve docker.io/library/golang:1.25-alpine@sha256:56961d79ea8129efddcc0b8643fd8a5416b4e6228cfd477e3fd61deb2672c587 done
+#8 DONE 0.0s
+
+#9 [runtime 3/7] RUN DOCKER_ARCH=$(case "amd64" in         (amd64) echo "x86_64" ;;         (arm64) echo "aarch64" ;;         (*) echo "x86_64" ;;     esac) &&     wget https://download.docker.com/linux/static/stable/${DOCKER_ARCH}/docker-28.5.1.tgz &&     tar -xvf docker-28.5.1.tgz &&     mv docker/docker /usr/local/bin/docker &&     rm -rf docker-28.5.1.tgz docker
+#9 CACHED
+
+#10 [runtime 2/7] RUN apt-get update && apt-get install -y     curl     wget     unzip     && rm -rf /var/lib/apt/lists/*
+#10 CACHED
+
+#11 [runtime 4/7] RUN set -eux;     COMPOSE_ARCH=$(case "amd64" in         (amd64) echo "x86_64" ;;         (arm64) echo "aarch64" ;;         (*) echo "x86_64" ;;     esac);     COMPOSE_NAME=docker-compose-linux-${COMPOSE_ARCH};     COMPOSE_URL=https://github.com/docker/compose/releases/download/v2.40.3;     COMPOSE_DIR=/tmp/docker-compose-download;     for attempt in 1 2 3 4 5; do         rm -rf ${COMPOSE_DIR};         mkdir -p ${COMPOSE_DIR};         if curl -fL --retry 3 --retry-delay 2 --retry-all-errors ${COMPOSE_URL}/${COMPOSE_NAME} -o ${COMPOSE_DIR}/${COMPOSE_NAME} &&             curl -fL --retry 3 --retry-delay 2 --retry-all-errors ${COMPOSE_URL}/${COMPOSE_NAME}.sha256 -o ${COMPOSE_DIR}/${COMPOSE_NAME}.sha256 &&             (cd ${COMPOSE_DIR} && sha256sum -c ${COMPOSE_NAME}.sha256); then             break;         fi;         if [ "$attempt" = "5" ]; then             exit 1;         fi;         sleep 2;     done;     install -d /usr/local/lib/docker/cli-plugins;     install -m 0755 ${COMPOSE_DIR}/${COMPOSE_NAME} /usr/local/lib/docker/cli-plugins/docker-compose;     rm -rf ${COMPOSE_DIR};     docker compose version
+#11 CACHED
+
+#12 [internal] load build context
+#12 ...
+
+#13 [ui-builder 4/8] COPY Makefile ./
+#13 CACHED
+
+#14 [ui-builder 2/8] RUN apk add --no-cache make
+#14 CACHED
+
+#15 [ui-builder 3/8] WORKDIR /app
+#15 CACHED
+
+#16 [ui-builder 5/8] COPY ui/package.json ui/package-lock.json ./
+#16 CACHED
+
+#17 [ui-builder 6/8] COPY ui ui
+#17 DONE 0.1s
+
+#12 [internal] load build context
+#12 transferring context: 38.14kB 0.1s done
+#12 ...
+
+#18 [ui-builder 7/8] RUN mkdir -p internal/registry/api/ui/dist
+#18 DONE 0.1s
+
+#19 [ui-builder 8/8] RUN make build-ui
+#19 0.085 /bin/sh: git: not found
+#19 0.093 Installing UI dependencies...
+#19 0.093 # --legacy-peer-deps: better-auth optional peers (vite / better-sqlite3 ranges)
+#19 0.094 cd ui && npm install --legacy-peer-deps
+#19 2.966 npm warn deprecated prebuild-install@7.1.3: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
+#19 18.03 
+#19 18.03 added 721 packages, and audited 722 packages in 18s
+#19 18.03 
+#19 18.03 228 packages are looking for funding
+#19 18.03   run `npm fund` for details
+#19 18.23 
+#19 18.23 12 vulnerabilities (1 low, 3 moderate, 7 high, 1 critical)
+#19 18.23 
+#19 18.23 To address issues that do not require attention, run:
+#19 18.23   npm audit fix
+#19 18.23 
+#19 18.23 To address all issues (including breaking changes), run:
+#19 18.23   npm audit fix --force
+#19 18.23 
+#19 18.23 Run `npm audit` for details.
+#19 18.23 npm notice
+#19 18.23 npm notice New major version of npm available! 10.9.8 -> 12.0.2
+#19 18.23 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+#19 18.23 npm notice To update run: npm install -g npm@12.0.2
+#19 18.23 npm notice
+#19 18.33 Building Next.js UI for embedding...
+#19 18.33 cd ui && npm run build:export
+#19 18.48 
+#19 18.48 > clawd-registry-ui@0.1.0 build:export
+#19 18.48 > node scripts/with-export-excludes.mjs sh -c 'NEXT_BUILD_EXPORT=true next build'
+#19 18.48 
+#19 18.53 [export-excludes] stashed app/api
+#19 18.53 [export-excludes] stashed app/.well-known
+#19 18.53 [export-excludes] stashed app/device
+#19 19.09 ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+#19 19.09  We detected multiple lockfiles and selected the directory of /app/package-lock.json as the root directory.
+#19 19.09  To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+#19 19.09    See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+#19 19.09  Detected additional lockfiles: 
+#19 19.09    * /app/ui/package-lock.json
+#19 19.09 
+#19 19.16 Attention: Next.js now collects completely anonymous telemetry regarding usage.
+#19 19.16 This information is used to shape Next.js' roadmap and prioritize features.
+#19 19.16 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+#19 19.16 https://nextjs.org/telemetry
+#19 19.16 
+#19 19.21 ▲ Next.js 16.2.4 (Turbopack)
+#19 19.21 - Environments: .env.local
+#19 19.21 
+#19 19.27   Creating an optimized production build ...
+#19 20.92 Browserslist: browsers data (caniuse-lite) is 10 months old. Please run:
+#19 20.92   npx update-browserslist-db@latest
+#19 20.92   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+#19 23.24 ✓ Compiled successfully in 3.6s
+#19 23.24   Running TypeScript ...
+#19 31.76   Finished TypeScript in 8.5s ...
+#19 31.76   Collecting page data using 5 workers ...
+#19 32.29   Generating static pages using 5 workers (0/4) ...
+#19 32.96   Generating static pages using 5 workers (1/4) 
+#19 32.96   Generating static pages using 5 workers (2/4) 
+#19 32.96   Generating static pages using 5 workers (3/4) 
+#19 32.96 ✓ Generating static pages using 5 workers (4/4) in 674ms
+#19 32.97   Finalizing page optimization ...
+#19 33.14 
+#19 33.14 Route (app)
+#19 33.14 ┌ ○ /
+#19 33.14 ├ ○ /_not-found
+#19 33.14 └ ○ /deployed
+#19 33.14 
+#19 33.14 
+#19 33.14 ○  (Static)  prerendered as static content
+#19 33.14 
+#19 33.22 [export-excludes] restored app/api
+#19 33.22 [export-excludes] restored app/.well-known
+#19 33.22 [export-excludes] restored app/device
+#19 33.23 Copying built files to internal/registry/api/ui/dist...
+#19 33.23 cp -r ui/out/* internal/registry/api/ui/dist/
+#19 33.24 git checkout -- internal/registry/api/ui/dist/.gitignore || :
+#19 33.24 /bin/sh: git: not found
+#19 33.24 UI built successfully to internal/registry/api/ui/dist/
+#19 DONE 35.9s
+
+#12 [internal] load build context
+#12 ...
+
+#8 [builder  1/10] FROM docker.io/library/golang:1.25-alpine@sha256:56961d79ea8129efddcc0b8643fd8a5416b4e6228cfd477e3fd61deb2672c587
+#8 DONE 0.4s
+
+#12 [internal] load build context
+#12 ...
+
+#8 [builder  1/10] FROM docker.io/library/golang:1.25-alpine@sha256:56961d79ea8129efddcc0b8643fd8a5416b4e6228cfd477e3fd61deb2672c587
+#8 sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 32B / 32B done
+#8 sha256:641f4422cfe00d027e25d4524379a0fd07e7d33b18e8081ca2d2c29bb947fcf1 126B / 126B 0.1s done
+#8 sha256:e26961f71d69520cef738bb5c90dce0006ef50ee55b92bc7bfdd21ba109a8c85 245.06kB / 245.06kB 0.1s done
+#8 extracting sha256:e26961f71d69520cef738bb5c90dce0006ef50ee55b92bc7bfdd21ba109a8c85 0.1s done
+#8 sha256:cbce9743886163cdd460279c53e2b7f5921bcf2e3725af1b36794b1f871a82b5 2.10MB / 60.25MB 0.2s
+#8 sha256:cbce9743886163cdd460279c53e2b7f5921bcf2e3725af1b36794b1f871a82b5 16.78MB / 60.25MB 0.3s
+#8 sha256:cbce9743886163cdd460279c53e2b7f5921bcf2e3725af1b36794b1f871a82b5 31.46MB / 60.25MB 0.5s
+#8 sha256:cbce9743886163cdd460279c53e2b7f5921bcf2e3725af1b36794b1f871a82b5 45.09MB / 60.25MB 0.6s
+#8 sha256:cbce9743886163cdd460279c53e2b7f5921bcf2e3725af1b36794b1f871a82b5 60.25MB / 60.25MB 0.8s
+#8 sha256:cbce9743886163cdd460279c53e2b7f5921bcf2e3725af1b36794b1f871a82b5 60.25MB / 60.25MB 0.8s done
+#8 extracting sha256:cbce9743886163cdd460279c53e2b7f5921bcf2e3725af1b36794b1f871a82b5
+#8 extracting sha256:cbce9743886163cdd460279c53e2b7f5921bcf2e3725af1b36794b1f871a82b5 3.3s done
+#8 DONE 4.5s
+
+#12 [internal] load build context
+#12 ...
+
+#8 [builder  1/10] FROM docker.io/library/golang:1.25-alpine@sha256:56961d79ea8129efddcc0b8643fd8a5416b4e6228cfd477e3fd61deb2672c587
+#8 extracting sha256:641f4422cfe00d027e25d4524379a0fd07e7d33b18e8081ca2d2c29bb947fcf1 done
+#8 extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 done
+#8 DONE 4.5s
+
+#20 [builder  2/10] RUN apk add --no-cache make
+#20 0.778 (1/1) Installing make (4.4.1-r4)
+#20 0.808 Executing busybox-1.37.0-r31.trigger
+#20 0.817 OK: 8627 KiB in 18 packages
+#20 DONE 2.7s
+
+#12 [internal] load build context
+#12 ...
+
+#21 [builder  3/10] WORKDIR /app
+#21 DONE 0.2s
+
+#22 [builder  4/10] COPY go.mod go.sum ./
+#22 DONE 0.2s
+
+#12 [internal] load build context
+#12 ...
+
+#23 [builder  5/10] RUN go mod download && go mod verify
+#23 4.641 all modules verified
+#23 DONE 9.2s
+
+#12 [internal] load build context
+#12 ...
+
+#24 [builder  6/10] COPY cmd cmd
+#24 DONE 0.3s
+
+#12 [internal] load build context
+#12 ...
+
+#25 [builder  7/10] COPY internal internal
+#25 DONE 0.1s
+
+#26 [builder  8/10] COPY pkg pkg
+#26 DONE 0.2s
+
+#12 [internal] load build context
+#12 ...
+
+#27 [builder  9/10] COPY --from=ui-builder /app/internal/registry/api/ui/dist /app/internal/registry/api/ui/dist
+#27 DONE 0.3s
+
+#12 [internal] load build context
+#12 ...
+
+#28 [builder 10/10] RUN CGO_ENABLED=0 GOOS=${TARGETOS:-linux} GOARCH=amd64 go build -a -ldflags "$LDFLAGS" -o bin/arctl-server cmd/server/main.go
+#28 DONE 30.1s
+
+#12 [internal] load build context
+#12 ...
+
+#29 [runtime 5/7] COPY --from=builder /app/bin/arctl-server /app/bin/arctl-server
+#29 DONE 0.7s
+
+#12 [internal] load build context
+#12 ...
+
+#30 [runtime 6/7] COPY docker/fly-entrypoint.sh /app/bin/fly-entrypoint.sh
+#30 DONE 0.1s
+
+#31 [runtime 7/7] RUN chmod +x /app/bin/fly-entrypoint.sh
+#31 DONE 0.2s
+
+#12 [internal] load build context
+#12 ...
+
+#32 exporting to image
+#32 exporting layers
+#32 exporting layers 2.2s done
+#32 exporting manifest sha256:aaba6baf8d1f24574d352e48ec571d444f7e3a354eb60e1991e3ca8211b301ab done
+#32 exporting config sha256:1dfcd4936cd56e9e5d13a167884c826e72c022f0ea9311aa18f191e7f531f6d7 done
+#32 pushing layers for registry.fly.io/cheshire-agentregistry:deployment-01KZAB7E76M7VXGVBKW68YVQZN@sha256:aaba6baf8d1f24574d352e48ec571d444f7e3a354eb60e1991e3ca8211b301ab
+#32 pushing layer sha256:1dfcd4936cd56e9e5d13a167884c826e72c022f0ea9311aa18f191e7f531f6d7
+#32 pushing layer sha256:2c1ce468d9f3d941396801f6e3afc8921466650dd05430fe644cd3537713d27f 0.1s done
+#32 pushing layer sha256:0a2f7dfca09f9f209351f14e56b64927628180aa6cdef6bd2bd73c59b916e270
+#32 pushing layer sha256:cc5e5a04ad7191845ed1c86b86a40182426d1cb9c84ed81e637f783e721a8035
+#32 pushing layer sha256:4e51fae1e4d17d95c8881a3bf9f6867dfa2c14ad026a3e0139652b499c76c5d6
+#32 pushing layer sha256:7aeb11b6c35411949d23554880c1e988b60c92a0b0a4c69397273e95d1987a5e
+#32 pushing layer sha256:2c19fc2c8820d84cb4d370d1d0b46bc93673d68762567adc0f740c33e0855d7d
+#32 pushing layer sha256:05d315669471ee9905928ffca8b6d01ae2918715723d97c515b9c42af3856940
+#32 pushing layer sha256:1dfcd4936cd56e9e5d13a167884c826e72c022f0ea9311aa18f191e7f531f6d7 1.0s done
+#32 pushing layer sha256:7aeb11b6c35411949d23554880c1e988b60c92a0b0a4c69397273e95d1987a5e 1.0s done
+#32 pushing layer sha256:05d315669471ee9905928ffca8b6d01ae2918715723d97c515b9c42af3856940 1.1s done
+#32 pushing layer sha256:2c19fc2c8820d84cb4d370d1d0b46bc93673d68762567adc0f740c33e0855d7d 1.2s done
+#32 pushing layer sha256:4e51fae1e4d17d95c8881a3bf9f6867dfa2c14ad026a3e0139652b499c76c5d6 1.4s done
+#32 pushing layer sha256:cc5e5a04ad7191845ed1c86b86a40182426d1cb9c84ed81e637f783e721a8035 1.5s done
+#32 pushing layers for registry.fly.io/cheshire-agentregistry:deployment-01KZAB7E76M7VXGVBKW68YVQZN@sha256:aaba6baf8d1f24574d352e48ec571d444f7e3a354eb60e1991e3ca8211b301ab 1.6s done
+#32 pushing layer sha256:0a2f7dfca09f9f209351f14e56b64927628180aa6cdef6bd2bd73c59b916e270 1.6s done
+#32 pushing manifest for registry.fly.io/cheshire-agentregistry:deployment-01KZAB7E76M7VXGVBKW68YVQZN@sha256:aaba6baf8d1f24574d352e48ec571d444f7e3a354eb60e1991e3ca8211b301ab
+#32 pushing manifest for registry.fly.io/cheshire-agentregistry:deployment-01KZAB7E76M7VXGVBKW68YVQZN@sha256:aaba6baf8d1f24574d352e48ec571d444f7e3a354eb60e1991e3ca8211b301ab 0.2s done
+#32 DONE 4.1s
+
+#12 [internal] load build context
+--> Build Summary:  (​)
+[38;5;252m--> Building image done[0m
+image: registry.fly.io/cheshire-agentregistry:deployment-01KZAB7E76M7VXGVBKW68YVQZN
+image size: 92 MB
+
+Watch your deployment at https://fly.io/apps/cheshire-agentregistry/monitoring
+
+Updating existing machines in 'cheshire-agentregistry' with rolling strategy
+> [1/2] Acquiring lease for 48ee32df446628
+> [1/2] Acquired lease for 48ee32df446628
+> [2/2] Acquiring lease for 185d336a345308
+> [2/2] Acquired lease for 185d336a345308
+> [1/2] Updating machine config for 48ee32df446628
+> [2/2] Updating machine config for 185d336a345308
+> [2/2] Updating 185d336a345308 [app]
+> [1/2] Updating 48ee32df446628 [app]
+> [1/2] Updated machine config for 48ee32df446628
+> [1/2] Waiting for machine 48ee32df446628 to reach a good state
+> [2/2] Updated machine config for 185d336a345308
+> [2/2] Waiting for machine 185d336a345308 to reach a good state
+> [2/2] Machine 185d336a345308 reached stopped state
+✔ [2/2] Machine 185d336a345308 is now in a good state
+> [1/2] Machine 48ee32df446628 reached started state
+> [1/2] Running smoke checks on machine 48ee32df446628
+> [1/2] Running machine checks on machine 48ee32df446628
+> [1/2] Checking health of machine 48ee32df446628
+✔ [1/2] Machine 48ee32df446628 is now in a good state
+> [2/2] Clearing lease for 185d336a345308
+> [1/2] Clearing lease for 48ee32df446628
+✔ [2/2] Cleared lease for 185d336a345308
+✔ [1/2] Cleared lease for 48ee32df446628
+Checking DNS configuration for cheshire-agentregistry.fly.dev
+✓ DNS configuration verified
+
+Visit your newly deployed app at https://cheshire-agentregistry.fly.dev/
+
